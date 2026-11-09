@@ -1,0 +1,2 @@
+PASS: real payload presentation (phases, resources, rover, limit, invalid, completed); stale results; duplicate suppression; edits during calculation; HTTP error handling.
+DOM double only: no browser, screenshots, downloads or layout verified.

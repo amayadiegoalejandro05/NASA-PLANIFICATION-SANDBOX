@@ -18,6 +18,7 @@ import heapq
 import itertools
 import math
 from typing import Optional
+from numeric_domain import require_number, finite_result, NumericDomainError
 
 from mars_route_planner import (
     Cell, NoSafeRouteError, PlannerConfig, RiskAwareAStar, Terrain, synthetic_terrain
@@ -33,6 +34,11 @@ class Usage:
     battery_wh: float = 0.0
     nutrition_kcal: float = 0.0
     distance_m: float = 0.0
+
+    def __post_init__(self):
+        for name, value in vars(self).items():
+            finite_result(value, name)
+            require_number(value, name, minimum=0)
 
     def __add__(self, other: 'Usage') -> 'Usage':
         return Usage(*(a + b for a, b in zip(self.values(), other.values())))
@@ -68,11 +74,11 @@ class Budget:
                  (self.battery_wh, self.battery_reserve_wh),
                  (self.nutrition_kcal, self.nutrition_reserve_kcal)]
         for capacity, reserve in pairs:
-            if not math.isfinite(reserve) or reserve < 0:
-                raise ValueError('Reserva invalida')
-            if capacity is not None and (not math.isfinite(capacity) or
-                                          capacity < reserve):
-                raise ValueError('La capacidad debe alcanzar la reserva')
+            require_number(reserve, 'reserve', minimum=0)
+            if capacity is not None:
+                require_number(capacity, 'capacity', minimum=reserve)
+        if self.time_min is None:
+            raise ValueError('El tiempo requiere presupuesto')
 
     def fits(self, used: Usage) -> bool:
         return (used.minutes <= self.time_min - self.time_reserve_min + 1e-9
@@ -102,19 +108,16 @@ class Consumption:
     battery_cost_weight: float = 0.01
 
     def __post_init__(self) -> None:
-        if not math.isfinite(self.speed_m_per_min) or self.speed_m_per_min <= 0:
-            raise ValueError('La velocidad debe ser positiva')
+        require_number(self.speed_m_per_min, 'speed_m_per_min', positive=True)
         for value in (self.oxygen_u_per_min, self.water_l_per_min,
                       self.battery_wh_per_min, self.nutrition_kcal_per_min,
                       self.uphill_speed_penalty, self.roughness_speed_penalty,
                       self.uphill_effort_penalty, self.climb_battery_wh_per_m,
                       self.hazard_cost_weight, self.battery_cost_weight):
-            if not math.isfinite(value) or value < 0:
-                raise ValueError('Los coeficientes deben ser finitos y >= 0')
+            require_number(value, 'coefficient', minimum=0)
 
     def stationary(self, minutes: float) -> Usage:
-        if not math.isfinite(minutes) or minutes < 0:
-            raise ValueError('Duracion de actividad invalida')
+        require_number(minutes, 'activity_min', minimum=0)
         return Usage(minutes, self.oxygen_u_per_min * minutes,
                      self.water_l_per_min * minutes,
                      self.battery_wh_per_min * minutes,
@@ -122,10 +125,18 @@ class Consumption:
 
     def traveling(self, distance_m: float, rise_m: float,
                   roughness: float) -> Usage:
+        require_number(distance_m, 'distance_m', positive=True)
+        require_number(rise_m, 'rise_m')
+        require_number(roughness, 'roughness', minimum=0)
+        if roughness > 1:
+            raise ValueError('roughness debe estar entre 0 y 1')
         uphill_grade = max(0.0, rise_m) / distance_m
+        finite_result(uphill_grade, 'uphill_grade')
         minutes = (distance_m / self.speed_m_per_min *
                    (1.0 + self.uphill_speed_penalty * uphill_grade +
                     self.roughness_speed_penalty * roughness))
+        if minutes == 0:
+            raise NumericDomainError('travel_minutes: subdesbordamiento a cero con distancia positiva')
         effort = 1.0 + self.uphill_effort_penalty * uphill_grade
         return Usage(minutes, minutes * self.oxygen_u_per_min * effort,
                      minutes * self.water_l_per_min * effort,
@@ -158,8 +169,7 @@ class ResourceAllocation:
 
     def __post_init__(self):
         for value in (self.capacity, self.reserve, self.movement_rate, self.activity_rate):
-            if not isinstance(value, (int, float)) or isinstance(value, bool) or not math.isfinite(value) or value < 0:
-                raise ValueError("Capacidad, reserva y tasas deben ser finitas y >= 0")
+            require_number(value, 'allocation', minimum=0)
         if self.reserve > self.capacity:
             raise ValueError("La reserva supera la capacidad")
 
@@ -375,8 +385,7 @@ class ResourceMissionPlanner:
         # Exactly N labels may be processed; interrupt before inserting N+1.
         if type(max_labels) is not int or max_labels <= 0:
             raise ValueError('max_labels debe ser un entero positivo')
-        if not math.isfinite(activity_min) or activity_min < 0:
-            raise ValueError('activity_min debe ser finito y >= 0')
+        require_number(activity_min, 'activity_min', minimum=0)
         if (not self.nav.traversable(start) or not self.nav.traversable(base)
                 or (not return_only and not self.nav.traversable(goal))):
             raise NoFeasibleMissionError('Base u objetivo no transitables')
@@ -389,6 +398,7 @@ class ResourceMissionPlanner:
         if not self.budget.fits(initial):
             raise NoFeasibleMissionError('Recursos iniciales insuficientes con reservas')
         initial_cost = initial.minutes + self.consumption.battery_cost_weight * initial.battery_wh
+        finite_result(initial_cost, 'initial_cost')
         labels = [_Label(start, visited, initial, initial_cost, None)]
         frontier: dict[tuple[Cell, bool], list[int]] = {(start, visited): [0]}
         sequence = itertools.count()
@@ -428,6 +438,7 @@ class ResourceMissionPlanner:
                             service.minutes +
                             self.consumption.battery_cost_weight *
                             (movement.battery_wh + service.battery_wh))
+                finite_result(new_cost, 'mission_cost')
                 new = _Label(nb, visits, new_usage, new_cost, i)
                 key = (nb, visits)
                 active_here = frontier.get(key, [])

@@ -1,0 +1,146 @@
+test_detour_is_real_and_conditions_include_reserves (test_expanded_ui.ExpandedWorkspace.test_detour_is_real_and_conditions_include_reserves) ... ok
+test_insufficient_and_interrupted_not_automatically_rebudgeted (test_expanded_ui.ExpandedWorkspace.test_insufficient_and_interrupted_not_automatically_rebudgeted) ... ok
+test_real_source_integrity_and_independent_projection_controls (test_expanded_ui.ExpandedWorkspace.test_real_source_integrity_and_independent_projection_controls) ... ok
+test_selection_beyond_old_window_and_rejection (test_expanded_ui.ExpandedWorkspace.test_selection_beyond_old_window_and_rejection) ... ok
+test_actual_route_rebudgeting_succeeds_without_changing_reserves (test_fast_mission.FastMission.test_actual_route_rebudgeting_succeeds_without_changing_reserves) ... ok
+test_blocked_goal_cannot_be_fixed_by_resources (test_fast_mission.FastMission.test_blocked_goal_cannot_be_fixed_by_resources) ... ok
+test_bounded_astar_separates_interruption_from_no_route (test_fast_mission.FastMission.test_bounded_astar_separates_interruption_from_no_route) ... ok
+test_completed_activity_not_recharged_and_rover_humans_not_applicable (test_fast_mission.FastMission.test_completed_activity_not_recharged_and_rover_humans_not_applicable) ... ok
+test_centers_orientation_and_inverse (test_jezero_adapter.CoordinateUnits.test_centers_orientation_and_inverse) ... ok
+test_core_and_transform_import_without_optional_dependencies (test_jezero_adapter.CoordinateUnits.test_core_and_transform_import_without_optional_dependencies) ... ok
+test_corners_and_half_open_bounds (test_jezero_adapter.CoordinateUnits.test_corners_and_half_open_bounds) ... ok
+test_crop_position_and_rejections (test_jezero_adapter.CoordinateUnits.test_crop_position_and_rejections) ... ok
+test_metadata_contract_rejections (test_jezero_adapter.CoordinateUnits.test_metadata_contract_rejections) ... ok
+test_integrity_and_all_layer_dimensions_rejected (test_jezero_adapter.SyntheticNpzUnits.test_integrity_and_all_layer_dimensions_rejected) ... ok
+test_nodata_is_none_and_blocked_no_filling_or_vertical_offset (test_jezero_adapter.SyntheticNpzUnits.test_nodata_is_none_and_blocked_no_filling_or_vertical_offset) ... ok
+test_only_ctx_payload_is_read_even_with_invalid_joint_mask (test_jezero_adapter.SyntheticNpzUnits.test_only_ctx_payload_is_read_even_with_invalid_joint_mask) ... ok
+test_validity_metadata_rejected_and_provenance_hash_detached (test_jezero_adapter.SyntheticNpzUnits.test_validity_metadata_rejected_and_provenance_hash_detached) ... ok
+test_activity_cost_is_not_free (test_mars_mission_resources.TestResourceMission.test_activity_cost_is_not_free) ... ok
+test_budget_validation (test_mars_mission_resources.TestResourceMission.test_budget_validation) ... ok
+test_reject_even_if_outbound_is_feasible (test_mars_mission_resources.TestResourceMission.test_reject_even_if_outbound_is_feasible) ... ok
+test_reject_if_water_reserve_would_be_spent (test_mars_mission_resources.TestResourceMission.test_reject_if_water_reserve_would_be_spent) ... ok
+test_respects_blocked_cells_and_returns (test_mars_mission_resources.TestResourceMission.test_respects_blocked_cells_and_returns) ... ok
+test_roundtrip_activities_and_reserves (test_mars_mission_resources.TestResourceMission.test_roundtrip_activities_and_reserves) ... ok
+test_rover_has_no_human_consumables (test_mars_mission_resources.TestResourceMission.test_rover_has_no_human_consumables) ... ok
+test_uphill_is_not_free (test_mars_mission_resources.TestResourceMission.test_uphill_is_not_free) ... ok
+test_default_demo (test_mars_route_planner.TestPlanner.test_default_demo) ... ok
+test_no_route_wall (test_mars_route_planner.TestPlanner.test_no_route_wall) ... ok
+test_prefers_low_risk_detour (test_mars_route_planner.TestPlanner.test_prefers_low_risk_detour) ... ok
+test_replanning (test_mars_route_planner.TestPlanner.test_replanning) ... ok
+test_route_flat (test_mars_route_planner.TestPlanner.test_route_flat) ... ok
+test_slope_limit (test_mars_route_planner.TestPlanner.test_slope_limit) ... ok
+test_unknown_is_blocked (test_mars_route_planner.TestPlanner.test_unknown_is_blocked) ... ok
+test_endpoint_obstacle_and_below_reserve_have_specific_messages (test_mission_explanations.MissionExplanations.test_endpoint_obstacle_and_below_reserve_have_specific_messages) ... ok
+test_interruption_remains_unknown_not_resource_rejection (test_mission_explanations.MissionExplanations.test_interruption_remains_unknown_not_resource_rejection) ... ok
+test_resource_shortfall_is_a_bound_from_engine_not_a_route (test_mission_explanations.MissionExplanations.test_resource_shortfall_is_a_bound_from_engine_not_a_route) ... ok
+test_three_obstacles_does_not_invent_a_single_failure_cause (test_mission_explanations.MissionExplanations.test_three_obstacles_does_not_invent_a_single_failure_cause) ... ok
+test_area_footprint_and_boundary (test_stage01.StageOne.test_area_footprint_and_boundary) ... ok
+test_cli_interrupted (test_stage01.StageOne.test_cli_interrupted) ... ok
+test_exhaustion_is_infeasible_even_at_limit (test_stage01.StageOne.test_exhaustion_is_infeasible_even_at_limit) ... ok
+test_limit_exact_and_classification (test_stage01.StageOne.test_limit_exact_and_classification) ... ok
+test_snapshot_and_updated_requests (test_stage01.StageOne.test_snapshot_and_updated_requests) ... ok
+test_swept_diagonal_and_corners (test_stage01.StageOne.test_swept_diagonal_and_corners) ... ok
+test_activity_once_and_zero (test_stage02.StageTwo.test_activity_once_and_zero) ... ok
+test_exact_reserves_and_short_budget (test_stage02.StageTwo.test_exact_reserves_and_short_budget) ... ok
+test_metadata (test_stage02.StageTwo.test_metadata) ... ok
+test_mobility (test_stage02.StageTwo.test_mobility) ... ok
+test_numeric_validation (test_stage02.StageTwo.test_numeric_validation) ... ok
+test_rover_rejects_human_inputs (test_stage02.StageTwo.test_rover_rejects_human_inputs) ... ok
+test_small_astronaut (test_stage02.StageTwo.test_small_astronaut) ... ok
+test_small_rover (test_stage02.StageTwo.test_small_rover) ... ok
+test_status_and_exclusion (test_stage02.StageTwo.test_status_and_exclusion) ... ok
+test_blocked_vs_invalid_and_explanations (test_stage03.StageThree.test_blocked_vs_invalid_and_explanations) ... ok
+test_breakdown_accounting_and_reserves (test_stage03.StageThree.test_breakdown_accounting_and_reserves) ... ok
+test_explicit_exclusion (test_stage03.StageThree.test_explicit_exclusion) ... ok
+test_five_scenarios_and_strict_json (test_stage03.StageThree.test_five_scenarios_and_strict_json) ... ok
+test_independent_tiny_reference (test_stage03.StageThree.test_independent_tiny_reference) ... ok
+test_request_validation (test_stage03.StageThree.test_request_validation) ... ok
+test_snapshot_identity_and_local_coordinates (test_stage03.StageThree.test_snapshot_identity_and_local_coordinates) ... ok
+test_unexpected_engine_errors_propagate (test_stage03.StageThree.test_unexpected_engine_errors_propagate) ... ok
+test_zero_activity_and_exact_reserves (test_stage03.StageThree.test_zero_activity_and_exact_reserves) ... ok
+test_ctx_only_payload_and_no_raster_access_from_search (test_stage04_integration.RealJezeroIntegration.test_ctx_only_payload_and_no_raster_access_from_search) ... ok
+test_existing_product_integrity_shape_crop_and_absolute_heights (test_stage04_integration.RealJezeroIntegration.test_existing_product_integrity_shape_crop_and_absolute_heights) ... ok
+test_insufficient_budget_limit_and_invalid_distinct_same_terrain (test_stage04_integration.RealJezeroIntegration.test_insufficient_budget_limit_and_invalid_distinct_same_terrain) ... ok
+test_rover_and_astronaut_success_phases_resources_reserves (test_stage04_integration.RealJezeroIntegration.test_rover_and_astronaut_success_phases_resources_reserves) ... ok
+test_strict_json_provenance_waypoints_and_reproducible_exports (test_stage04_integration.RealJezeroIntegration.test_strict_json_provenance_waypoints_and_reproducible_exports) ... ok
+test_comparison_common_constraints_and_coincidence (test_stage05.StageFive.test_comparison_common_constraints_and_coincidence) ... ok
+test_completed_and_initial_goal_science_once (test_stage05.StageFive.test_completed_and_initial_goal_science_once) ... ok
+test_continuation_independent_expected_accounts (test_stage05.StageFive.test_continuation_independent_expected_accounts) ... ok
+test_core_without_optional_dependencies (test_stage05.StageFive.test_core_without_optional_dependencies) ... ok
+test_decision_infeasible_interrupted_and_no_confirmed_return (test_stage05.StageFive.test_decision_infeasible_interrupted_and_no_confirmed_return) ... ok
+test_direct_return_and_base_zero (test_stage05.StageFive.test_direct_return_and_base_zero) ... ok
+test_events_phases_and_strict_json (test_stage05.StageFive.test_events_phases_and_strict_json) ... ok
+test_excluded_and_v3_compatibility (test_stage05.StageFive.test_excluded_and_v3_compatibility) ... ok
+test_history_not_debited_reserves_absolute (test_stage05.StageFive.test_history_not_debited_reserves_absolute) ... ok
+test_independent_small_reference_continue_return (test_stage05.StageFive.test_independent_small_reference_continue_return) ... ok
+test_new_snapshots_detour_wall_unknown_elevation (test_stage05.StageFive.test_new_snapshots_detour_wall_unknown_elevation) ... ok
+test_personal_validation_and_no_effect (test_stage05.StageFive.test_personal_validation_and_no_effect) ... ok
+test_position_blocked_unknown_no_relocation (test_stage05.StageFive.test_position_blocked_unknown_no_relocation) ... ok
+test_preferences_use_computed_metrics (test_stage05.StageFive.test_preferences_use_computed_metrics) ... ok
+test_provenance_and_conservative_scenario (test_stage05.StageFive.test_provenance_and_conservative_scenario) ... ok
+test_state_validation_and_identity (test_stage05.StageFive.test_state_validation_and_identity) ... ok
+test_real_continue_return_comparison_and_accounting (test_stage05_integration.StageFiveRealCTX.test_real_continue_return_comparison_and_accounting) ... ok
+test_real_simulated_perturbations_limit_and_traceability (test_stage05_integration.StageFiveRealCTX.test_real_simulated_perturbations_limit_and_traceability) ... ok
+test_all_statuses_and_construction_errors (test_stage06.StageSix.test_all_statuses_and_construction_errors) ... 127.0.0.1 - - [08/Nov/2026 21:57:26] "POST /api/calculate HTTP/1.1" 400 -
+127.0.0.1 - - [08/Nov/2026 21:57:26] "POST /api/calculate HTTP/1.1" 400 -
+127.0.0.1 - - [08/Nov/2026 21:57:26] "POST /api/calculate HTTP/1.1" 400 -
+127.0.0.1 - - [08/Nov/2026 21:57:26] "POST /api/calculate HTTP/1.1" 400 -
+ok
+test_continue_return_completed_and_balances (test_stage06.StageSix.test_continue_return_completed_and_balances) ... ok
+test_core_has_no_server_dependency (test_stage06.StageSix.test_core_has_no_server_dependency) ... ok
+test_exports_frames_identity_and_strict_json (test_stage06.StageSix.test_exports_frames_identity_and_strict_json) ... ok
+test_http_real_ctx_and_current_inputs (test_stage06.StageSix.test_http_real_ctx_and_current_inputs) ... 127.0.0.1 - - [08/Nov/2026 21:57:27] "POST /api/calculate HTTP/1.1" 200 -
+ok
+test_http_rejects_duplicate_work_and_internal_error_is_not_invalid_input (test_stage06.StageSix.test_http_rejects_duplicate_work_and_internal_error_is_not_invalid_input) ... 127.0.0.1 - - [08/Nov/2026 21:57:27] "POST /api/calculate HTTP/1.1" 409 -
+127.0.0.1 - - [08/Nov/2026 21:57:27] "POST /api/calculate HTTP/1.1" 200 -
+127.0.0.1 - - [08/Nov/2026 21:57:27] "POST /api/calculate HTTP/1.1" 500 -
+ok
+test_http_scope_invalid_json_and_static (test_stage06.StageSix.test_http_scope_invalid_json_and_static) ... 127.0.0.1 - - [08/Nov/2026 21:57:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [08/Nov/2026 21:57:27] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Nov/2026 21:57:27] "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - - [08/Nov/2026 21:57:27] "GET /api/catalog HTTP/1.1" 200 -
+127.0.0.1 - - [08/Nov/2026 21:57:27] "GET /../mission_decisions.py HTTP/1.1" 404 -
+127.0.0.1 - - [08/Nov/2026 21:57:27] "GET /api/catalog HTTP/1.1" 403 -
+127.0.0.1 - - [08/Nov/2026 21:57:27] "POST /api/calculate HTTP/1.1" 403 -
+127.0.0.1 - - [08/Nov/2026 21:57:27] "POST /api/calculate HTTP/1.1" 400 -
+127.0.0.1 - - [08/Nov/2026 21:57:27] "POST /api/calculate HTTP/1.1" 400 -
+127.0.0.1 - - [08/Nov/2026 21:57:27] "POST /api/calculate HTTP/1.1" 400 -
+ok
+test_rover_and_explicit_exclusion (test_stage06.StageSix.test_rover_and_explicit_exclusion) ... ok
+test_selection_checks_and_new_snapshot_restore (test_stage06.StageSix.test_selection_checks_and_new_snapshot_restore) ... ok
+test_synthetic_detour_policies_and_conservative (test_stage06.StageSix.test_synthetic_detour_policies_and_conservative) ... ok
+test_applicability_at_events_phases_totals_json (test_stage065_numerical.BudgetAndDomain.test_applicability_at_events_phases_totals_json) ... ok
+test_core_importable_without_site_packages (test_stage065_numerical.BudgetAndDomain.test_core_importable_without_site_packages) ... ok
+test_exact_insufficient_and_tolerance (test_stage065_numerical.BudgetAndDomain.test_exact_insufficient_and_tolerance) ... ok
+test_invalid_public_numbers (test_stage065_numerical.BudgetAndDomain.test_invalid_public_numbers) ... ok
+test_overflow_facades_strict_json_and_unexpected_error (test_stage065_numerical.BudgetAndDomain.test_overflow_facades_strict_json_and_unexpected_error) ... ok
+test_overflow_usage_addition_and_geometry_are_not_infeasibility (test_stage065_numerical.BudgetAndDomain.test_overflow_usage_addition_and_geometry_are_not_infeasibility) ... ok
+test_zero_capacity_equal_reserve_and_below (test_stage065_numerical.BudgetAndDomain.test_zero_capacity_equal_reserve_and_below) ... ok
+test_fast_overflow_is_construction_error_not_infeasibility (test_stage065_numerical.FastAccounting.test_fast_overflow_is_construction_error_not_infeasibility) ... ok
+test_large_finite_activity_same_chronological_sum (test_stage065_numerical.FastAccounting.test_large_finite_activity_same_chronological_sum) ... ok
+test_preparation_complete_candidate_preserves_rates_and_scenario (test_stage065_numerical.FastAccounting.test_preparation_complete_candidate_preserves_rates_and_scenario) ... ok
+test_flat_ascent_descent_rough_diagonal (test_stage065_numerical.IndependentAccounts.test_flat_ascent_descent_rough_diagonal) ... ok
+test_geometry_units_and_weighted_cost (test_stage065_numerical.IndependentAccounts.test_geometry_units_and_weighted_cost) ... ok
+test_roundtrip_completed_initial_goal_and_direct_returns (test_stage065_numerical.IndependentAccounts.test_roundtrip_completed_initial_goal_and_direct_returns) ... ok
+test_scenario_scales_rates_only (test_stage065_numerical.IndependentAccounts.test_scenario_scales_rates_only) ... ok
+test_shared_accounting_same_sloped_path_v3_v5 (test_stage065_numerical.IndependentAccounts.test_shared_accounting_same_sloped_path_v3_v5) ... ok
+test_stationary_and_distinct_activity_rates (test_stage065_numerical.IndependentAccounts.test_stationary_and_distinct_activity_rates) ... ok
+test_aggregation_matches_original_prior_only (test_stage06_maps.RegionalMaps.test_aggregation_matches_original_prior_only) ... ok
+test_finite_regional_missions_and_export_alignment (test_stage06_maps.RegionalMaps.test_finite_regional_missions_and_export_alignment) ... ok
+test_geographic_selection_no_relocation_and_outside_explanation (test_stage06_maps.RegionalMaps.test_geographic_selection_no_relocation_and_outside_explanation) ... ok
+test_independent_control_points_axes_and_pixel_centers (test_stage06_maps.RegionalMaps.test_independent_control_points_axes_and_pixel_centers) ... ok
+test_new_mission_mode_is_authoritative (test_stage06_maps.RegionalMaps.test_new_mission_mode_is_authoritative) ... ok
+test_real_script_entrypoint_preserves_validation_error_identity (test_stage06_maps.RegionalMaps.test_real_script_entrypoint_preserves_validation_error_identity) ... ok
+test_regional_http_catalog_selection_and_png (test_stage06_maps.RegionalMaps.test_regional_http_catalog_selection_and_png) ... 127.0.0.1 - - [08/Nov/2026 21:57:32] "GET /api/catalog HTTP/1.1" 200 -
+127.0.0.1 - - [08/Nov/2026 21:57:32] "GET /regional-relief.png HTTP/1.1" 200 -
+127.0.0.1 - - [08/Nov/2026 21:57:32] "GET /regional-elevation.png HTTP/1.1" 200 -
+127.0.0.1 - - [08/Nov/2026 21:57:32] "GET /vendor/leaflet.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Nov/2026 21:57:32] "GET /map-app.js HTTP/1.1" 200 -
+127.0.0.1 - - [08/Nov/2026 21:57:32] "POST /api/select HTTP/1.1" 200 -
+ok
+test_visual_products_do_not_change_planning_snapshot (test_stage06_maps.RegionalMaps.test_visual_products_do_not_change_planning_snapshot) ... ok
+
+----------------------------------------------------------------------
+Ran 117 tests in 20.658s
+
+OK

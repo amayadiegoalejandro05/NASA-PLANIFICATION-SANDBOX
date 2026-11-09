@@ -26,3 +26,16 @@ Escenario nominal factores 1; conservador >=1 en tasas, tiempo 1. No es interval
 Pesos del costo y tasas físicas son conceptos distintos. A* pondera geometría; detallado combina tiempo con penalización de terreno y batería. No afirmar óptimo físico/operacional global.
 
 Todos los ejemplos son simulados. Declarar procedencia measured/estimated no autentica una medición. Masa/altura son informativos sin efecto; edad/sexo no se recopilan. Faltan calibración, fatiga, carga/traje, térmica, CO2, radiación y meteorología. Ver PERSONALIZACION_ETAPA05.md y roadmap 6.5.
+
+## Auditoría numérica 6.5
+
+[Inventario, cuentas independientes, dominio y evidencia](NUMERICAL_MODEL_AUDIT.md).
+Las ecuaciones y tolerancias anteriores se conservan. Los números booleanos,
+no finitos y fuera del dominio se rechazan; los desbordamientos derivados se
+identifican como `NUMERIC_DOMAIN_EXCEEDED` en las fachadas 3.0/5.0, nunca como
+inviabilidad física. El modo rápido suma en el orden de los eventos.
+
+El presupuesto `nutrition_kcal` limita demanda energética simulada, no cantidad
+de alimento que deba ingerirse durante el trayecto. No modela ingestión,
+absorción, nutrición diaria ni reservas fisiológicas. No es prescripción médica.
+O2 conserva su unidad ficticia; aprobar las cuentas no calibra el modelo.

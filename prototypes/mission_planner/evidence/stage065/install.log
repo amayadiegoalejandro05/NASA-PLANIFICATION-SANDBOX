@@ -1,0 +1,8 @@
+Collecting numpy==2.2.6 (from -r requirements.txt (line 2))
+  Using cached numpy-2.2.6-cp311-cp311-win_amd64.whl.metadata (60 kB)
+Using cached numpy-2.2.6-cp311-cp311-win_amd64.whl (12.9 MB)
+Installing collected packages: numpy
+Successfully installed numpy-2.2.6
+
+[notice] A new release of pip is available: 24.0 -> 26.3
+[notice] To update, run: C:\Users\laura\OneDrive\Escritorio\NASA-PLANIFICATION-SANDBOX\.venv\Scripts\python.exe -m pip install --upgrade pip

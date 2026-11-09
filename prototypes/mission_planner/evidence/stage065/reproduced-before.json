@@ -1,0 +1,16 @@
+{
+  "negative_distance": "Usage(minutes=-1.0, oxygen_u=-0.0, water_l=-0.0, battery_wh=0.0, nutrition_kcal=-0.0, distance_m=-1)",
+  "nan_rise": "Usage(minutes=1.0, oxygen_u=0.0, water_l=0.0, battery_wh=0.0, nutrition_kcal=0.0, distance_m=1)",
+  "bool_speed": "Consumption(speed_m_per_min=True, oxygen_u_per_min=0.0, water_l_per_min=0.0, battery_wh_per_min=0.0, nutrition_kcal_per_min=0.0, uphill_speed_penalty=2.0, roughness_speed_penalty=0.5, uphill_effort_penalty=2.0, climb_battery_wh_per_m=0.0, hazard_cost_weight=2.0, battery_cost_weight=0.01)",
+  "overflow_consumption": "Usage(minutes=2.0, oxygen_u=0.0, water_l=0.0, battery_wh=inf, nutrition_kcal=0.0, distance_m=2)",
+  "overflow_cost": {
+    "exception": "NoSafeRouteError",
+    "message": "No existe ruta segura con los limites configurados"
+  },
+  "overflow_scenario": {
+    "exception": "ValueError",
+    "message": "Capacidad, reserva y tasas deben ser finitas y >= 0"
+  },
+  "bool_activity": "Usage(minutes=True, oxygen_u=0.0, water_l=0.0, battery_wh=0.0, nutrition_kcal=0.0, distance_m=0.0)",
+  "nonfinite_excluded_usage": "True"
+}

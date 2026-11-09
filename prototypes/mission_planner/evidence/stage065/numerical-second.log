@@ -1,0 +1,38 @@
+test_applicability_at_events_phases_totals_json (test_stage065_numerical.BudgetAndDomain.test_applicability_at_events_phases_totals_json) ... ok
+test_core_importable_without_site_packages (test_stage065_numerical.BudgetAndDomain.test_core_importable_without_site_packages) ... ok
+test_exact_insufficient_and_tolerance (test_stage065_numerical.BudgetAndDomain.test_exact_insufficient_and_tolerance) ... ok
+test_invalid_public_numbers (test_stage065_numerical.BudgetAndDomain.test_invalid_public_numbers) ... ok
+test_overflow_facades_strict_json_and_unexpected_error (test_stage065_numerical.BudgetAndDomain.test_overflow_facades_strict_json_and_unexpected_error) ... ok
+test_overflow_usage_addition_and_geometry_are_not_infeasibility (test_stage065_numerical.BudgetAndDomain.test_overflow_usage_addition_and_geometry_are_not_infeasibility) ... ok
+test_zero_capacity_equal_reserve_and_below (test_stage065_numerical.BudgetAndDomain.test_zero_capacity_equal_reserve_and_below) ... ok
+test_fast_overflow_is_construction_error_not_infeasibility (test_stage065_numerical.FastAccounting.test_fast_overflow_is_construction_error_not_infeasibility) ... ok
+test_large_finite_activity_same_chronological_sum (test_stage065_numerical.FastAccounting.test_large_finite_activity_same_chronological_sum) ... ERROR
+test_preparation_complete_candidate_preserves_rates_and_scenario (test_stage065_numerical.FastAccounting.test_preparation_complete_candidate_preserves_rates_and_scenario) ... ok
+test_flat_ascent_descent_rough_diagonal (test_stage065_numerical.IndependentAccounts.test_flat_ascent_descent_rough_diagonal) ... ok
+test_geometry_units_and_weighted_cost (test_stage065_numerical.IndependentAccounts.test_geometry_units_and_weighted_cost) ... ok
+test_roundtrip_completed_initial_goal_and_direct_returns (test_stage065_numerical.IndependentAccounts.test_roundtrip_completed_initial_goal_and_direct_returns) ... ok
+test_scenario_scales_rates_only (test_stage065_numerical.IndependentAccounts.test_scenario_scales_rates_only) ... ok
+test_shared_accounting_same_sloped_path_v3_v5 (test_stage065_numerical.IndependentAccounts.test_shared_accounting_same_sloped_path_v3_v5) ... ok
+test_stationary_and_distinct_activity_rates (test_stage065_numerical.IndependentAccounts.test_stationary_and_distinct_activity_rates) ... ok
+
+======================================================================
+ERROR: test_large_finite_activity_same_chronological_sum (test_stage065_numerical.FastAccounting.test_large_finite_activity_same_chronological_sum)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\laura\OneDrive\Escritorio\NASA-PLANIFICATION-SANDBOX\prototypes\mission_planner\test_stage065_numerical.py", line 276, in test_large_finite_activity_same_chronological_sum
+    result = fast_calculate(self.bridge(q),{'obstacles':[]})
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\laura\OneDrive\Escritorio\NASA-PLANIFICATION-SANDBOX\prototypes\mission_planner\fast_mission.py", line 17, in fast_calculate
+    return _fast_calculate(bridge,config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\laura\OneDrive\Escritorio\NASA-PLANIFICATION-SANDBOX\prototypes\mission_planner\fast_mission.py", line 46, in _fast_calculate
+    candidate=_breakdown(proxy,planner,plan,include_activity=pending)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\laura\OneDrive\Escritorio\NASA-PLANIFICATION-SANDBOX\prototypes\mission_planner\mission_api.py", line 257, in _breakdown
+    raise RuntimeError("Desglose y total del motor no coinciden")
+RuntimeError: Desglose y total del motor no coinciden
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.865s
+
+FAILED (errors=1)

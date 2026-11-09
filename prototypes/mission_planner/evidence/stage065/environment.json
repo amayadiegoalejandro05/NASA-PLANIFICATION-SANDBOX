@@ -1,0 +1,6 @@
+{
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "executable": "C:\\Users\\laura\\OneDrive\\Escritorio\\NASA-PLANIFICATION-SANDBOX\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "dependencies": "[{\"name\": \"numpy\", \"version\": \"2.2.6\"}, {\"name\": \"pip\", \"version\": \"24.0\"}, {\"name\": \"setuptools\", \"version\": \"65.5.0\"}]\n"
+}

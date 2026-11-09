@@ -9,9 +9,17 @@ from mission_decisions import effective_future_profile
 from mission_api import _breakdown,_profile_data
 from mission_ui import strict,UIInputError
 from jezero_map import en_to_planet
+from numeric_domain import finite_result, NumericDomainError
 
 
 def fast_calculate(bridge,config):
+    try:
+        return _fast_calculate(bridge,config)
+    except NumericDomainError as error:
+        raise UIInputError(str(error)) from error
+
+
+def _fast_calculate(bridge,config):
     try:q=bridge.build(config);q.validate()
     except (ValueError,TypeError,KeyError) as e:raise UIInputError(str(e)) from e
     s=q.state
@@ -30,10 +38,15 @@ def fast_calculate(bridge,config):
             out=planner.nav.plan(s.current,s.goal,max_expansions=5000)
             back=planner.nav.plan(s.goal,s.original_base,max_expansions=5000)
             path=tuple(out.cells)+tuple(back.cells[1:]);goal_index=len(out.cells)-1;total=Usage()
-            for x,y in zip(path,path[1:]):total=total+planner.movement_usage(x,y,planner.nav._edge(x,y)[1])
             pending=s.activity_status=='pending'
-            if pending:total=total+planner.activity_consumption.stationary(s.pending_activity_min)
-            plan=MissionPlan(path,goal_index,total,out.total_cost+back.total_cost,0)
+            # Match the engine/event chronological sum, including science at start.
+            if pending and goal_index==0:
+                total=total+planner.activity_consumption.stationary(s.pending_activity_min)
+            for i,(x,y) in enumerate(zip(path,path[1:]),start=1):
+                total=total+planner.movement_usage(x,y,planner.nav._edge(x,y)[1])
+                if pending and i==goal_index:
+                    total=total+planner.activity_consumption.stationary(s.pending_activity_min)
+            plan=MissionPlan(path,goal_index,total,finite_result(out.total_cost+back.total_cost, 'roundtrip_cost'),0)
             proxy=SimpleNamespace(profile=profile,activity_min=s.pending_activity_min,goal=s.goal,base=s.original_base,frame=q.frame)
             candidate=_breakdown(proxy,planner,plan,include_activity=pending)
             candidate['cost_objective']='Geometric terrain-weighted A* cost, not multiresource cost'
@@ -41,7 +54,7 @@ def fast_calculate(bridge,config):
             a.update(status='SUCCESS' if fits else 'INFEASIBLE',reason_code='FAST_ROUTE_FITS' if fits else 'FAST_ROUTE_NEEDS_RESOURCES',
                      message='Recorrido comprobado con ida, actividad, regreso y reservas.' if fits else 'Encontré un recorrido transitable. Faltan recursos para completarlo con las reservas.')
             a['mission_conditions']=dict(kind='MEASURED_CANDIDATE',message='Recursos del recorrido completo encontrado, incluyendo pendientes, desvíos y reservas.',
-                resources=[dict(resource=k,unit=v['unit'],required_initial=v['consumed']+v['reserve'],current_initial=v['capacity'],satisfied=v['margin_above_reserve']>=-1e-9)
+                resources=[dict(resource=k,unit=v['unit'],required_initial=finite_result(v['consumed']+v['reserve'], 'required_initial'),current_initial=v['capacity'],satisfied=v['margin_above_reserve']>=-1e-9)
                            for k,v in candidate['total']['resources'].items() if v['status']=='modeled'])
             if fits:a['plan']=candidate
             else:a['ui_diagnostic']=dict(kind='CANDIDATE_BUDGET',summary=a['message'],next_step='Pulsa «Preparar recursos para este recorrido». Se conserva el terreno y se verifica otra vez; estos recursos pertenecen a un recorrido completo, no a una línea recta.')

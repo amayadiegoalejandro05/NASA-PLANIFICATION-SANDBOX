@@ -10,7 +10,7 @@ Bootstrap preserva, documenta y ejecuta; no implementa estas mejoras.
 | 4 | Completada: CTX local | Datos y marcos comprobados |
 | 5 | Completada experimental: decisiones 5.0 | Continuar/regresar y pruebas pequeñas |
 | 6 | Funcional; ampliación histórica incompleta | Acordar alcance regional vs todo cráter, color y curvas; última vista estrecha pendiente |
-| 6.5 | Rigor numérico | Auditoría de unidades y cuentas independientes; demanda separada de alimentación; procedencia por perfil; sin falsa calibración |
+| 6.5 | Completada localmente: rigor numérico | [Auditoría](NUMERICAL_MODEL_AUDIT.md): cuentas independientes, dominio finito, reservas y contabilidad; sin calibración física |
 | 6.6 | Algoritmos | Semántica de candidato rápido corregida/versionada; comparación A*/Dijkstra; alternativas, restricciones e incertidumbre comprobadas |
 | 6.7 | Interfaz | Desglose, perfil de elevación, alertas, estados y alternativas entendibles; validación de navegador real |
 | 6.8 | Integración | Contratos públicos estables, ejemplos ejecutados y guía para otros equipos; no confundir puente local con API pública |
@@ -19,4 +19,7 @@ Bootstrap preserva, documenta y ejecuta; no implementa estas mejoras.
 
 Dependencias: baseline reproducible antes de 6.5; reglas semánticas antes de exponer resultados en 6.8; medir antes de optimizar; ROS después de consolidación. No prometer cubrir todo Jezero ampliando solamente el mapa. Autoría/licencia de originales debe aclararse antes de distribución pública.
 
-Primera intervención 6.5: tabla verificable de unidades/tasas por fase y recurso con fixtures aritméticos independientes (plano, ascenso, actividad, saldos/reservas), contrastada contra funciones existentes, sin ajustar coeficientes a un resultado deseado. Evaluar desbordamientos y tolerancias; cambios solo cuando un fallo concreto esté reproducido.
+6.5 se registra en [su cierre](continuidad/ETAPA_06_5_CIERRE.md). La siguiente
+intervención propuesta, solo con autorización posterior, es 6.6: reproducir un
+rechazo del candidato rápido frente a otras alternativas y definir/versionar
+su semántica antes de modificar algoritmos o estados. No se inició aquí.

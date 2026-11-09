@@ -1,0 +1,5 @@
+PASS: production preparation button uses unrounded complete candidate, increases only deficits, preserves rates/reserves/scenario/points, records adjustments, reruns once and rejects stale results.
+PASS: regional controls, original/current balances, recommendation, coincidence, rover not applicable, stale result, in-flight edit, duplicate suppression and removed destination. Browser verification is recorded separately.
+
+PASS: real payload presentation (phases, resources, rover, limit, invalid, completed); stale results; duplicate suppression; edits during calculation; HTTP error handling.
+DOM double only: no browser, screenshots, downloads or layout verified.

@@ -12,6 +12,7 @@ from enum import Enum
 import hashlib
 import json
 import math
+from numeric_domain import finite_number, finite_result, NumericDomainError
 
 from mars_route_planner import Cell, TerrainSnapshot
 from mars_mission_resources import (
@@ -31,10 +32,7 @@ def _text(value, name):
 
 
 def _finite(value):
-    try:
-        return type(value) in (int, float) and math.isfinite(value)
-    except OverflowError:
-        return False
+    return finite_number(value)
 
 
 def _digest(value):
@@ -218,7 +216,8 @@ def _resources(profile, usage):
         if status == "modeled":
             remaining = item.capacity - used[name]
             result[name].update(capacity=item.capacity, reserve=item.reserve,
-                                remaining=remaining, margin_above_reserve=remaining-item.reserve)
+                                remaining=finite_result(remaining, 'remaining'),
+                                margin_above_reserve=finite_result(remaining-item.reserve, 'margin'))
         elif isinstance(item, ExcludedResource):
             result[name]["reason"] = item.reason
     return result
@@ -252,7 +251,9 @@ def _breakdown(request, planner, plan, *, include_activity=True, return_only=Fal
         if include_activity and i == plan.goal_index:
             append("activity", "science", b, b,
                    planner.activity_consumption.stationary(request.activity_min))
-    if any(abs(a-b) > TOLERANCE for a, b in zip(cumulative.values(), plan.total.values())):
+    finite_result(plan.cost, 'plan_cost')
+    if any(not _finite(a) or not _finite(b) or abs(a-b) > TOLERANCE
+           for a, b in zip(cumulative.values(), plan.total.values())):
         raise RuntimeError("Desglose y total del motor no coinciden")
     return dict(path=[list(cell) for cell in plan.path],
                 goal_cell=None if return_only else list(request.goal),
@@ -299,22 +300,26 @@ def plan_mission(request: MissionRequest) -> MissionResult:
         request.validate()
     except RequestValidationError as error:
         return result(MissionStatus.INVALID_INPUT, "REQUEST_VALIDATION_FAILED", str(error))
-    planner = ResourceMissionPlanner.from_profile(terrain.snapshot, profile)
-    if not planner.nav.traversable(request.base) or not planner.nav.traversable(request.goal):
-        return result(MissionStatus.INFEASIBLE, "ENDPOINT_NOT_TRAVERSABLE",
-                      "Base u objetivo dentro del mapa pero no transitable bajo la geometria y movilidad configuradas.")
     try:
-        plan = planner.plan(request.start, request.goal, request.activity_min, request.max_labels)
-    except SearchLimitReachedError as error:
-        return result(MissionStatus.SEARCH_LIMIT_REACHED, "LABEL_LIMIT_REACHED",
-                      "Busqueda interrumpida por limite de etiquetas; factibilidad desconocida.",
-                      dict(generated_labels=error.generated_labels, max_labels=error.limit,
-                           meaning="Etiquetas generadas, no expansiones"))
-    except NoFeasibleMissionError:
-        return result(MissionStatus.INFEASIBLE, "SEARCH_EXHAUSTED",
-                      "Busqueda agotada sin mision admisible con ida, ciencia, regreso y reservas; no se identifica una causa unica.")
-    return result(MissionStatus.SUCCESS, "MISSION_FOUND",
-                  "Mision admisible bajo el perfil y snapshot indicados: ida, ciencia y regreso; restricciones de movilidad y presupuestos con reservas verificados (tolerancia 1e-9). El costo combina tiempo ponderado por peligro y bateria; no certifica la ruta mas segura ni optimalidad operacional global.",
-                  dict(generated_labels=plan.explored_labels,
-                       meaning="explored_labels del motor cuenta etiquetas generadas, no expansiones"),
-                  _breakdown(request, planner, plan))
+        planner = ResourceMissionPlanner.from_profile(terrain.snapshot, profile)
+        if not planner.nav.traversable(request.base) or not planner.nav.traversable(request.goal):
+            return result(MissionStatus.INFEASIBLE, "ENDPOINT_NOT_TRAVERSABLE",
+                          "Base u objetivo dentro del mapa pero no transitable bajo la geometria y movilidad configuradas.")
+        try:
+            plan = planner.plan(request.start, request.goal, request.activity_min, request.max_labels)
+        except SearchLimitReachedError as error:
+            return result(MissionStatus.SEARCH_LIMIT_REACHED, "LABEL_LIMIT_REACHED",
+                          "Busqueda interrumpida por limite de etiquetas; factibilidad desconocida.",
+                          dict(generated_labels=error.generated_labels, max_labels=error.limit,
+                               meaning="Etiquetas generadas, no expansiones"))
+        except NoFeasibleMissionError:
+            return result(MissionStatus.INFEASIBLE, "SEARCH_EXHAUSTED",
+                          "Busqueda agotada sin mision admisible con ida, ciencia, regreso y reservas; no se identifica una causa unica.")
+        return result(MissionStatus.SUCCESS, "MISSION_FOUND",
+                      "Mision admisible bajo el perfil y snapshot indicados: ida, ciencia y regreso; restricciones de movilidad y presupuestos con reservas verificados (tolerancia 1e-9). El costo combina tiempo ponderado por peligro y bateria; no certifica la ruta mas segura ni optimalidad operacional global.",
+                      dict(generated_labels=plan.explored_labels,
+                           meaning="explored_labels del motor cuenta etiquetas generadas, no expansiones"),
+                      _breakdown(request, planner, plan))
+
+    except NumericDomainError as error:
+        return result(MissionStatus.INVALID_INPUT, "NUMERIC_DOMAIN_EXCEEDED", str(error))

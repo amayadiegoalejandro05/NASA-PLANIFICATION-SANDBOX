@@ -7,6 +7,7 @@ from dataclasses import asdict, dataclass, replace
 import json
 from types import MappingProxyType, SimpleNamespace
 from typing import Mapping
+from numeric_domain import finite_result, NumericDomainError
 
 from mars_mission_resources import (
     AgentProfile, ResourceAllocation, ResourceMissionPlanner,
@@ -226,7 +227,7 @@ def policy_profile(profile, policy):
     if policy == "minimum_time":
         motion = replace(motion, hazard_cost_weight=0., battery_cost_weight=0.)
     elif policy == "terrain_caution":
-        motion = replace(motion, hazard_cost_weight=max(4., 2*motion.hazard_cost_weight))
+        motion = replace(motion, hazard_cost_weight=finite_result(max(4., 2*motion.hazard_cost_weight), 'policy_weight'))
     return replace(profile, motion=motion)
 
 
@@ -256,7 +257,8 @@ def effective_future_profile(request, policy="balanced"):
     for k in modeled_keys(p):
         item,factor=resources[k],request.scenario.factors[k]
         resources[k]=replace(item,capacity=request.state.remaining[k],reserve=request.state.reserves[k],
-                             movement_rate=item.movement_rate*factor,activity_rate=item.activity_rate*factor)
+                             movement_rate=finite_result(item.movement_rate*factor, 'scenario_movement_rate'),
+                             activity_rate=finite_result(item.activity_rate*factor, 'scenario_activity_rate'))
     return replace(p,resources=resources)
 
 
@@ -288,40 +290,45 @@ def plan_future(request: DecisionRequest, mode="continue", policy="balanced") ->
         return result(S.INVALID_INPUT, "REQUEST_VALIDATION_FAILED", str(error))
     data["request"] = request.to_dict()
     s = request.state
-    p = policy_profile(request.profile, policy)
-    data["policy_weights"] = dict(mobility=asdict(p.mobility), motion=asdict(p.motion))
-    # Validate position even if balance is already below reserve; do not relocate.
-    nav = ResourceMissionPlanner.from_profile(request.terrain.snapshot, p).nav
-    for name, cell in (("CURRENT", s.current), ("BASE", s.original_base), ("GOAL", s.goal)):
-        if name == "GOAL" and mode == "return":
-            continue
-        if request.terrain.snapshot.heights_m[cell[0]][cell[1]] is None:
-            return result(S.INFEASIBLE, name+"_UNKNOWN", "Celda desconocida; no se desplaza el agente.")
-        if not nav.traversable(cell):
-            return result(S.INFEASIBLE, name+"_NOT_TRAVERSABLE", "Celda no transitable con snapshot, huella y movilidad declarados.")
-    if any(s.remaining[k] < s.reserves[k] for k in modeled_keys(p)):
-        return result(S.INFEASIBLE, "BALANCE_BELOW_RESERVE", "Saldo menor que reserva absoluta; no se reduce la reserva.")
-    effective = effective_future_profile(request,policy)
-    data["effective_profile"] = _profile_data(effective)
-    planner = ResourceMissionPlanner.from_profile(request.terrain.snapshot, effective)
-    return_only = mode == "return"
     try:
-        plan = planner.plan(s.current, s.goal, s.pending_activity_min, request.max_labels,
-                            base=s.original_base, return_only=return_only,
-                            activity_completed=s.activity_status == "completed")
-    except SearchLimitReachedError as error:
-        data["search_metrics"]["generated_labels"] = error.generated_labels
-        return result(S.SEARCH_LIMIT_REACHED, "LABEL_LIMIT_REACHED", "Calculo interrumpido; factibilidad desconocida.")
-    except NoFeasibleMissionError:
-        return result(S.INFEASIBLE, "SEARCH_EXHAUSTED", "Busqueda agotada sin plan con saldo, restricciones y reservas declaradas.")
-    proxy = SimpleNamespace(profile=effective, activity_min=s.pending_activity_min,
-                            goal=s.goal, base=s.original_base, frame=request.frame)
-    data["plan"] = _breakdown(proxy, planner, plan,
-                              include_activity=not return_only and s.activity_status == "pending",
-                              return_only=return_only)
-    data["plan"]["budget_semantics"] = "capacity en eventos/total = saldo al solicitar; historico informativo no descontado"
-    data["search_metrics"]["generated_labels"] = plan.explored_labels
-    return result(S.SUCCESS, "FUTURE_PLAN_FOUND", "Plan futuro admisible en este modelo experimental; sin garantia EVA o evacuacion.")
+        p = policy_profile(request.profile, policy)
+        data["policy_weights"] = dict(mobility=asdict(p.mobility), motion=asdict(p.motion))
+        # Validate position even if balance is already below reserve; do not relocate.
+        nav = ResourceMissionPlanner.from_profile(request.terrain.snapshot, p).nav
+        for name, cell in (("CURRENT", s.current), ("BASE", s.original_base), ("GOAL", s.goal)):
+            if name == "GOAL" and mode == "return":
+                continue
+            if request.terrain.snapshot.heights_m[cell[0]][cell[1]] is None:
+                return result(S.INFEASIBLE, name+"_UNKNOWN", "Celda desconocida; no se desplaza el agente.")
+            if not nav.traversable(cell):
+                return result(S.INFEASIBLE, name+"_NOT_TRAVERSABLE", "Celda no transitable con snapshot, huella y movilidad declarados.")
+        if any(s.remaining[k] < s.reserves[k] for k in modeled_keys(p)):
+            return result(S.INFEASIBLE, "BALANCE_BELOW_RESERVE", "Saldo menor que reserva absoluta; no se reduce la reserva.")
+        effective = effective_future_profile(request,policy)
+        data["effective_profile"] = _profile_data(effective)
+        planner = ResourceMissionPlanner.from_profile(request.terrain.snapshot, effective)
+        return_only = mode == "return"
+        try:
+            plan = planner.plan(s.current, s.goal, s.pending_activity_min, request.max_labels,
+                                base=s.original_base, return_only=return_only,
+                                activity_completed=s.activity_status == "completed")
+        except SearchLimitReachedError as error:
+            data["search_metrics"]["generated_labels"] = error.generated_labels
+            return result(S.SEARCH_LIMIT_REACHED, "LABEL_LIMIT_REACHED", "Calculo interrumpido; factibilidad desconocida.")
+        except NoFeasibleMissionError:
+            return result(S.INFEASIBLE, "SEARCH_EXHAUSTED", "Busqueda agotada sin plan con saldo, restricciones y reservas declaradas.")
+        proxy = SimpleNamespace(profile=effective, activity_min=s.pending_activity_min,
+                                goal=s.goal, base=s.original_base, frame=request.frame)
+        data["plan"] = _breakdown(proxy, planner, plan,
+                                  include_activity=not return_only and s.activity_status == "pending",
+                                  return_only=return_only)
+        data["plan"]["budget_semantics"] = "capacity en eventos/total = saldo al solicitar; historico informativo no descontado"
+        data["search_metrics"]["generated_labels"] = plan.explored_labels
+        return result(S.SUCCESS, "FUTURE_PLAN_FOUND", "Plan futuro admisible en este modelo experimental; sin garantia EVA o evacuacion.")
+
+    except NumericDomainError as error:
+        data["plan"] = None
+        return result(S.INVALID_INPUT, "NUMERIC_DOMAIN_EXCEEDED", str(error))
 
 
 COMPARISON_RULE = ("Entre SUCCESS calculados: menor tiempo total, luego menor bateria total, "

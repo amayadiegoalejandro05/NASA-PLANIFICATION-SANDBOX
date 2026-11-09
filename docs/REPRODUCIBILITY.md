@@ -93,3 +93,25 @@ Se conserva biblioteca estándar y pathlib, pero no se declara validación Linux
 - Rápido rechaza recursos: se rechazó un candidato, no todas las rutas; ver 6.6.
 
 La herramienta de migración raíz es un registro one-shot para el layout original; no es instalador. Para verificar que el origen y copia inicial siguen intactos usar `examples/verify_migration.py` solo donde exista la carpeta original. Sus hashes no se deben actualizar para encubrir cambios posteriores legítimos: preservar manifiesto baseline y registrar diffs nuevos.
+
+## Verificación posterior: auditoría 6.5
+
+El 2026-11-08 el `.venv` de este checkout no tenía NumPy: referencia inicial
+64 tests, 5 errores y 6 skips. Se instaló el requirements fijado en ese mismo
+entorno (sin copiar otro), y antes de cambiar motor pasaron 101/101 sin skips.
+Después de las correcciones numéricas: **117/117 sin skips**; selección CORE
+con `-S`: **71/71 sin skips**. Dos suites JS heredadas y una de preparación PASS.
+No se cambió la UI ni se declara otra inspección visual.
+
+Los comandos completos, dominio soportado y logs nuevos se enlazan en
+[NUMERICAL_MODEL_AUDIT](NUMERICAL_MODEL_AUDIT.md). Para ejecutar JS preservando
+los logs históricos:
+
+```powershell
+& .\.venv\Scripts\python.exe prototypes/mission_planner/evidence/stage065/generate_evidence.py
+node prototypes/mission_planner/evidence/stage065/run_frontends.cjs
+```
+
+El generador usa solo CTX local, guarda evidencia de preparación y revalidación
+en stage065; no descarga ni modifica el DEM. Esa carpeta diferencia referencia,
+reproducciones fallidas y verificaciones finales.

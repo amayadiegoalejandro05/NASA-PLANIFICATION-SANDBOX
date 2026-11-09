@@ -1,0 +1,1 @@
+PASS: production preparation button uses unrounded complete candidate, increases only deficits, preserves rates/reserves/scenario/points, records adjustments, reruns once and rejects stale results.

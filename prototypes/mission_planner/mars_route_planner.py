@@ -12,6 +12,7 @@ from dataclasses import dataclass
 import heapq
 import math
 from typing import Optional
+from numeric_domain import require_number, finite_result
 
 Cell = tuple[int, int]  # (fila, columna)
 
@@ -33,8 +34,9 @@ class Terrain:
         if not self.heights_m or not self.heights_m[0]:
             raise ValueError("El terreno no puede estar vacio")
         rows, cols = len(self.heights_m), len(self.heights_m[0])
-        if not math.isfinite(self.resolution_m) or self.resolution_m <= 0:
-            raise ValueError("resolution_m debe ser positivo")
+        require_number(self.resolution_m, 'resolution_m', positive=True)
+        finite_result(rows * self.resolution_m, 'terrain_height_m')
+        finite_result(cols * self.resolution_m, 'terrain_width_m')
         for name, arr in (("heights_m", self.heights_m),
                           ("obstacles", self.obstacles),
                           ("risk", self.risk),
@@ -44,11 +46,12 @@ class Terrain:
         for r in range(rows):
             for c in range(cols):
                 h = self.heights_m[r][c]
-                if h is not None and not math.isfinite(h):
-                    raise ValueError("Altura no finita; use None para desconocido")
+                if h is not None:
+                    require_number(h, 'height_m')
                 for name, arr in (("risk", self.risk), ("roughness", self.roughness)):
                     value = arr[r][c]
-                    if not math.isfinite(value) or not (0 <= value <= 1):
+                    require_number(value, name, minimum=0)
+                    if value > 1:
                         raise ValueError(f"{name} debe estar entre 0 y 1")
 
     @property
@@ -95,13 +98,15 @@ class PlannerConfig:
     proximity_weight: float = 0.8
 
     def __post_init__(self) -> None:
+        require_number(self.max_slope_deg, 'max_slope_deg', positive=True)
         if not (0 < self.max_slope_deg < 90):
             raise ValueError("max_slope_deg debe estar en (0,90)")
         other = (self.rover_radius_m, self.safety_margin_m,
                  self.near_obstacle_m, self.slope_weight, self.risk_weight,
                  self.roughness_weight, self.proximity_weight)
-        if any(not math.isfinite(x) or x < 0 for x in other):
-            raise ValueError("Radios y pesos deben ser no negativos y finitos")
+        for x in other:
+            require_number(x, 'radius/weight', minimum=0)
+        finite_result(self.rover_radius_m + self.safety_margin_m, 'footprint_m')
 
 
 @dataclass
@@ -150,13 +155,14 @@ class RiskAwareAStar:
         def grad(dr: int, dc: int) -> float:
             before, after = self._height(r - dr, c - dc), self._height(r + dr, c + dc)
             if before is not None and after is not None:
-                return (after - before) / (2 * res)
+                return finite_result(finite_result(after - before, 'height_delta') /
+                                     finite_result(2 * res, 'gradient_span'), 'gradient')
             if after is not None:
-                return (after - h) / res
+                return finite_result(finite_result(after - h, 'height_delta') / res, 'gradient')
             if before is not None:
-                return (h - before) / res
+                return finite_result(finite_result(h - before, 'height_delta') / res, 'gradient')
             return 0.0
-        return math.degrees(math.atan(math.hypot(grad(0, 1), grad(1, 0))))
+        return math.degrees(math.atan(finite_result(math.hypot(grad(0, 1), grad(1, 0)), 'gradient_norm')))
 
     def _clearance(self, r: int, c: int) -> float:
         res = self.t.resolution_m
@@ -188,7 +194,7 @@ class RiskAwareAStar:
         Minkowski sum. Closed intersection, including tangency, is rejected.
         The map is convex: endpoint clearance guarantees boundary containment.
         """
-        radius = (self.cfg.rover_radius_m + self.cfg.safety_margin_m) / self.t.resolution_m
+        radius = finite_result((self.cfg.rover_radius_m + self.cfg.safety_margin_m) / self.t.resolution_m, 'footprint_cells')
         for r, c in self._obstacles:
             lo, hi = 0.0, 1.0
             for start, end, center in zip(a, b, (r, c)):
@@ -219,10 +225,10 @@ class RiskAwareAStar:
                 return None
         if not self._swept_clear(a, b):
             return None
-        distance = math.hypot(dr, dc) * self.t.resolution_m
+        distance = finite_result(math.hypot(dr, dc) * self.t.resolution_m, 'edge_distance')
         za, zb = self.t.heights_m[ar][ac], self.t.heights_m[br][bc]
         assert za is not None and zb is not None
-        edge_slope = math.degrees(math.atan(abs(zb - za) / distance))
+        edge_slope = math.degrees(math.atan(finite_result(abs(finite_result(zb - za, 'height_delta')) / distance, 'edge_grade')))
         slope = max(edge_slope, self._slopes[ar][ac], self._slopes[br][bc])
         if slope > self.cfg.max_slope_deg:
             return None
@@ -235,7 +241,7 @@ class RiskAwareAStar:
                       + self.cfg.risk_weight * risk
                       + self.cfg.roughness_weight * rough
                       + self.cfg.proximity_weight * near)
-        return distance * multiplier, distance, slope
+        return finite_result(distance * multiplier, 'edge_cost'), distance, slope
 
     def plan(self, start: Cell, goal: Cell, *, max_expansions=None) -> Route:
         if max_expansions is not None and (type(max_expansions) is not int or max_expansions<=0):
@@ -245,7 +251,7 @@ class RiskAwareAStar:
         if not self.traversable(goal):
             raise NoSafeRouteError("La meta esta bloqueada o fuera de limites")
         def heuristic(p: Cell) -> float:
-            return math.hypot(p[0] - goal[0], p[1] - goal[1]) * self.t.resolution_m
+            return finite_result(math.hypot(p[0] - goal[0], p[1] - goal[1]) * self.t.resolution_m, 'heuristic')
         g_score: dict[Cell, float] = {start: 0.0}
         came_from: dict[Cell, Cell] = {}
         queue = [(heuristic(start), 0.0, start)]
@@ -264,7 +270,7 @@ class RiskAwareAStar:
                     result = self._edge(a, b)
                     assert result is not None
                     _, dist, slope = result
-                    total_distance += dist
+                    total_distance = finite_result(total_distance + dist, 'route_distance')
                     max_slope = max(max_slope, slope)
                 res = self.t.resolution_m
                 waypoints = [((c + 0.5) * res, (r + 0.5) * res)
@@ -279,11 +285,11 @@ class RiskAwareAStar:
                 edge = self._edge(here, nb)
                 if edge is None:
                     continue
-                new_g = best_g + edge[0]
+                new_g = finite_result(best_g + edge[0], 'route_cost')
                 if new_g + 1e-10 < g_score.get(nb, math.inf):
                     came_from[nb] = here
                     g_score[nb] = new_g
-                    heapq.heappush(queue, (new_g + heuristic(nb), new_g, nb))
+                    heapq.heappush(queue, (finite_result(new_g + heuristic(nb), 'astar_priority'), new_g, nb))
         raise NoSafeRouteError("No existe ruta segura con los limites configurados")
 
 

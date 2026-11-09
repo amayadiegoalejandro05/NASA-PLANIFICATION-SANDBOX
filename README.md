@@ -48,3 +48,7 @@ Guías: [arquitectura](docs/ARCHITECTURE.md), [integración](docs/INTEGRATION_GU
 La licencia raíz preexistente no prueba la autoría ni relicencia automáticamente los originales importados; su situación se conserva documentada en [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Leaflet mantiene BSD-2-Clause. Los productos USGS concretos se identifican en DATA_SOURCES. No se incorporan el ZIP, entornos, `.git` del origen, credenciales o paquetes científicos globales.
 
 Los resultados de la migración están en [MIGRATION_REPORT.md](docs/MIGRATION_REPORT.md). Los cierres y logs históricos no sustituyen esas ejecuciones nuevas.
+
+## Expediente de presentación
+
+[Memoria técnica, algoritmos, evidencia y preparación Space Apps](docs/presentacion/README.md). Reglas 2026 pendientes de confirmar donde no pudieron verificarse; no constituye inscripción ni certificación EVA.
