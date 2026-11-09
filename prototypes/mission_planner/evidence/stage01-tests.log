@@ -1,0 +1,26 @@
+test_activity_cost_is_not_free (test_mars_mission_resources.TestResourceMission.test_activity_cost_is_not_free) ... ok
+test_budget_validation (test_mars_mission_resources.TestResourceMission.test_budget_validation) ... ok
+test_reject_even_if_outbound_is_feasible (test_mars_mission_resources.TestResourceMission.test_reject_even_if_outbound_is_feasible) ... ok
+test_reject_if_water_reserve_would_be_spent (test_mars_mission_resources.TestResourceMission.test_reject_if_water_reserve_would_be_spent) ... ok
+test_respects_blocked_cells_and_returns (test_mars_mission_resources.TestResourceMission.test_respects_blocked_cells_and_returns) ... ok
+test_roundtrip_activities_and_reserves (test_mars_mission_resources.TestResourceMission.test_roundtrip_activities_and_reserves) ... ok
+test_rover_has_no_human_consumables (test_mars_mission_resources.TestResourceMission.test_rover_has_no_human_consumables) ... ok
+test_uphill_is_not_free (test_mars_mission_resources.TestResourceMission.test_uphill_is_not_free) ... ok
+test_default_demo (test_mars_route_planner.TestPlanner.test_default_demo) ... ok
+test_no_route_wall (test_mars_route_planner.TestPlanner.test_no_route_wall) ... ok
+test_prefers_low_risk_detour (test_mars_route_planner.TestPlanner.test_prefers_low_risk_detour) ... ok
+test_replanning (test_mars_route_planner.TestPlanner.test_replanning) ... ok
+test_route_flat (test_mars_route_planner.TestPlanner.test_route_flat) ... ok
+test_slope_limit (test_mars_route_planner.TestPlanner.test_slope_limit) ... ok
+test_unknown_is_blocked (test_mars_route_planner.TestPlanner.test_unknown_is_blocked) ... ok
+test_area_footprint_and_boundary (test_stage01.StageOne.test_area_footprint_and_boundary) ... ok
+test_cli_interrupted (test_stage01.StageOne.test_cli_interrupted) ... ok
+test_exhaustion_is_infeasible_even_at_limit (test_stage01.StageOne.test_exhaustion_is_infeasible_even_at_limit) ... ok
+test_limit_exact_and_classification (test_stage01.StageOne.test_limit_exact_and_classification) ... ok
+test_snapshot_and_updated_requests (test_stage01.StageOne.test_snapshot_and_updated_requests) ... ok
+test_swept_diagonal_and_corners (test_stage01.StageOne.test_swept_diagonal_and_corners) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.291s
+
+OK

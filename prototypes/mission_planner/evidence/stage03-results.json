@@ -1,0 +1,1560 @@
+{
+  "astronaut_success": {
+    "schema_version": "3.0",
+    "request_id": "simulated-astronaut",
+    "status": "SUCCESS",
+    "reason_code": "MISSION_FOUND",
+    "message": "Mision admisible bajo el perfil y snapshot indicados: ida, ciencia y regreso; restricciones de movilidad y presupuestos con reservas verificados (tolerancia 1e-9). El costo combina tiempo ponderado por peligro y bateria; no certifica la ruta mas segura ni optimalidad operacional global.",
+    "terrain": {
+      "terrain_id": "simulated-corridor",
+      "revision_sha256": "806b4fd5cd71437eaf6c0ab3fa3ddfea9188280224ce9b9a714c189636214df4",
+      "hash_format": "terrain-snapshot-v1",
+      "rows": 1,
+      "columns": 3,
+      "resolution_m": 1.0
+    },
+    "profile": {
+      "agent_type": "astronaut",
+      "profile_id": "sim-astronaut-small",
+      "version": "2.0",
+      "parameter_nature": "simulated",
+      "provenance": "Conjunto hipotetico configurable para pruebas aritmeticas",
+      "limitations": "Sin calibracion fisiologica/mecanica; no certifica EVA",
+      "mobility": {
+        "agent_radius_m": 0,
+        "safety_margin_m": 0,
+        "max_slope_deg": 18.0,
+        "near_obstacle_m": 0,
+        "slope_weight": 3.0,
+        "risk_weight": 2.0,
+        "roughness_weight": 1.5,
+        "proximity_weight": 0
+      },
+      "motion": {
+        "speed_m_per_min": 1,
+        "uphill_speed_penalty": 2.0,
+        "roughness_speed_penalty": 0.5,
+        "uphill_effort_penalty": 2.0,
+        "climb_battery_wh_per_m": 0.0,
+        "hazard_cost_weight": 2.0,
+        "battery_cost_weight": 0.01
+      },
+      "resources": {
+        "time": {
+          "status": "modeled",
+          "unit": "min",
+          "capacity": 8,
+          "reserve": 1,
+          "movement_rate": 1,
+          "activity_rate": 1
+        },
+        "battery": {
+          "status": "modeled",
+          "unit": "Wh",
+          "capacity": 19,
+          "reserve": 1,
+          "movement_rate": 2,
+          "activity_rate": 5
+        },
+        "oxygen": {
+          "status": "modeled",
+          "unit": "simulated_u",
+          "capacity": 11,
+          "reserve": 1,
+          "movement_rate": 1,
+          "activity_rate": 3
+        },
+        "water": {
+          "status": "modeled",
+          "unit": "L",
+          "capacity": 2,
+          "reserve": 0.2,
+          "movement_rate": 0.1,
+          "activity_rate": 0.4
+        },
+        "nutrition": {
+          "status": "modeled",
+          "unit": "kcal",
+          "capacity": 29,
+          "reserve": 1,
+          "movement_rate": 4,
+          "activity_rate": 6
+        }
+      },
+      "revision_sha256": "f030cc369c80a0978f614ff3a5c7f1f348812d3a7d3789c87e2847a6d5ea179a"
+    },
+    "frame": {
+      "frame_id": "LOCAL_GRID_SIMULATED",
+      "resolution_m": 1.0,
+      "origin_xy_m": [
+        0.0,
+        0.0
+      ],
+      "coordinate_unit": "m",
+      "height_unit": "m",
+      "time_unit": "min",
+      "cell_order": "row,column",
+      "x_axis": "increasing_column",
+      "y_axis": "increasing_row",
+      "origin_location": "outer_corner_row0_col0"
+    },
+    "assumptions": [
+      "Modelo determinista local; geometria conservadora y snapshot inmutable.",
+      "Consumos parametrizados; sin certificacion fisica/EVA.",
+      "Sin calibracion fisiologica/mecanica; no certifica EVA"
+    ],
+    "exclusions": {},
+    "search_metrics": {
+      "generated_labels": 5,
+      "meaning": "explored_labels del motor cuenta etiquetas generadas, no expansiones"
+    },
+    "plan": {
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "goal_cell": [
+        0,
+        2
+      ],
+      "goal_index": 2,
+      "base_cell": [
+        0,
+        0
+      ],
+      "waypoints_xy_m": [
+        [
+          0.5,
+          0.5
+        ],
+        [
+          1.5,
+          0.5
+        ],
+        [
+          2.5,
+          0.5
+        ],
+        [
+          1.5,
+          0.5
+        ],
+        [
+          0.5,
+          0.5
+        ]
+      ],
+      "events": [
+        {
+          "index": 0,
+          "phase": "outbound",
+          "kind": "movement",
+          "start_cell": [
+            0,
+            0
+          ],
+          "end_cell": [
+            0,
+            1
+          ],
+          "duration_min": 1.0,
+          "distance_m": 1.0,
+          "incremental": {
+            "time": 1.0,
+            "battery": 2.0,
+            "oxygen": 1.0,
+            "water": 0.1,
+            "nutrition": 4.0
+          },
+          "cumulative": {
+            "time": 1.0,
+            "battery": 2.0,
+            "oxygen": 1.0,
+            "water": 0.1,
+            "nutrition": 4.0
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 1.0,
+              "capacity": 8,
+              "reserve": 1,
+              "remaining": 7.0,
+              "margin_above_reserve": 6.0
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 2.0,
+              "capacity": 19,
+              "reserve": 1,
+              "remaining": 17.0,
+              "margin_above_reserve": 16.0
+            },
+            "oxygen": {
+              "status": "modeled",
+              "unit": "simulated_u",
+              "consumed": 1.0,
+              "capacity": 11,
+              "reserve": 1,
+              "remaining": 10.0,
+              "margin_above_reserve": 9.0
+            },
+            "water": {
+              "status": "modeled",
+              "unit": "L",
+              "consumed": 0.1,
+              "capacity": 2,
+              "reserve": 0.2,
+              "remaining": 1.9,
+              "margin_above_reserve": 1.7
+            },
+            "nutrition": {
+              "status": "modeled",
+              "unit": "kcal",
+              "consumed": 4.0,
+              "capacity": 29,
+              "reserve": 1,
+              "remaining": 25.0,
+              "margin_above_reserve": 24.0
+            }
+          }
+        },
+        {
+          "index": 1,
+          "phase": "outbound",
+          "kind": "movement",
+          "start_cell": [
+            0,
+            1
+          ],
+          "end_cell": [
+            0,
+            2
+          ],
+          "duration_min": 1.0,
+          "distance_m": 1.0,
+          "incremental": {
+            "time": 1.0,
+            "battery": 2.0,
+            "oxygen": 1.0,
+            "water": 0.1,
+            "nutrition": 4.0
+          },
+          "cumulative": {
+            "time": 2.0,
+            "battery": 4.0,
+            "oxygen": 2.0,
+            "water": 0.2,
+            "nutrition": 8.0
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 2.0,
+              "capacity": 8,
+              "reserve": 1,
+              "remaining": 6.0,
+              "margin_above_reserve": 5.0
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 4.0,
+              "capacity": 19,
+              "reserve": 1,
+              "remaining": 15.0,
+              "margin_above_reserve": 14.0
+            },
+            "oxygen": {
+              "status": "modeled",
+              "unit": "simulated_u",
+              "consumed": 2.0,
+              "capacity": 11,
+              "reserve": 1,
+              "remaining": 9.0,
+              "margin_above_reserve": 8.0
+            },
+            "water": {
+              "status": "modeled",
+              "unit": "L",
+              "consumed": 0.2,
+              "capacity": 2,
+              "reserve": 0.2,
+              "remaining": 1.8,
+              "margin_above_reserve": 1.6
+            },
+            "nutrition": {
+              "status": "modeled",
+              "unit": "kcal",
+              "consumed": 8.0,
+              "capacity": 29,
+              "reserve": 1,
+              "remaining": 21.0,
+              "margin_above_reserve": 20.0
+            }
+          }
+        },
+        {
+          "index": 2,
+          "phase": "activity",
+          "kind": "science",
+          "start_cell": [
+            0,
+            2
+          ],
+          "end_cell": [
+            0,
+            2
+          ],
+          "duration_min": 2.0,
+          "distance_m": 0.0,
+          "incremental": {
+            "time": 2.0,
+            "battery": 10.0,
+            "oxygen": 6.0,
+            "water": 0.8,
+            "nutrition": 12.0
+          },
+          "cumulative": {
+            "time": 4.0,
+            "battery": 14.0,
+            "oxygen": 8.0,
+            "water": 1.0,
+            "nutrition": 20.0
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 4.0,
+              "capacity": 8,
+              "reserve": 1,
+              "remaining": 4.0,
+              "margin_above_reserve": 3.0
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 14.0,
+              "capacity": 19,
+              "reserve": 1,
+              "remaining": 5.0,
+              "margin_above_reserve": 4.0
+            },
+            "oxygen": {
+              "status": "modeled",
+              "unit": "simulated_u",
+              "consumed": 8.0,
+              "capacity": 11,
+              "reserve": 1,
+              "remaining": 3.0,
+              "margin_above_reserve": 2.0
+            },
+            "water": {
+              "status": "modeled",
+              "unit": "L",
+              "consumed": 1.0,
+              "capacity": 2,
+              "reserve": 0.2,
+              "remaining": 1.0,
+              "margin_above_reserve": 0.8
+            },
+            "nutrition": {
+              "status": "modeled",
+              "unit": "kcal",
+              "consumed": 20.0,
+              "capacity": 29,
+              "reserve": 1,
+              "remaining": 9.0,
+              "margin_above_reserve": 8.0
+            }
+          }
+        },
+        {
+          "index": 3,
+          "phase": "inbound",
+          "kind": "movement",
+          "start_cell": [
+            0,
+            2
+          ],
+          "end_cell": [
+            0,
+            1
+          ],
+          "duration_min": 1.0,
+          "distance_m": 1.0,
+          "incremental": {
+            "time": 1.0,
+            "battery": 2.0,
+            "oxygen": 1.0,
+            "water": 0.1,
+            "nutrition": 4.0
+          },
+          "cumulative": {
+            "time": 5.0,
+            "battery": 16.0,
+            "oxygen": 9.0,
+            "water": 1.1,
+            "nutrition": 24.0
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 5.0,
+              "capacity": 8,
+              "reserve": 1,
+              "remaining": 3.0,
+              "margin_above_reserve": 2.0
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 16.0,
+              "capacity": 19,
+              "reserve": 1,
+              "remaining": 3.0,
+              "margin_above_reserve": 2.0
+            },
+            "oxygen": {
+              "status": "modeled",
+              "unit": "simulated_u",
+              "consumed": 9.0,
+              "capacity": 11,
+              "reserve": 1,
+              "remaining": 2.0,
+              "margin_above_reserve": 1.0
+            },
+            "water": {
+              "status": "modeled",
+              "unit": "L",
+              "consumed": 1.1,
+              "capacity": 2,
+              "reserve": 0.2,
+              "remaining": 0.8999999999999999,
+              "margin_above_reserve": 0.7
+            },
+            "nutrition": {
+              "status": "modeled",
+              "unit": "kcal",
+              "consumed": 24.0,
+              "capacity": 29,
+              "reserve": 1,
+              "remaining": 5.0,
+              "margin_above_reserve": 4.0
+            }
+          }
+        },
+        {
+          "index": 4,
+          "phase": "inbound",
+          "kind": "movement",
+          "start_cell": [
+            0,
+            1
+          ],
+          "end_cell": [
+            0,
+            0
+          ],
+          "duration_min": 1.0,
+          "distance_m": 1.0,
+          "incremental": {
+            "time": 1.0,
+            "battery": 2.0,
+            "oxygen": 1.0,
+            "water": 0.1,
+            "nutrition": 4.0
+          },
+          "cumulative": {
+            "time": 6.0,
+            "battery": 18.0,
+            "oxygen": 10.0,
+            "water": 1.2000000000000002,
+            "nutrition": 28.0
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 6.0,
+              "capacity": 8,
+              "reserve": 1,
+              "remaining": 2.0,
+              "margin_above_reserve": 1.0
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 18.0,
+              "capacity": 19,
+              "reserve": 1,
+              "remaining": 1.0,
+              "margin_above_reserve": 0.0
+            },
+            "oxygen": {
+              "status": "modeled",
+              "unit": "simulated_u",
+              "consumed": 10.0,
+              "capacity": 11,
+              "reserve": 1,
+              "remaining": 1.0,
+              "margin_above_reserve": 0.0
+            },
+            "water": {
+              "status": "modeled",
+              "unit": "L",
+              "consumed": 1.2000000000000002,
+              "capacity": 2,
+              "reserve": 0.2,
+              "remaining": 0.7999999999999998,
+              "margin_above_reserve": 0.5999999999999999
+            },
+            "nutrition": {
+              "status": "modeled",
+              "unit": "kcal",
+              "consumed": 28.0,
+              "capacity": 29,
+              "reserve": 1,
+              "remaining": 1.0,
+              "margin_above_reserve": 0.0
+            }
+          }
+        }
+      ],
+      "phases": {
+        "outbound": {
+          "duration_min": 2.0,
+          "distance_m": 2.0,
+          "consumed": {
+            "time": 2.0,
+            "battery": 4.0,
+            "oxygen": 2.0,
+            "water": 0.2,
+            "nutrition": 8.0
+          }
+        },
+        "activity": {
+          "duration_min": 2.0,
+          "distance_m": 0.0,
+          "consumed": {
+            "time": 2.0,
+            "battery": 10.0,
+            "oxygen": 6.0,
+            "water": 0.8,
+            "nutrition": 12.0
+          }
+        },
+        "inbound": {
+          "duration_min": 2.0,
+          "distance_m": 2.0,
+          "consumed": {
+            "time": 2.0,
+            "battery": 4.0,
+            "oxygen": 2.0,
+            "water": 0.2,
+            "nutrition": 8.0
+          }
+        }
+      },
+      "total": {
+        "duration_min": 6.0,
+        "distance_m": 4.0,
+        "resources": {
+          "time": {
+            "status": "modeled",
+            "unit": "min",
+            "consumed": 6.0,
+            "capacity": 8,
+            "reserve": 1,
+            "remaining": 2.0,
+            "margin_above_reserve": 1.0
+          },
+          "battery": {
+            "status": "modeled",
+            "unit": "Wh",
+            "consumed": 18.0,
+            "capacity": 19,
+            "reserve": 1,
+            "remaining": 1.0,
+            "margin_above_reserve": 0.0
+          },
+          "oxygen": {
+            "status": "modeled",
+            "unit": "simulated_u",
+            "consumed": 10.0,
+            "capacity": 11,
+            "reserve": 1,
+            "remaining": 1.0,
+            "margin_above_reserve": 0.0
+          },
+          "water": {
+            "status": "modeled",
+            "unit": "L",
+            "consumed": 1.2000000000000002,
+            "capacity": 2,
+            "reserve": 0.2,
+            "remaining": 0.7999999999999998,
+            "margin_above_reserve": 0.5999999999999999
+          },
+          "nutrition": {
+            "status": "modeled",
+            "unit": "kcal",
+            "consumed": 28.0,
+            "capacity": 29,
+            "reserve": 1,
+            "remaining": 1.0,
+            "margin_above_reserve": 0.0
+          }
+        }
+      },
+      "cost": 6.179999999999999,
+      "cost_objective": "sum(move_minutes*(1+hazard_cost_weight*max(0,edge_cost/distance-1))+activity_minutes+battery_cost_weight*(move_Wh+activity_Wh))",
+      "consistency_tolerance_absolute": 1e-09
+    }
+  },
+  "rover_success": {
+    "schema_version": "3.0",
+    "request_id": "simulated-rover",
+    "status": "SUCCESS",
+    "reason_code": "MISSION_FOUND",
+    "message": "Mision admisible bajo el perfil y snapshot indicados: ida, ciencia y regreso; restricciones de movilidad y presupuestos con reservas verificados (tolerancia 1e-9). El costo combina tiempo ponderado por peligro y bateria; no certifica la ruta mas segura ni optimalidad operacional global.",
+    "terrain": {
+      "terrain_id": "simulated-corridor",
+      "revision_sha256": "806b4fd5cd71437eaf6c0ab3fa3ddfea9188280224ce9b9a714c189636214df4",
+      "hash_format": "terrain-snapshot-v1",
+      "rows": 1,
+      "columns": 3,
+      "resolution_m": 1.0
+    },
+    "profile": {
+      "agent_type": "rover",
+      "profile_id": "sim-rover-small",
+      "version": "2.0",
+      "parameter_nature": "simulated",
+      "provenance": "Conjunto hipotetico configurable para pruebas aritmeticas",
+      "limitations": "Sin calibracion fisiologica/mecanica; no certifica EVA",
+      "mobility": {
+        "agent_radius_m": 0,
+        "safety_margin_m": 0,
+        "max_slope_deg": 18.0,
+        "near_obstacle_m": 0,
+        "slope_weight": 3.0,
+        "risk_weight": 2.0,
+        "roughness_weight": 1.5,
+        "proximity_weight": 0
+      },
+      "motion": {
+        "speed_m_per_min": 1,
+        "uphill_speed_penalty": 2.0,
+        "roughness_speed_penalty": 0.5,
+        "uphill_effort_penalty": 2.0,
+        "climb_battery_wh_per_m": 0.0,
+        "hazard_cost_weight": 2.0,
+        "battery_cost_weight": 0.01
+      },
+      "resources": {
+        "time": {
+          "status": "modeled",
+          "unit": "min",
+          "capacity": 8,
+          "reserve": 1,
+          "movement_rate": 1,
+          "activity_rate": 1
+        },
+        "battery": {
+          "status": "modeled",
+          "unit": "Wh",
+          "capacity": 19,
+          "reserve": 1,
+          "movement_rate": 2,
+          "activity_rate": 5
+        },
+        "oxygen": {
+          "status": "not_applicable",
+          "unit": "simulated_u"
+        },
+        "water": {
+          "status": "not_applicable",
+          "unit": "L"
+        },
+        "nutrition": {
+          "status": "not_applicable",
+          "unit": "kcal"
+        }
+      },
+      "revision_sha256": "aebfea3fbac31ac48816a987585d737c0da8f73b494c7f88963f3514188977c1"
+    },
+    "frame": {
+      "frame_id": "LOCAL_GRID_SIMULATED",
+      "resolution_m": 1.0,
+      "origin_xy_m": [
+        0.0,
+        0.0
+      ],
+      "coordinate_unit": "m",
+      "height_unit": "m",
+      "time_unit": "min",
+      "cell_order": "row,column",
+      "x_axis": "increasing_column",
+      "y_axis": "increasing_row",
+      "origin_location": "outer_corner_row0_col0"
+    },
+    "assumptions": [
+      "Modelo determinista local; geometria conservadora y snapshot inmutable.",
+      "Consumos parametrizados; sin certificacion fisica/EVA.",
+      "Sin calibracion fisiologica/mecanica; no certifica EVA"
+    ],
+    "exclusions": {},
+    "search_metrics": {
+      "generated_labels": 5,
+      "meaning": "explored_labels del motor cuenta etiquetas generadas, no expansiones"
+    },
+    "plan": {
+      "path": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "goal_cell": [
+        0,
+        2
+      ],
+      "goal_index": 2,
+      "base_cell": [
+        0,
+        0
+      ],
+      "waypoints_xy_m": [
+        [
+          0.5,
+          0.5
+        ],
+        [
+          1.5,
+          0.5
+        ],
+        [
+          2.5,
+          0.5
+        ],
+        [
+          1.5,
+          0.5
+        ],
+        [
+          0.5,
+          0.5
+        ]
+      ],
+      "events": [
+        {
+          "index": 0,
+          "phase": "outbound",
+          "kind": "movement",
+          "start_cell": [
+            0,
+            0
+          ],
+          "end_cell": [
+            0,
+            1
+          ],
+          "duration_min": 1.0,
+          "distance_m": 1.0,
+          "incremental": {
+            "time": 1.0,
+            "battery": 2.0,
+            "oxygen": null,
+            "water": null,
+            "nutrition": null
+          },
+          "cumulative": {
+            "time": 1.0,
+            "battery": 2.0,
+            "oxygen": null,
+            "water": null,
+            "nutrition": null
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 1.0,
+              "capacity": 8,
+              "reserve": 1,
+              "remaining": 7.0,
+              "margin_above_reserve": 6.0
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 2.0,
+              "capacity": 19,
+              "reserve": 1,
+              "remaining": 17.0,
+              "margin_above_reserve": 16.0
+            },
+            "oxygen": {
+              "status": "not_applicable",
+              "unit": "simulated_u",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            },
+            "water": {
+              "status": "not_applicable",
+              "unit": "L",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            },
+            "nutrition": {
+              "status": "not_applicable",
+              "unit": "kcal",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            }
+          }
+        },
+        {
+          "index": 1,
+          "phase": "outbound",
+          "kind": "movement",
+          "start_cell": [
+            0,
+            1
+          ],
+          "end_cell": [
+            0,
+            2
+          ],
+          "duration_min": 1.0,
+          "distance_m": 1.0,
+          "incremental": {
+            "time": 1.0,
+            "battery": 2.0,
+            "oxygen": null,
+            "water": null,
+            "nutrition": null
+          },
+          "cumulative": {
+            "time": 2.0,
+            "battery": 4.0,
+            "oxygen": null,
+            "water": null,
+            "nutrition": null
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 2.0,
+              "capacity": 8,
+              "reserve": 1,
+              "remaining": 6.0,
+              "margin_above_reserve": 5.0
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 4.0,
+              "capacity": 19,
+              "reserve": 1,
+              "remaining": 15.0,
+              "margin_above_reserve": 14.0
+            },
+            "oxygen": {
+              "status": "not_applicable",
+              "unit": "simulated_u",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            },
+            "water": {
+              "status": "not_applicable",
+              "unit": "L",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            },
+            "nutrition": {
+              "status": "not_applicable",
+              "unit": "kcal",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            }
+          }
+        },
+        {
+          "index": 2,
+          "phase": "activity",
+          "kind": "science",
+          "start_cell": [
+            0,
+            2
+          ],
+          "end_cell": [
+            0,
+            2
+          ],
+          "duration_min": 2.0,
+          "distance_m": 0.0,
+          "incremental": {
+            "time": 2.0,
+            "battery": 10.0,
+            "oxygen": null,
+            "water": null,
+            "nutrition": null
+          },
+          "cumulative": {
+            "time": 4.0,
+            "battery": 14.0,
+            "oxygen": null,
+            "water": null,
+            "nutrition": null
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 4.0,
+              "capacity": 8,
+              "reserve": 1,
+              "remaining": 4.0,
+              "margin_above_reserve": 3.0
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 14.0,
+              "capacity": 19,
+              "reserve": 1,
+              "remaining": 5.0,
+              "margin_above_reserve": 4.0
+            },
+            "oxygen": {
+              "status": "not_applicable",
+              "unit": "simulated_u",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            },
+            "water": {
+              "status": "not_applicable",
+              "unit": "L",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            },
+            "nutrition": {
+              "status": "not_applicable",
+              "unit": "kcal",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            }
+          }
+        },
+        {
+          "index": 3,
+          "phase": "inbound",
+          "kind": "movement",
+          "start_cell": [
+            0,
+            2
+          ],
+          "end_cell": [
+            0,
+            1
+          ],
+          "duration_min": 1.0,
+          "distance_m": 1.0,
+          "incremental": {
+            "time": 1.0,
+            "battery": 2.0,
+            "oxygen": null,
+            "water": null,
+            "nutrition": null
+          },
+          "cumulative": {
+            "time": 5.0,
+            "battery": 16.0,
+            "oxygen": null,
+            "water": null,
+            "nutrition": null
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 5.0,
+              "capacity": 8,
+              "reserve": 1,
+              "remaining": 3.0,
+              "margin_above_reserve": 2.0
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 16.0,
+              "capacity": 19,
+              "reserve": 1,
+              "remaining": 3.0,
+              "margin_above_reserve": 2.0
+            },
+            "oxygen": {
+              "status": "not_applicable",
+              "unit": "simulated_u",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            },
+            "water": {
+              "status": "not_applicable",
+              "unit": "L",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            },
+            "nutrition": {
+              "status": "not_applicable",
+              "unit": "kcal",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            }
+          }
+        },
+        {
+          "index": 4,
+          "phase": "inbound",
+          "kind": "movement",
+          "start_cell": [
+            0,
+            1
+          ],
+          "end_cell": [
+            0,
+            0
+          ],
+          "duration_min": 1.0,
+          "distance_m": 1.0,
+          "incremental": {
+            "time": 1.0,
+            "battery": 2.0,
+            "oxygen": null,
+            "water": null,
+            "nutrition": null
+          },
+          "cumulative": {
+            "time": 6.0,
+            "battery": 18.0,
+            "oxygen": null,
+            "water": null,
+            "nutrition": null
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 6.0,
+              "capacity": 8,
+              "reserve": 1,
+              "remaining": 2.0,
+              "margin_above_reserve": 1.0
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 18.0,
+              "capacity": 19,
+              "reserve": 1,
+              "remaining": 1.0,
+              "margin_above_reserve": 0.0
+            },
+            "oxygen": {
+              "status": "not_applicable",
+              "unit": "simulated_u",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            },
+            "water": {
+              "status": "not_applicable",
+              "unit": "L",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            },
+            "nutrition": {
+              "status": "not_applicable",
+              "unit": "kcal",
+              "consumed": null,
+              "capacity": null,
+              "reserve": null,
+              "remaining": null,
+              "margin_above_reserve": null
+            }
+          }
+        }
+      ],
+      "phases": {
+        "outbound": {
+          "duration_min": 2.0,
+          "distance_m": 2.0,
+          "consumed": {
+            "time": 2.0,
+            "battery": 4.0,
+            "oxygen": null,
+            "water": null,
+            "nutrition": null
+          }
+        },
+        "activity": {
+          "duration_min": 2.0,
+          "distance_m": 0.0,
+          "consumed": {
+            "time": 2.0,
+            "battery": 10.0,
+            "oxygen": null,
+            "water": null,
+            "nutrition": null
+          }
+        },
+        "inbound": {
+          "duration_min": 2.0,
+          "distance_m": 2.0,
+          "consumed": {
+            "time": 2.0,
+            "battery": 4.0,
+            "oxygen": null,
+            "water": null,
+            "nutrition": null
+          }
+        }
+      },
+      "total": {
+        "duration_min": 6.0,
+        "distance_m": 4.0,
+        "resources": {
+          "time": {
+            "status": "modeled",
+            "unit": "min",
+            "consumed": 6.0,
+            "capacity": 8,
+            "reserve": 1,
+            "remaining": 2.0,
+            "margin_above_reserve": 1.0
+          },
+          "battery": {
+            "status": "modeled",
+            "unit": "Wh",
+            "consumed": 18.0,
+            "capacity": 19,
+            "reserve": 1,
+            "remaining": 1.0,
+            "margin_above_reserve": 0.0
+          },
+          "oxygen": {
+            "status": "not_applicable",
+            "unit": "simulated_u",
+            "consumed": null,
+            "capacity": null,
+            "reserve": null,
+            "remaining": null,
+            "margin_above_reserve": null
+          },
+          "water": {
+            "status": "not_applicable",
+            "unit": "L",
+            "consumed": null,
+            "capacity": null,
+            "reserve": null,
+            "remaining": null,
+            "margin_above_reserve": null
+          },
+          "nutrition": {
+            "status": "not_applicable",
+            "unit": "kcal",
+            "consumed": null,
+            "capacity": null,
+            "reserve": null,
+            "remaining": null,
+            "margin_above_reserve": null
+          }
+        }
+      },
+      "cost": 6.179999999999999,
+      "cost_objective": "sum(move_minutes*(1+hazard_cost_weight*max(0,edge_cost/distance-1))+activity_minutes+battery_cost_weight*(move_Wh+activity_Wh))",
+      "consistency_tolerance_absolute": 1e-09
+    }
+  },
+  "insufficient_budget": {
+    "schema_version": "3.0",
+    "request_id": "simulated-insufficient-budget",
+    "status": "INFEASIBLE",
+    "reason_code": "SEARCH_EXHAUSTED",
+    "message": "Busqueda agotada sin mision admisible con ida, ciencia, regreso y reservas; no se identifica una causa unica.",
+    "terrain": {
+      "terrain_id": "simulated-corridor",
+      "revision_sha256": "806b4fd5cd71437eaf6c0ab3fa3ddfea9188280224ce9b9a714c189636214df4",
+      "hash_format": "terrain-snapshot-v1",
+      "rows": 1,
+      "columns": 3,
+      "resolution_m": 1.0
+    },
+    "profile": {
+      "agent_type": "rover",
+      "profile_id": "sim-rover-small",
+      "version": "2.0",
+      "parameter_nature": "simulated",
+      "provenance": "Conjunto hipotetico configurable para pruebas aritmeticas",
+      "limitations": "Sin calibracion fisiologica/mecanica; no certifica EVA",
+      "mobility": {
+        "agent_radius_m": 0,
+        "safety_margin_m": 0,
+        "max_slope_deg": 18.0,
+        "near_obstacle_m": 0,
+        "slope_weight": 3.0,
+        "risk_weight": 2.0,
+        "roughness_weight": 1.5,
+        "proximity_weight": 0
+      },
+      "motion": {
+        "speed_m_per_min": 1,
+        "uphill_speed_penalty": 2.0,
+        "roughness_speed_penalty": 0.5,
+        "uphill_effort_penalty": 2.0,
+        "climb_battery_wh_per_m": 0.0,
+        "hazard_cost_weight": 2.0,
+        "battery_cost_weight": 0.01
+      },
+      "resources": {
+        "time": {
+          "status": "modeled",
+          "unit": "min",
+          "capacity": 8,
+          "reserve": 1,
+          "movement_rate": 1,
+          "activity_rate": 1
+        },
+        "battery": {
+          "status": "modeled",
+          "unit": "Wh",
+          "capacity": 10,
+          "reserve": 1,
+          "movement_rate": 2,
+          "activity_rate": 5
+        },
+        "oxygen": {
+          "status": "not_applicable",
+          "unit": "simulated_u"
+        },
+        "water": {
+          "status": "not_applicable",
+          "unit": "L"
+        },
+        "nutrition": {
+          "status": "not_applicable",
+          "unit": "kcal"
+        }
+      },
+      "revision_sha256": "bb001d8900b0cc647c4ed0c654e64eaec1f6922e5e5c8d8da2777e758955b038"
+    },
+    "frame": {
+      "frame_id": "LOCAL_GRID_SIMULATED",
+      "resolution_m": 1.0,
+      "origin_xy_m": [
+        0.0,
+        0.0
+      ],
+      "coordinate_unit": "m",
+      "height_unit": "m",
+      "time_unit": "min",
+      "cell_order": "row,column",
+      "x_axis": "increasing_column",
+      "y_axis": "increasing_row",
+      "origin_location": "outer_corner_row0_col0"
+    },
+    "assumptions": [
+      "Modelo determinista local; geometria conservadora y snapshot inmutable.",
+      "Consumos parametrizados; sin certificacion fisica/EVA.",
+      "Sin calibracion fisiologica/mecanica; no certifica EVA"
+    ],
+    "exclusions": {},
+    "search_metrics": {
+      "generated_labels": null,
+      "meaning": "Etiquetas generadas, no expansiones"
+    },
+    "plan": null
+  },
+  "label_limit": {
+    "schema_version": "3.0",
+    "request_id": "simulated-label-limit",
+    "status": "SEARCH_LIMIT_REACHED",
+    "reason_code": "LABEL_LIMIT_REACHED",
+    "message": "Busqueda interrumpida por limite de etiquetas; factibilidad desconocida.",
+    "terrain": {
+      "terrain_id": "simulated-corridor",
+      "revision_sha256": "806b4fd5cd71437eaf6c0ab3fa3ddfea9188280224ce9b9a714c189636214df4",
+      "hash_format": "terrain-snapshot-v1",
+      "rows": 1,
+      "columns": 3,
+      "resolution_m": 1.0
+    },
+    "profile": {
+      "agent_type": "rover",
+      "profile_id": "sim-rover-small",
+      "version": "2.0",
+      "parameter_nature": "simulated",
+      "provenance": "Conjunto hipotetico configurable para pruebas aritmeticas",
+      "limitations": "Sin calibracion fisiologica/mecanica; no certifica EVA",
+      "mobility": {
+        "agent_radius_m": 0,
+        "safety_margin_m": 0,
+        "max_slope_deg": 18.0,
+        "near_obstacle_m": 0,
+        "slope_weight": 3.0,
+        "risk_weight": 2.0,
+        "roughness_weight": 1.5,
+        "proximity_weight": 0
+      },
+      "motion": {
+        "speed_m_per_min": 1,
+        "uphill_speed_penalty": 2.0,
+        "roughness_speed_penalty": 0.5,
+        "uphill_effort_penalty": 2.0,
+        "climb_battery_wh_per_m": 0.0,
+        "hazard_cost_weight": 2.0,
+        "battery_cost_weight": 0.01
+      },
+      "resources": {
+        "time": {
+          "status": "modeled",
+          "unit": "min",
+          "capacity": 8,
+          "reserve": 1,
+          "movement_rate": 1,
+          "activity_rate": 1
+        },
+        "battery": {
+          "status": "modeled",
+          "unit": "Wh",
+          "capacity": 19,
+          "reserve": 1,
+          "movement_rate": 2,
+          "activity_rate": 5
+        },
+        "oxygen": {
+          "status": "not_applicable",
+          "unit": "simulated_u"
+        },
+        "water": {
+          "status": "not_applicable",
+          "unit": "L"
+        },
+        "nutrition": {
+          "status": "not_applicable",
+          "unit": "kcal"
+        }
+      },
+      "revision_sha256": "aebfea3fbac31ac48816a987585d737c0da8f73b494c7f88963f3514188977c1"
+    },
+    "frame": {
+      "frame_id": "LOCAL_GRID_SIMULATED",
+      "resolution_m": 1.0,
+      "origin_xy_m": [
+        0.0,
+        0.0
+      ],
+      "coordinate_unit": "m",
+      "height_unit": "m",
+      "time_unit": "min",
+      "cell_order": "row,column",
+      "x_axis": "increasing_column",
+      "y_axis": "increasing_row",
+      "origin_location": "outer_corner_row0_col0"
+    },
+    "assumptions": [
+      "Modelo determinista local; geometria conservadora y snapshot inmutable.",
+      "Consumos parametrizados; sin certificacion fisica/EVA.",
+      "Sin calibracion fisiologica/mecanica; no certifica EVA"
+    ],
+    "exclusions": {},
+    "search_metrics": {
+      "generated_labels": 1,
+      "max_labels": 1,
+      "meaning": "Etiquetas generadas, no expansiones"
+    },
+    "plan": null
+  },
+  "invalid_request": {
+    "schema_version": "3.0",
+    "request_id": "simulated-invalid",
+    "status": "INVALID_INPUT",
+    "reason_code": "REQUEST_VALIDATION_FAILED",
+    "message": "goal: coordenadas fuera del mapa",
+    "terrain": {
+      "terrain_id": "simulated-corridor",
+      "revision_sha256": "806b4fd5cd71437eaf6c0ab3fa3ddfea9188280224ce9b9a714c189636214df4",
+      "hash_format": "terrain-snapshot-v1",
+      "rows": 1,
+      "columns": 3,
+      "resolution_m": 1.0
+    },
+    "profile": {
+      "agent_type": "rover",
+      "profile_id": "sim-rover-small",
+      "version": "2.0",
+      "parameter_nature": "simulated",
+      "provenance": "Conjunto hipotetico configurable para pruebas aritmeticas",
+      "limitations": "Sin calibracion fisiologica/mecanica; no certifica EVA",
+      "mobility": {
+        "agent_radius_m": 0,
+        "safety_margin_m": 0,
+        "max_slope_deg": 18.0,
+        "near_obstacle_m": 0,
+        "slope_weight": 3.0,
+        "risk_weight": 2.0,
+        "roughness_weight": 1.5,
+        "proximity_weight": 0
+      },
+      "motion": {
+        "speed_m_per_min": 1,
+        "uphill_speed_penalty": 2.0,
+        "roughness_speed_penalty": 0.5,
+        "uphill_effort_penalty": 2.0,
+        "climb_battery_wh_per_m": 0.0,
+        "hazard_cost_weight": 2.0,
+        "battery_cost_weight": 0.01
+      },
+      "resources": {
+        "time": {
+          "status": "modeled",
+          "unit": "min",
+          "capacity": 8,
+          "reserve": 1,
+          "movement_rate": 1,
+          "activity_rate": 1
+        },
+        "battery": {
+          "status": "modeled",
+          "unit": "Wh",
+          "capacity": 19,
+          "reserve": 1,
+          "movement_rate": 2,
+          "activity_rate": 5
+        },
+        "oxygen": {
+          "status": "not_applicable",
+          "unit": "simulated_u"
+        },
+        "water": {
+          "status": "not_applicable",
+          "unit": "L"
+        },
+        "nutrition": {
+          "status": "not_applicable",
+          "unit": "kcal"
+        }
+      },
+      "revision_sha256": "aebfea3fbac31ac48816a987585d737c0da8f73b494c7f88963f3514188977c1"
+    },
+    "frame": {
+      "frame_id": "LOCAL_GRID_SIMULATED",
+      "resolution_m": 1.0,
+      "origin_xy_m": [
+        0.0,
+        0.0
+      ],
+      "coordinate_unit": "m",
+      "height_unit": "m",
+      "time_unit": "min",
+      "cell_order": "row,column",
+      "x_axis": "increasing_column",
+      "y_axis": "increasing_row",
+      "origin_location": "outer_corner_row0_col0"
+    },
+    "assumptions": [
+      "Modelo determinista local; geometria conservadora y snapshot inmutable.",
+      "Consumos parametrizados; sin certificacion fisica/EVA.",
+      "Sin calibracion fisiologica/mecanica; no certifica EVA"
+    ],
+    "exclusions": {},
+    "search_metrics": {
+      "generated_labels": null,
+      "meaning": "Etiquetas generadas, no expansiones"
+    },
+    "plan": null
+  }
+}

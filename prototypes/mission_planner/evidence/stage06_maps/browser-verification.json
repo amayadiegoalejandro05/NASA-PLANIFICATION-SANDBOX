@@ -1,0 +1,41 @@
+{
+  "verified_date_local": "2026-11-05",
+  "timezone": "America/Bogota",
+  "browser": "Codex in-app browser via CUA",
+  "desktop": [
+    1440,
+    1000
+  ],
+  "narrow": [
+    390,
+    844
+  ],
+  "actual_interactions": [
+    "orbital CTX and context MOLA/HRSC loaded",
+    "pan and zoom",
+    "click selected base and destination",
+    "astronaut SUCCESS",
+    "rover SUCCESS and human resources not applicable",
+    "changed destination in narrow view: 96.569 m new computed route",
+    "elevation and local relief switches",
+    "alternative inspection",
+    "intermediate current position and CONTINUE",
+    "completed activity with no science event in actual download",
+    "three JSON downloads copied and parsed",
+    "insufficient balance",
+    "label-limit interruption",
+    "negative activity returns HTTP 400 after entrypoint fix",
+    "outside calculation coverage rejected",
+    "simulated obstacle then INFEASIBLE then restored SUCCESS",
+    "previous result label on changed input",
+    "local-only: remote tiles count zero, local PNG loaded, SUCCESS"
+  ],
+  "network_physical_disconnect_tested": false,
+  "local_only_behavior_tested": true,
+  "console_errors_final": [],
+  "python_tests": 89,
+  "skips": 0,
+  "prior_core_sha256_unchanged": true,
+  "source_ctx_sha256": "18d20b39a680d93addc3c3151bb3f19a5f41fc8f9a170396d4094694bbd76d6b",
+  "previous_closure_sha256": "37722b8c8338332bc71a981d8f3c4298b47d94d67ae1f9b3116a6625249769f9"
+}

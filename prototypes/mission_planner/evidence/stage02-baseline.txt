@@ -1,0 +1,1 @@
+Referencia inicial ejecutada antes de editar: Python 3.11.9, unittest discovery -s prototypes/mission_planner -v. 21 pruebas, 0.305 s, OK. Rama etapa01-base-confiable; HEAD 0d5a444f5444b4dfa574224c9f7d09652dad1df5. Git status: ?? docs/continuidad/ y ?? prototypes/. Sin fallos previos.

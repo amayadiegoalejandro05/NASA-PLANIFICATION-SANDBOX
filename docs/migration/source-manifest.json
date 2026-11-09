@@ -1,0 +1,941 @@
+{
+  "source": "NASA-Sandbox-etapa01 local working tree; includes uncommitted stage 1-6 work",
+  "source_base_commit": "0d5a444f5444b4dfa574224c9f7d09652dad1df5",
+  "sandbox_base_commit": "471019a5377f2803612fcbac3ba5774310ec9d08",
+  "exclusions": [
+    "*.pyc",
+    "*.pyo",
+    ".git",
+    ".pytest_cache",
+    ".venv*",
+    "__pycache__",
+    "node_modules"
+  ],
+  "files": [
+    {
+      "path": "prototypes/mission_planner/demo_stage03.py",
+      "bytes": 2813,
+      "sha256": "3e044f7f7cabba8c15497bb7c937786133c2fc9697d85fb9699b29252bb8d1fb"
+    },
+    {
+      "path": "prototypes/mission_planner/demo_stage04.py",
+      "bytes": 8962,
+      "sha256": "6534474c807ce0d97b718e98dff5b7c860f2a76eee32f217cfd58c1c11c5e2fb"
+    },
+    {
+      "path": "prototypes/mission_planner/demo_stage05.py",
+      "bytes": 8403,
+      "sha256": "9cbbdc95d1cf711b5fd3e807b4f975574ea7ebc248c8879a3f346dd945e81b2d"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/baseline-tests.log",
+      "bytes": 1724,
+      "sha256": "27a60956e617ae1645bbdb7fb993c5bd436e441c54c9d6bcd0ecaf565163c71c"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/demo-resources.log",
+      "bytes": 635,
+      "sha256": "3fa188cf814672d44c18de378d1c1967198b3331ff1ae7260c2bd495b58a46b2"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/demo-route.log",
+      "bytes": 1421,
+      "sha256": "248a9e810b8ff42f81174a5e174f4ebd155da04d0b884471b103fc2570c63e66"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/source-sha256.json",
+      "bytes": 417,
+      "sha256": "44c084b4fa6caf461620a36c4028abfc291567e4021c8f287bb314f273921a27"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage01-resources.log",
+      "bytes": 475,
+      "sha256": "95e915ad921282003028321d1c93aa2c874f8e53db8426ff085b2fd807be0ffb"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage01-route.log",
+      "bytes": 1433,
+      "sha256": "abd76160673a549a16047418bd80f451b8d2f747e96a27f1884650c9611055b4"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage01-tests.log",
+      "bytes": 2318,
+      "sha256": "b2e0cbed4679e2cfb456ad3ea2e694a6c17942975ef80a2ad4c33b7ded4b705a"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage02-baseline.txt",
+      "bytes": 287,
+      "sha256": "d7d5d37ac4f01409443353435be411c63ac0a6534a68790dcdc7c924c794ff86"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage02-resources.log",
+      "bytes": 1108,
+      "sha256": "bf74a4bab78b6dec3965989947fdb58581671e2c7cd0ccf9b6545b0dce8f2966"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage02-route.log",
+      "bytes": 1433,
+      "sha256": "abd76160673a549a16047418bd80f451b8d2f747e96a27f1884650c9611055b4"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage02-tests.log",
+      "bytes": 3032,
+      "sha256": "c05691ed4ea14cce66841930a66c3ea610fd34562126de1b0964d9b3a16c00e9"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage03-baseline.txt",
+      "bytes": 591,
+      "sha256": "2e29cd41bb62c9b1e69008f01de92b38a07d41fb84dbd65e8adda2dab8a80069"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage03-demo.log",
+      "bytes": 1887,
+      "sha256": "278fd0dac3c739c5775b2f71e471086b73c6df551850f64d4d857b0d28e15471"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage03-results.json",
+      "bytes": 44099,
+      "sha256": "b303ac4746bbc5bfe9c5745b03d3cc4a65ac818e980be59fe3aa38d889b1614e"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage03-tests.log",
+      "bytes": 3976,
+      "sha256": "78e3eabae68b2b5a17c7bdad63b9e35ee475936481f614805fc43b51e5b5494b"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04/astronaut_success-waypoints.csv",
+      "bytes": 381,
+      "sha256": "8a836fc47a1a8a08745f6ba7e7cda3eb6bd2547f5626121f2bd4ed1af26f8908"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04/astronaut_success.json",
+      "bytes": 31774,
+      "sha256": "c04c908215edc8764866502ec211d360445b6ba34a28514a5712ee835cc67575"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04/insufficient_budget.json",
+      "bytes": 13062,
+      "sha256": "a88d9384e14bbc1b24867eea61ebab5e32845f33ffc98d0cf9715ec0d1b82795"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04/invalid_request.json",
+      "bytes": 12967,
+      "sha256": "75ee45d9733cde57877f0187f4b03b78dd723887acf7a26e9c1d9e0960b6cb83"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04/label_limit.json",
+      "bytes": 13034,
+      "sha256": "1aff12306736c56235730d551b93553ea91d47903497ac4a21062e9d40bd53f2"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04/rover_success-waypoints.csv",
+      "bytes": 381,
+      "sha256": "8a836fc47a1a8a08745f6ba7e7cda3eb6bd2547f5626121f2bd4ed1af26f8908"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04/rover_success.json",
+      "bytes": 29961,
+      "sha256": "cb1d37fb4bb9cf45539eabcba189db516d9f5877d00ec2758f9d9920827afe02"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04/summary.txt",
+      "bytes": 3260,
+      "sha256": "b375bd5936fe80c3a4b6fbdd62aef63f1b7e95169d905f44e24668ccaa4335f7"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04/vista-rover.png",
+      "bytes": 34905,
+      "sha256": "48691710e031e8cabe458a1d88397676ab62ba77d6fa0aaaf400c6b2f8a7c4cf"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04-baseline-tests.log",
+      "bytes": 3976,
+      "sha256": "64c5fa9387fc0e0febfa2bb0c6f65301dfb113153b2d5cc7c776c393e93efab9"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04-baseline.json",
+      "bytes": 6628,
+      "sha256": "d31b610efd883a030b592436df73c183c867829176bcacacb1aa562b0b5955db"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04-core-without-numpy.log",
+      "bytes": 5765,
+      "sha256": "c06bac4d703880976601a9b35953026997f715ac22be6396150e9aabdd347b00"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04-demo.log",
+      "bytes": 3262,
+      "sha256": "0fc0f50baa4acb57377bb371060a7cba370a0e640b0b5761e99236d4797b6f34"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04-tests.log",
+      "bytes": 6157,
+      "sha256": "1ae3cd84c483a0ffeed8a81f9a2ef38343a25b18f7415f219512ef6bfa1afc05"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage04-verification.json",
+      "bytes": 684,
+      "sha256": "5b7d8daaedb076ff67dc981a0f8bbebbebfc3c910958f9f95172d48272cf840b"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage05/baseline-tests.log",
+      "bytes": 6157,
+      "sha256": "63805ed65fe09e4d9d859a0bfdab2c1795cbbcf580cc22d58666905fd61644c8"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage05/baseline.json",
+      "bytes": 959,
+      "sha256": "5631fe8a6137847e2f12f15206b704a1c4ad3ac8db0df3b08ad773d960789666"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage05/core-tests.log",
+      "bytes": 2006,
+      "sha256": "6dffa6013f8e60ea77d8477c3b084d7d5b14894fc079534923eb8a8f42377228"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage05/evaluation.json",
+      "bytes": 1380928,
+      "sha256": "9782a04b9a6f21e8d0eb31c15e318cd3069ef88b8578e63e89cf9869c4d0092e"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage05/inherited-sha256.json",
+      "bytes": 7411,
+      "sha256": "6d0198786f6100ae24d19bfdfeb7479fcc79a4af77de6b8f5ed66b4779e2e002"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage05/summary.txt",
+      "bytes": 1903,
+      "sha256": "f5857851b690f81c2bd709a702ce0c0e43116b50da1e7265f90b6dc213e4a091"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage05/tests.log",
+      "bytes": 8381,
+      "sha256": "dda7420637341e91c92e8d857625e1736652c9d3b7b671bc34a65d65aa866048"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage05/verification.json",
+      "bytes": 873,
+      "sha256": "6c7db001c8c5afbad0d333e553cd09622b96b1a21674583edde2d8a27a94ed48"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06/browser-blocker.md",
+      "bytes": 1716,
+      "sha256": "2c0dc3490ca6350ea834e2a221431dbdceccf133d41c17a1a50c4955ef0ea9b2"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06/catalog.json",
+      "bytes": 24840,
+      "sha256": "ca61e082ceaa06e0e37700395a3434f04982f9176ffdeb38c29a36d87a4a4563"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06/frontend-unit.log",
+      "bytes": 244,
+      "sha256": "61a4f963ef6034503023e66872ae6edcc7d7f1edeafdaf7111830b37324235cc"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06/functional-summary.txt",
+      "bytes": 764,
+      "sha256": "b2b7a0d336ea45d94b31693a58ca9507285acb4d2c9c0c775f7b1af332560e65"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06/functional.json",
+      "bytes": 713260,
+      "sha256": "38596a13c3c91356c4282bc332c8a8543a747020d445c689ed86e7db8cbed826"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06/live-http.json",
+      "bytes": 128989,
+      "sha256": "b99ad75aef7cd9a4bd5f2fde218e083fd72ac633119dfae5ddef73109e1297cf"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06/preserved-core-sha256.json",
+      "bytes": 657,
+      "sha256": "eaf0c74da4aa12fab512c6653c3c24d99b311b4dd8b478d65603f13cb95a0f9a"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06/tests.log",
+      "bytes": 10919,
+      "sha256": "b5b75fd8dfcb65e51cf73d201d7b0983212f9bc110a50c510aa2c64c11e5ab8e"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_diagnostics/resource-explanation.jpg",
+      "bytes": 92603,
+      "sha256": "58a34a51ad40c15340c19414093a11d625377e1f8d3d32f224ef20ff09f15919"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_diagnostics/restored-success.jpg",
+      "bytes": 91265,
+      "sha256": "d16d5146eb1e933d0f7c15c23d44bbea2845183df681e16de4c12bb7fdfc519e"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_diagnostics/tests.log",
+      "bytes": 13240,
+      "sha256": "778a1fc759724a39c1c94080f5e7dac6f4174eb5fa044d69e9727ed7fe5241b7"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_diagnostics/three-obstacles.jpg",
+      "bytes": 92174,
+      "sha256": "1eec3d2c2bdbedc4fa102baa13958e1678cd23993c0df4c0596c92f0a3706db7"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_fast/after-adjust.jpg",
+      "bytes": 120340,
+      "sha256": "3fcc34e5547a8b89ea9a105bfd9eb5f235052b12e9b274d2a02e0d9f73b210ef"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_fast/before-adjust.jpg",
+      "bytes": 159935,
+      "sha256": "13b77694cc5bffe99b94e08b88ccff72a6963bb20e14557f3189815874bb6951"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_fast/browser-dom.txt",
+      "bytes": 5196,
+      "sha256": "5c499ef89a84c966a887662a2e597a81aec4867edacb811c9ae1083992fdfcac"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_fast/tests.log",
+      "bytes": 14507,
+      "sha256": "e4312ec37928890ddab164da671e46cfcaaf8a4d3e717670ab45617a3de0dbf1"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_impact/color-capabilities.xml",
+      "bytes": 10055,
+      "sha256": "b44140e04651c9897d03b0301cb13f5a11ca120c3cb2a744746c00ebccb7cc50"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_impact/color-sample.png",
+      "bytes": 19854,
+      "sha256": "22b9c93af1ed4371210dfd2aa1ef320c3b7f4f197c3754b4078563280a608f80"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_impact/console.jpg",
+      "bytes": 118942,
+      "sha256": "bb3afa1031241a742d9aabf880c4404fe5d5440897a777ae2fff8ad404caaf69"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_impact/source.json",
+      "bytes": 228,
+      "sha256": "294847b34aaf98c9e8d9e0314143a2ae8e1257b4613babac960efa231dbb9a6a"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/acceptance-plan.json",
+      "bytes": 1298,
+      "sha256": "362dfdd90f10d2a5c96fd35f005e1417d686f18f6d6eb58424372157b3f6e4e3"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/artifact-manifest.json",
+      "bytes": 8690,
+      "sha256": "0bfca0d5f8291a1b7867c64a9415f2c552366eef72c6d21fda12e5ae8742d4a4"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/browser-configuration.json",
+      "bytes": 68140,
+      "sha256": "f8aa755add67b6ff6828962fe48849b80d584b1d4d1727acadaae06af1ffb382"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/browser-console.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/browser-final-dom.txt",
+      "bytes": 6409,
+      "sha256": "80be9219ee0781115d29c4fe83fd73ad2b6591ec83f811ff0d192f2d243a7c2d"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/browser-result.json",
+      "bytes": 228329,
+      "sha256": "ee11466d9fa6e87e61f06062580327e2d562f50de03c6200dda1ebaab454b6df"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/browser-verification.json",
+      "bytes": 1489,
+      "sha256": "f4a3c273bde0e831b936982505463b826af217f3edc91881e34f4a81f3cab17c"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/browser-waypoints.json",
+      "bytes": 12801,
+      "sha256": "7bb3af4e9b0b2d0dc86f00aaecc82b132fb78e0a0ee51a1f8c81328a31af4d50"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/context-coverage.jpg",
+      "bytes": 182748,
+      "sha256": "2deebaa5d3a6436f45fe99d98df1f02dfd8f07b05d56c3522643aca3ed8d2a07"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/continue-return.jpg",
+      "bytes": 87825,
+      "sha256": "416a04b29728d9c20203ad8f0692b6ead8ee58dc4bb19b532591ce468e970fe8"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/frontend-unit.log",
+      "bytes": 225,
+      "sha256": "dbf12cb6a58a1b2129235fe671c4e0bfac47ce3d2b533f5b131397069032b0a9"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/insufficient.jpg",
+      "bytes": 83242,
+      "sha256": "8dc734a26600f8c47655143a6a4fca55b95d62101cfb0b36492644db4ee825fc"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/interrupted.jpg",
+      "bytes": 82909,
+      "sha256": "ba823882d00fcd98e8d1fd37969f32378f0ee6ad6f704af0393a6b3ae1ac82c6"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/invalid.jpg",
+      "bytes": 81910,
+      "sha256": "c87bfba2c8e3e9e12766591754cd2626646ccddfa34450e2376cd99aa577bed4"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0-getAbstractUrl.html",
+      "bytes": 1402,
+      "sha256": "e188839ecb66940bf94025d3ea803e1558aaa1506eb5d61c8bee7d00d9e0135f"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0-getMetadataUrl.html",
+      "bytes": 6415,
+      "sha256": "01e81c47df4e81cf8275484a5414f8317e72aa4d19d2a76b41f4baab8ff585e7"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0-sample.png",
+      "bytes": 19737,
+      "sha256": "24780cb29dbaf5d52d705be87b41d0c9b2c34146b709aea4a5baaff78c00f908"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0-service.json",
+      "bytes": 784,
+      "sha256": "e0848c9cd364615f791dcff3076c50d34a60312df23e509fc02b36490825303e"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.xml",
+      "bytes": 8810,
+      "sha256": "bb58f640da78bcc404a9109f613f2b3f0e3e683ff6625e8f48dcb23e602813b8"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/leaflet.html",
+      "bytes": 1087272,
+      "sha256": "c46a2132bcd3cd9c78e216d40b2e59e6f87620a1eaa039bceaacc1b22052417b"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/Mars_MOLA_blend200ppx_HRSC_Shade_clon0dd_200mpp_lzw-getAbstractUrl.html",
+      "bytes": 1860,
+      "sha256": "41941ab99e4eadfc982ab3ec52d5c69ae5743d52ea5c73aa18d4d45f01baef26"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/Mars_MOLA_blend200ppx_HRSC_Shade_clon0dd_200mpp_lzw-getMetadataUrl.html",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/Mars_MOLA_blend200ppx_HRSC_Shade_clon0dd_200mpp_lzw-sample.jpg",
+      "bytes": 37703,
+      "sha256": "d9d400141118d8638c79b6b7c0e49b5d8f0b952f9cc95743ff54087d919970af"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/Mars_MOLA_blend200ppx_HRSC_Shade_clon0dd_200mpp_lzw-service.json",
+      "bytes": 790,
+      "sha256": "f63a9a51d7f8d8773e8cd2e61ca91a19dbb30c4b4cc8381a7676c8edce5015b5"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/Mars_MOLA_blend200ppx_HRSC_Shade_clon0dd_200mpp_lzw.xml",
+      "bytes": 7396,
+      "sha256": "ee6b02c37e1dbd2809eff0e499c2f3827ef9532e02d35d43f1a6d991f6ce9284"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/Mars_Viking_MDIM21_ClrMosaic_global_232m-getAbstractUrl.html",
+      "bytes": 437,
+      "sha256": "6bfdd6121481bfbfcf0488db4b3255493dbba5b9eef23fdc2d2570a46e97f959"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/Mars_Viking_MDIM21_ClrMosaic_global_232m-getMetadataUrl.html",
+      "bytes": 3692,
+      "sha256": "3d92c99dd8d0bad34b2b1c72cf029619c2b808b594566d06a93f22a5e8c86d14"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/Mars_Viking_MDIM21_ClrMosaic_global_232m-sample.jpg",
+      "bytes": 60074,
+      "sha256": "f4b509c69a8a9fec9f81f8773237d59a920ac6c0816f0e050f671bd7ee23441f"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/Mars_Viking_MDIM21_ClrMosaic_global_232m-service.json",
+      "bytes": 1647,
+      "sha256": "dcc9667bfee9bcab471cb4e39ec41f617882938a5c374a96db45c2a6193d75f0"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/Mars_Viking_MDIM21_ClrMosaic_global_232m.xml",
+      "bytes": 7016,
+      "sha256": "977e2037d634f9dc70f654ce176ca7e5775e336d9d4242d323bf55f1b4be4ec6"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/narrow-final.jpg",
+      "bytes": 39655,
+      "sha256": "57b0e2ea6a9fb9c3b12765470c9b162a7b06b36629434ffa268b2f42efba8a59"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/narrow-overview.jpg",
+      "bytes": 65863,
+      "sha256": "d804ebdbf7a786685d51b3cf36cf6f20047a565e7e5c180ff26bec6af53a814d"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/narrow-results.jpg",
+      "bytes": 39886,
+      "sha256": "d08ba054b4815b7ac8a800672ffdad82ed1ace6398bed416d4dced85196fca22"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/obstacle.jpg",
+      "bytes": 117532,
+      "sha256": "8720e235729262202aeb4b9741be6607db9b3a14e7aa0ba4c1f702b50894be55"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/offline-local.jpg",
+      "bytes": 115489,
+      "sha256": "85929d00864dd5e6a9abf5511ee59a3f26429d0017df6360027a4a76b3035c99"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/offline-orbital.jpg",
+      "bytes": 88827,
+      "sha256": "b77961883ed9ffc698f7ba7561c3a8755fba91d5e7c9e6deab61d49dc2143c07"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/outside-coverage.jpg",
+      "bytes": 108035,
+      "sha256": "df100c482f5c89d71995f61753754b80524cdb51c0e834dbdbb0f49d6a3f55f5"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/overview-final.jpg",
+      "bytes": 189806,
+      "sha256": "7a965e854eaa4e723355b527cd04d00e6497576a8b3772d797e33ae9e120f904"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/overview-relief.jpg",
+      "bytes": 145636,
+      "sha256": "c52c5ada77ba101cc886ed8f10a5075108729735fe00dfd70ea569958eaa9083"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/regional-catalog.json",
+      "bytes": 140161,
+      "sha256": "b201ee1afcdc7b36a3a469c3a1da0204b78ad17b908fd7c6904dd34c30bf5b28"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/regional-evaluation.json",
+      "bytes": 742927,
+      "sha256": "a538a8ecdfe8be3ad24af1ea394d8e8fbf7aa237cd90dad7d5fa259af96ac422"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/regional-performance.csv",
+      "bytes": 379,
+      "sha256": "cb4597dd3d89a4448dc9dbbb0d39eebdaaf32fa532893e917e74de0f1b5798a4"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/regional-provenance.json",
+      "bytes": 9192,
+      "sha256": "40fc4815ed7e3e5d3c1cf6e33bc2b0de09f7c3e29b9602094a764d6f217b34e3"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/representative.jpg",
+      "bytes": 112676,
+      "sha256": "860a01f7e320dc053e6c18fdfdb491caa933ced706136025b96887b1d2c67738"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/route-elevation.jpg",
+      "bytes": 77399,
+      "sha256": "7387c450fa688a161cdd002964d50b5f5e64546e793ce7fd83cef363f249830e"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/rover.jpg",
+      "bytes": 82410,
+      "sha256": "9cf3d50271d841e61f4f2d61bb1255ae10c9f2f83c37bad8a3cec2294378f95a"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/selection.jpg",
+      "bytes": 84826,
+      "sha256": "0cda5bb62d77b137b10695309c679fbaeaf531aa4a4e46a051e246219ab25048"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/service-verification.json",
+      "bytes": 3630,
+      "sha256": "2e3a91f7ed2bbc2cb2245d3512a599370ea01aa0d031da0421a106e3f252ab6b"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/tests.log",
+      "bytes": 12536,
+      "sha256": "d97be830d76203dc7a0d4c369e27e0d304a24a0d8c9a95dd6c4d22facf4f02f6"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/trek-config.json",
+      "bytes": 1842,
+      "sha256": "70c7aed0783731789e0f3b2252398e8938e81465d0cfdb2f6e655382758ecaaf"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/trek-layers.json",
+      "bytes": 311418,
+      "sha256": "5f6d60b0c3a8afd468bbb01773d472ba77cc50b2c7022c15de470ebd315f0cda"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/trek.html",
+      "bytes": 4312,
+      "sha256": "7ff5aea6018ea8e4184e12c84ad456c05033dc01d3794b8c07eac1026aa1d190"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_maps/trekApi.js",
+      "bytes": 5952,
+      "sha256": "038b6ab9e3fc3ffded6c18e69a3fdba2b792708b5efc7a1b4b4f5500cf4a173a"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_simple/browser-dom.txt",
+      "bytes": 7792,
+      "sha256": "4f7c0b3489f03b9ae8cf7584c7664fd438f12f13252349280195952340f009d9"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_simple/conditions-detour.jpg",
+      "bytes": 94244,
+      "sha256": "816e3acd3d96a90d2a51f38fcf82676f4cfca647197228afcbfe7487e479aa25"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_simple/evaluation.json",
+      "bytes": 5982532,
+      "sha256": "04e4eebc01d8748bd009f410b6d814fa7b70f88b606edaa2dab1541d849c0627"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_simple/expanded-area.jpg",
+      "bytes": 125651,
+      "sha256": "57a54e075b53cf0b7c2c3d2e8bf9e3672762f74fcf1d2970693ac4ecdabc5fb7"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/stage06_simple/tests.log",
+      "bytes": 13870,
+      "sha256": "6fb8b09327c93dd48469d51bfb290ceae842c5a3b7b6f4404db1e8679e75093c"
+    },
+    {
+      "path": "prototypes/mission_planner/evidence/tests-baseline.log",
+      "bytes": 1724,
+      "sha256": "7e6c315dcffbeaf620260fa288cdbc9219144d68e6f0b268e436b90130c6ac0f"
+    },
+    {
+      "path": "prototypes/mission_planner/expanded_ui.py",
+      "bytes": 3407,
+      "sha256": "927db45dd19c7df8a1988fe8270b2a0f553a1c18cf28003be0b87d4039df783f"
+    },
+    {
+      "path": "prototypes/mission_planner/fast_mission.py",
+      "bytes": 5924,
+      "sha256": "279a083fd9dbacdf3962998668420fb4a2c5a44d49cd50f5d4dac4b6123f6942"
+    },
+    {
+      "path": "prototypes/mission_planner/jezero_adapter.py",
+      "bytes": 17949,
+      "sha256": "21f3ccccbd59d9d446aa1c8b043583db6d95f0cbf47e2f64070018d584a4f697"
+    },
+    {
+      "path": "prototypes/mission_planner/jezero_map.py",
+      "bytes": 5012,
+      "sha256": "f491445bd47ac89c6cbe4a8b0946bb69f52c2e2dc3f549bc8442cb0d812e1dda"
+    },
+    {
+      "path": "prototypes/mission_planner/mars_mission_resources.py",
+      "bytes": 23931,
+      "sha256": "5d9752951f0a9ae825417488391261fead17cdef3e398b13141181b0c3eefc2f"
+    },
+    {
+      "path": "prototypes/mission_planner/mars_route_planner.py",
+      "bytes": 14359,
+      "sha256": "096d9d72ca8421a545c15fe03e8f4cf0152e5fba30257fd563a2ec45e67a12ed"
+    },
+    {
+      "path": "prototypes/mission_planner/mission_api.py",
+      "bytes": 15551,
+      "sha256": "c99a4244b101eeaa836e883b2e0a45b185337844e6e44535196ba5633dc8ac6b"
+    },
+    {
+      "path": "prototypes/mission_planner/mission_decisions.py",
+      "bytes": 18786,
+      "sha256": "6b86da23823e4f41a68b865ffa0043e3e46ef42e172920c573165eb2e722f7a6"
+    },
+    {
+      "path": "prototypes/mission_planner/mission_explanations.py",
+      "bytes": 4755,
+      "sha256": "dd7461d0b7723dc27c164f712c99f9b87190b05297235f883b072ca53b05ddef"
+    },
+    {
+      "path": "prototypes/mission_planner/mission_ui.py",
+      "bytes": 15791,
+      "sha256": "ae6bbf7ec7ae78393647898941e7e4601682a54f5f123aec9a6aaf031bba1ccf"
+    },
+    {
+      "path": "prototypes/mission_planner/originals/mars_mission_resources (1).py",
+      "bytes": 13466,
+      "sha256": "3537b307deed09b3f85609fb0177edc7531d80c57e9044e813d9e1674379e0f2"
+    },
+    {
+      "path": "prototypes/mission_planner/originals/mars_route_planner (1).py",
+      "bytes": 11289,
+      "sha256": "512c41630309c3294e29d79c9fdeb378bfab643c70395c2de94a13253d521ccb"
+    },
+    {
+      "path": "prototypes/mission_planner/originals/PLANIFICADOR_MARS_GODS_EYE_RECURSOS (1).md",
+      "bytes": 6164,
+      "sha256": "b95fcbc6f56e06def11824f0f041c039bd55b81ebcc7963e59dcd09ee78910a1"
+    },
+    {
+      "path": "prototypes/mission_planner/originals/Proyecto_MARS_GODS_EYE_Contexto_Maestro.md",
+      "bytes": 28241,
+      "sha256": "360d5b5e0a7a7053c2f10d1bf350690ffbca0fbc5ef8273056f304100332e508"
+    },
+    {
+      "path": "prototypes/mission_planner/originals/test_mars_mission_resources (1).py",
+      "bytes": 4543,
+      "sha256": "85556d5c14988d2636b6d3107c7126555fad60804242dffb10b2d42188a5a177"
+    },
+    {
+      "path": "prototypes/mission_planner/originals/test_mars_route_planner.py",
+      "bytes": 2631,
+      "sha256": "8798d38e2960816d20fde9edda05da1c6ddad82bfcb92023d40974100050f6e7"
+    },
+    {
+      "path": "prototypes/mission_planner/PERSONALIZACION_ETAPA05.md",
+      "bytes": 4780,
+      "sha256": "9f28001a29dcbcf1b1ea225329f3bcfcd1c08cb86963cb6df3aa1b187a68e3fc"
+    },
+    {
+      "path": "prototypes/mission_planner/prepare_ctx_2km.py",
+      "bytes": 3591,
+      "sha256": "63dd45d8ee66508769b63cb5747b9137e223e8f1a33ec8f1146e9f011d440ae9"
+    },
+    {
+      "path": "prototypes/mission_planner/README.md",
+      "bytes": 22078,
+      "sha256": "a7c704b8a35862841b5b7bf6bb825451d595685b71f8bc7aba1e55bed10e829e"
+    },
+    {
+      "path": "prototypes/mission_planner/regional_ui.py",
+      "bytes": 5427,
+      "sha256": "36cb8a4a5ee9599b8b4053227029137fb89faf2c43068f26b0f37ac60d7a170d"
+    },
+    {
+      "path": "prototypes/mission_planner/requirements-jezero.txt",
+      "bytes": 90,
+      "sha256": "4ee76226d505effaef53e71b35471d1037cb9f03969e2354a318a44b18353897"
+    },
+    {
+      "path": "prototypes/mission_planner/requirements-maps-prep.txt",
+      "bytes": 98,
+      "sha256": "058e70f59256a706867a6ad05be1e9bedd1b76dc9031ee1fc07261ba92dd4560"
+    },
+    {
+      "path": "prototypes/mission_planner/test_expanded_ui.py",
+      "bytes": 2912,
+      "sha256": "576b78edc4850b88d445f41dd50c06904241186e42a672fb1a1a55f896da6a4f"
+    },
+    {
+      "path": "prototypes/mission_planner/test_fast_mission.py",
+      "bytes": 2900,
+      "sha256": "2917d8517caed7f715156788fbe5aa140c6558ee914d3789eb905b99552d9712"
+    },
+    {
+      "path": "prototypes/mission_planner/test_jezero_adapter.py",
+      "bytes": 12218,
+      "sha256": "90f5747d43a22b2b58943abeca7dda6e24db167f9d24a98e76e6f2366bd73870"
+    },
+    {
+      "path": "prototypes/mission_planner/test_mars_mission_resources.py",
+      "bytes": 4543,
+      "sha256": "85556d5c14988d2636b6d3107c7126555fad60804242dffb10b2d42188a5a177"
+    },
+    {
+      "path": "prototypes/mission_planner/test_mars_route_planner.py",
+      "bytes": 2631,
+      "sha256": "8798d38e2960816d20fde9edda05da1c6ddad82bfcb92023d40974100050f6e7"
+    },
+    {
+      "path": "prototypes/mission_planner/test_mission_explanations.py",
+      "bytes": 3139,
+      "sha256": "c6eee95a257a140b3a6912b8e6fbb3dd7cf00b0cf97b7dfe9e3a0130bd305281"
+    },
+    {
+      "path": "prototypes/mission_planner/test_stage01.py",
+      "bytes": 5642,
+      "sha256": "15b9478a4c5f8f0f44e0c9e080555e32d4f27ada4ae6c6fe23534c0692da69ce"
+    },
+    {
+      "path": "prototypes/mission_planner/test_stage02.py",
+      "bytes": 6517,
+      "sha256": "d8a478f64c663587d62fdb30e1c928eb6095ca33768d4ae7dd6fbad5fb52d608"
+    },
+    {
+      "path": "prototypes/mission_planner/test_stage03.py",
+      "bytes": 13536,
+      "sha256": "daa880759704456322fdc7689c0de42ec3fac31625b612689df3cf4e733b5d52"
+    },
+    {
+      "path": "prototypes/mission_planner/test_stage04_integration.py",
+      "bytes": 10434,
+      "sha256": "ef37230d39e7d95b41f4f3bfb639158bd1a8cfbfd5f981c5bd5324abb089ac45"
+    },
+    {
+      "path": "prototypes/mission_planner/test_stage05.py",
+      "bytes": 20241,
+      "sha256": "559dda2fd8746327a1c5f0252d86abcb31a92cfc014ff3a50392dfdd1cc0da33"
+    },
+    {
+      "path": "prototypes/mission_planner/test_stage05_integration.py",
+      "bytes": 3881,
+      "sha256": "a1497d262bd0ee9293fd848ca716aceed24348e0f1c6ad1227b410a5e1394439"
+    },
+    {
+      "path": "prototypes/mission_planner/test_stage06.py",
+      "bytes": 10056,
+      "sha256": "adb708f809f4f929d3c8e0369c42e3bd4902cd7eb5bb78595b1063e18f455cdc"
+    },
+    {
+      "path": "prototypes/mission_planner/test_stage06_frontend.cjs",
+      "bytes": 4358,
+      "sha256": "3b8568e636d64e7964cbdbc62d55af641b54df51957d74ae66f62f2df44ae56b"
+    },
+    {
+      "path": "prototypes/mission_planner/test_stage06_map_frontend.cjs",
+      "bytes": 2641,
+      "sha256": "f71e659b37533ffacafcefaddf611fd71969d84f8ecd4e75d20980d01bca762c"
+    },
+    {
+      "path": "prototypes/mission_planner/test_stage06_maps.py",
+      "bytes": 7635,
+      "sha256": "69c920d865f1f5a013fe8af06a6ac04efca009fb67f587b9448c36d3787453da"
+    },
+    {
+      "path": "prototypes/mission_planner/verify_stage06.py",
+      "bytes": 2679,
+      "sha256": "4fd5e0d9251c777296dbd2779d5f1a99890c8b4ebb6ad4124d87e6db27ef07f4"
+    },
+    {
+      "path": "prototypes/mission_planner/web/app.js",
+      "bytes": 18343,
+      "sha256": "857773ce07436c2c768969f0521d36b4f556a6ed6be2ed58133bf8a95cc5ab66"
+    },
+    {
+      "path": "prototypes/mission_planner/web/index.html",
+      "bytes": 8299,
+      "sha256": "1bf65845065014c4c785f3a9c8faba97b3ab32fdf5aa372c849272bee9a50a32"
+    },
+    {
+      "path": "prototypes/mission_planner/web/legacy/app.js",
+      "bytes": 18343,
+      "sha256": "857773ce07436c2c768969f0521d36b4f556a6ed6be2ed58133bf8a95cc5ab66"
+    },
+    {
+      "path": "prototypes/mission_planner/web/legacy/index.html",
+      "bytes": 5332,
+      "sha256": "09384f778645ebee3eade812a753da60de58b8f9851ff7e8d83af97770baa808"
+    },
+    {
+      "path": "prototypes/mission_planner/web/legacy/style.css",
+      "bytes": 4452,
+      "sha256": "a3e323acf757ac1c4808ee3014dae62cb74fd1d211ac0e75ac6acd25da12e9a6"
+    },
+    {
+      "path": "prototypes/mission_planner/web/map-app.js",
+      "bytes": 28921,
+      "sha256": "6e27c57172f8a4ebf7bc76db5e0f047f546b2a33a650e1ad6c56feb833c67dd4"
+    },
+    {
+      "path": "prototypes/mission_planner/web/map.css",
+      "bytes": 10104,
+      "sha256": "b399a64860beddb7ef5f69819f20707b5fb04a9e6e9fc8706d688ad3845745fd"
+    },
+    {
+      "path": "prototypes/mission_planner/web/style.css",
+      "bytes": 4452,
+      "sha256": "a3e323acf757ac1c4808ee3014dae62cb74fd1d211ac0e75ac6acd25da12e9a6"
+    },
+    {
+      "path": "prototypes/mission_planner/web/vendor/leaflet.css",
+      "bytes": 14806,
+      "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6"
+    },
+    {
+      "path": "prototypes/mission_planner/web/vendor/leaflet.js",
+      "bytes": 147552,
+      "sha256": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a"
+    },
+    {
+      "path": "prototypes/mission_planner/web/vendor/LICENSE",
+      "bytes": 1395,
+      "sha256": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb"
+    },
+    {
+      "path": "docs/continuidad/ETAPA_01_CIERRE.md",
+      "bytes": 10871,
+      "sha256": "29c753908a7c931060568aae5805a5dc34e2517cb1f57477093a14368542444c"
+    },
+    {
+      "path": "docs/continuidad/ETAPA_02_CIERRE.md",
+      "bytes": 11303,
+      "sha256": "182e4e87599547299be93ebce8ce2a1875585f651573feb4b40695ec26af501c"
+    },
+    {
+      "path": "docs/continuidad/ETAPA_03_CIERRE.md",
+      "bytes": 25330,
+      "sha256": "b0858383f86b48e09f090f52c6299bcd65b230a950b1ef79b945ec394257dba9"
+    },
+    {
+      "path": "docs/continuidad/ETAPA_04_CIERRE.md",
+      "bytes": 20742,
+      "sha256": "4d53ed4c149f79d54629a03b04c4e912d0d17d4b40ebdaa5128af8e5da25aff5"
+    },
+    {
+      "path": "docs/continuidad/ETAPA_05_CIERRE.md",
+      "bytes": 23008,
+      "sha256": "4bf9f93da106104d8449bc89ed0c5816e74a82cda3bac3defe016e10873bcbb4"
+    },
+    {
+      "path": "docs/continuidad/ETAPA_06_CIERRE.md",
+      "bytes": 23101,
+      "sha256": "fb30f927644fd500d644134f794fa640c97900947983b400709854ea9cd813ee"
+    },
+    {
+      "path": "docs/continuidad/ETAPA_06_CIERRE_PRE_CONSOLIDADO_2026-11-06.md",
+      "bytes": 35522,
+      "sha256": "aeb80c1c817d33141fd74447d5bffd29757ee046275a92cf85bee0c9320c7248"
+    },
+    {
+      "path": "docs/continuidad/ETAPA_06_CIERRE_PRE_IMPACTO.md",
+      "bytes": 25052,
+      "sha256": "a021b4108dba1768faf969d36bf19efb5d0d87b9c6cb27860b650f7394fe1008"
+    },
+    {
+      "path": "docs/continuidad/ETAPA_06_CIERRE_PRE_MAPA.md",
+      "bytes": 18635,
+      "sha256": "37722b8c8338332bc71a981d8f3c4298b47d94d67ae1f9b3116a6625249769f9"
+    },
+    {
+      "path": "docs/continuidad/RESUMEN_Y_ANALISIS_ETAPAS_01_A_06_2026-11-06.md",
+      "bytes": 13080,
+      "sha256": "f0aee6c0ed49b332749f07342ccef5d4a50049b009a8a47658da1f163d9824f7"
+    },
+    {
+      "path": "data/jezero/metadata.json",
+      "bytes": 4607,
+      "sha256": "a3800c66726f12d4d6db012fc9e73c695452143dcde5512e0912c685580f66cb"
+    },
+    {
+      "path": "data/jezero/terrain.npz",
+      "bytes": 79786,
+      "sha256": "18d20b39a680d93addc3c3151bb3f19a5f41fc8f9a170396d4094694bbd76d6b"
+    },
+    {
+      "path": "data/mission_planner_ctx_2km/metadata.json",
+      "bytes": 2301,
+      "sha256": "9177c76983310ba0d491835109c7eb854efdd528cb7435cbfbc40c5822ad3ef8"
+    },
+    {
+      "path": "data/mission_planner_ctx_2km/source-window.npy",
+      "bytes": 45888,
+      "sha256": "0ab1dfdbff9a2801ee4fa86242448a7f95ed248c62eda8e70c510bf1485b515e"
+    },
+    {
+      "path": "data/mission_planner_ctx_2km/terrain.json",
+      "bytes": 180186,
+      "sha256": "eacc709117d3fce8863838f3638c9dc00b989215957d274c27edcd98665083db"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+- banner:
+  - generic: MARS GOD’S EYE / MISSION PLANNER
+  - heading "Explora Jezero. Planifica tu misión." [level=1]
+  - generic: LOCAL · ETAPA 6
+- main:
+  - region "Mapa navegable de Jezero":
+    - button "Ver Jezero"
+    - button "Área de cálculo"
+    - button "Ajustar a la ruta"
+    - generic: ↑ Norte
+    - generic "Mapa de Marte. Flechas para desplazar; más y menos para zoom":
+      - tooltip "Salida / base"
+      - tooltip "Destino / actividad"
+      - button "Zoom in": +
+      - button "Zoom out": −
+    - text: Capa del mapa
+    - combobox "Capa del mapa":
+      - option "Imagen orbital · CTX"
+      - option "Relieve · MOLA/HRSC + CTX local"
+      - option "Elevación · CTX local" [selected]
+    - generic "Fuentes y leyenda"
+    - checkbox "Solo datos locales (sin teselas remotas)"
+    - text: Solo datos locales (sin teselas remotas)
+    - paragraph: NASA MGS / MOLA + ESA Mars Express / HRSC · NASA Trek. Contexto sombreado de 200 m/píxel; dentro del área, elevación coloreada de CTX local de 20 m.
+    - paragraph: "Elevación absoluta CTX (color añadido): azul -2574,81 m → ocre -2564,623 m"
+    - status
+    - generic: 72,391 m
+    - paragraph: "Área de cálculo: 480 × 480 m · Resolución 20 m. Marca los centros usados por el motor."
+    - paragraph: Coordenadas planetocéntricas · Longitud este · Esfera de Marte
+    - paragraph: "Cartografía: NASA/JPL-Caltech/USGS · MRO CTX; NASA MGS MOLA / ESA Mars Express HRSC. Sin respaldo institucional implícito."
+  - complementary:
+    - text: TU MISIÓN
+    - heading "Salida, ciencia y regreso" [level=2]
+    - paragraph:
+      - text: "Calcula dentro del área delimitada:"
+      - strong: 480 × 480 m · celdas de 20 m
+      - text: .
+    - text: Modo de misión
+    - combobox "Modo de misión":
+      - option "Misión nueva" [selected]
+      - option "Misión en curso"
+    - text: Agente
+    - combobox "Agente":
+      - option "Astronauta" [selected]
+      - option "Rover"
+    - button "Marcar salida"
+    - button "Retirar salida": ×
+    - paragraph: 18.449831° N · 77.449466° E · -2571,171 m CTX · Centro de demostración, editable
+    - button "Marcar destino"
+    - button "Retirar destino": ×
+    - paragraph: 18.449831° N · 77.450178° E · -2571,554 m CTX · Centro de demostración, editable
+    - button "Consultar un punto"
+    - status
+    - text: Actividad
+    - combobox "Actividad":
+      - option "Pendiente" [selected]
+      - option "Completada"
+    - text: Minutos pendientes
+    - spinbutton "Minutos pendientes": "2"
+    - generic "Recursos y reservas"
+    - option "Modelado" [selected]
+    - option "Exclusión explícita"
+    - option "Modelado" [selected]
+    - option "Exclusión explícita"
+    - option "Modelado" [selected]
+    - option "Exclusión explícita"
+    - generic "Perfil y ajustes avanzados"
+    - option "Nominal · tasas declaradas" [selected]
+    - option "Conservador · sensibilidad de tasas"
+    - generic "Obstáculos simulados y laboratorio"
+    - button "Calcular misión"
+    - status: Misión posible bajo el modelo
+    - region "Resultados de la misión":
+      - heading "Alternativas calculadas" [level=2]
+      - paragraph: "Ruta recomendada según el perfil, los recursos y el criterio configurado: Equilibrada. Entre las satisfactorias se elige menor tiempo, luego batería y finalmente Equilibrada → Tiempo mínimo → Cautela de terreno."
+      - paragraph: "1 ruta distinta: las políticas coinciden. Grupos: Equilibrada + Tiempo mínimo + Cautela de terreno"
+      - text: Mostrar fases
+      - combobox "Mostrar fases":
+        - option "Ida y regreso" [selected]
+        - option "Ida"
+        - option "Regreso"
+      - button "Equilibrada Misión posible bajo el modelo 80 m · 22,192 min · 48,575 Wh":
+        - strong: Equilibrada
+        - generic: Misión posible bajo el modelo
+        - generic: 80 m · 22,192 min · 48,575 Wh
+      - button "Tiempo mínimo Misión posible bajo el modelo 80 m · 22,192 min · 48,575 Wh":
+        - strong: Tiempo mínimo
+        - generic: Misión posible bajo el modelo
+        - generic: 80 m · 22,192 min · 48,575 Wh
+      - button "Cautela de terreno Misión posible bajo el modelo 80 m · 22,192 min · 48,575 Wh":
+        - strong: Cautela de terreno
+        - generic: Misión posible bajo el modelo
+        - generic: 80 m · 22,192 min · 48,575 Wh
+      - heading "Equilibrada" [level=3]
+      - paragraph: Plan futuro admisible en este modelo experimental; sin garantia EVA o evacuacion.
+      - strong: Batería (Wh)
+      - term: Saldo inicial del cálculo
+      - definition: "100"
+      - term: Consumo futuro
+      - definition: 48,575
+      - term: Restante al regresar
+      - definition: 51,425
+      - term: Reserva absoluta
+      - definition: "10"
+      - term: Margen sobre reserva
+      - definition: 41,425
+      - strong: Demanda energética (kcal)
+      - term: Saldo inicial del cálculo
+      - definition: "200"
+      - term: Consumo futuro
+      - definition: 91,548
+      - term: Restante al regresar
+      - definition: 108,452
+      - term: Reserva absoluta
+      - definition: "20"
+      - term: Margen sobre reserva
+      - definition: 88,452
+      - strong: Oxígeno simulado (simulated_u)
+      - term: Saldo inicial del cálculo
+      - definition: "20"
+      - term: Consumo futuro
+      - definition: 5,697
+      - term: Restante al regresar
+      - definition: 14,303
+      - term: Reserva absoluta
+      - definition: "2"
+      - term: Margen sobre reserva
+      - definition: 12,303
+      - strong: Tiempo (min)
+      - term: Saldo inicial del cálculo
+      - definition: "60"
+      - term: Consumo futuro
+      - definition: 22,192
+      - term: Restante al regresar
+      - definition: 37,808
+      - term: Reserva absoluta
+      - definition: "5"
+      - term: Margen sobre reserva
+      - definition: 32,808
+      - strong: Agua (L)
+      - term: Saldo inicial del cálculo
+      - definition: "2"
+      - term: Consumo futuro
+      - definition: 0,244
+      - term: Restante al regresar
+      - definition: 1,756
+      - term: Reserva absoluta
+      - definition: 0,2
+      - term: Margen sobre reserva
+      - definition: 1,556
+      - generic "Ida, actividad, regreso y eventos"
+      - generic "Códigos, criterio y perfil efectivo"
+    - generic "Exportaciones y trazabilidad"
+    - generic "Fuentes, cobertura y limitaciones"

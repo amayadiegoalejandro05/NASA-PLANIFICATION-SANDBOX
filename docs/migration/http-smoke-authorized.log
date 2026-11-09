@@ -1,0 +1,15 @@
+{
+  "checks": {
+    "/": 8299,
+    "/map-app.js": 28921,
+    "/map.css": 10104,
+    "/vendor/leaflet.js": 147552,
+    "/vendor/leaflet.css": 14806,
+    "/regional-relief.png": 5759,
+    "/regional-elevation.png": 9983
+  },
+  "calculation_id": "d72428ea-46b8-4f4b-ad20-a6bfc9332365",
+  "planning_method": "geometric_astar",
+  "status": "SUCCESS",
+  "distance_m": 80.0
+}

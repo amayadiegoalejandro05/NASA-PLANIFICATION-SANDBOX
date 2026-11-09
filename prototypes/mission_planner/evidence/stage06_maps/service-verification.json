@@ -1,0 +1,89 @@
+[
+  {
+    "layer": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0/1.0.0/default/default028mm/8/101/366.png",
+    "status": 200,
+    "bytes": 19737,
+    "sha256": "24780cb29dbaf5d52d705be87b41d0c9b2c34146b709aea4a5baaff78c00f908",
+    "content_type": "image/png",
+    "max_zoom": 13,
+    "headers": {
+      "Date": "Fri, 06 Nov 2026 03:21:08 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Wed, 29 Jul 2020 23:17:36 GMT",
+      "ETag": "\"4d19-5ab9cc2e22068\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "19737",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/png",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Connection": "close"
+    }
+  },
+  {
+    "layer": "Mars_MOLA_blend200ppx_HRSC_Shade_clon0dd_200mpp_lzw",
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MOLA_blend200ppx_HRSC_Shade_clon0dd_200mpp_lzw/1.0.0/default/default028mm/8/101/366.jpg",
+    "status": 200,
+    "bytes": 37703,
+    "sha256": "d9d400141118d8638c79b6b7c0e49b5d8f0b952f9cc95743ff54087d919970af",
+    "content_type": "image/jpeg",
+    "max_zoom": 8,
+    "headers": {
+      "Date": "Fri, 06 Nov 2026 03:21:09 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Fri, 01 Dec 2017 22:08:28 GMT",
+      "ETag": "\"9347-55f4e9bc314ca\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "37703",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/jpeg",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Connection": "close"
+    }
+  },
+  {
+    "layer": "Mars_Viking_MDIM21_ClrMosaic_global_232m",
+    "url": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_Viking_MDIM21_ClrMosaic_global_232m/1.0.0/default/default028mm/7/50/183.jpg",
+    "status": 200,
+    "bytes": 60074,
+    "sha256": "f4b509c69a8a9fec9f81f8773237d59a920ac6c0816f0e050f671bd7ee23441f",
+    "content_type": "image/jpeg",
+    "max_zoom": 7,
+    "headers": {
+      "Date": "Fri, 06 Nov 2026 03:21:09 GMT",
+      "Server": "Apache/2.4.65 (Unix) OpenSSL/3.4.3",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+      "X-Content-Type-Options": "nosniff",
+      "Last-Modified": "Wed, 29 Nov 2017 04:43:39 GMT",
+      "ETag": "\"eaaa-55f17c786c599\"",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "60074",
+      "Access-Control-Allow-Origin": "*",
+      "Content-Type": "image/jpeg",
+      "Content-Security-Policy": "frame-ancestors 'self' aelp.smartsparrow.com;",
+      "Connection": "close"
+    }
+  },
+  {
+    "file": "leaflet.js",
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js",
+    "bytes": 147552,
+    "sha256": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a"
+  },
+  {
+    "file": "leaflet.css",
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css",
+    "bytes": 14806,
+    "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6"
+  },
+  {
+    "file": "LICENSE",
+    "url": "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/LICENSE",
+    "bytes": 1395,
+    "sha256": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb"
+  }
+]

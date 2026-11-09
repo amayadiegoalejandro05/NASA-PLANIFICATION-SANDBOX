@@ -1,0 +1,26 @@
+{
+  "strict_json": true,
+  "evaluation_cases": 17,
+  "planning_requests": 39,
+  "statuses": {
+    "SUCCESS": 27,
+    "INFEASIBLE": 8,
+    "SEARCH_LIMIT_REACHED": 4
+  },
+  "inherited_checked": 56,
+  "inherited_changed": [
+    "prototypes\\mission_planner\\mars_mission_resources.py",
+    "prototypes\\mission_planner\\mission_api.py",
+    "prototypes\\mission_planner\\README.md"
+  ],
+  "inherited_unchanged_count": 53,
+  "old_tests_closures_originals_and_evidence_unchanged": true,
+  "real_product_sha256": "18d20b39a680d93addc3c3151bb3f19a5f41fc8f9a170396d4094694bbd76d6b",
+  "suite_tests": 71,
+  "suite_skips": 0,
+  "core_tests": 16,
+  "git_diff_check": "passed",
+  "final_git_status": "M .gitignore\n?? docs/continuidad/\n?? prototypes/",
+  "final_branch": "etapa01-base-confiable",
+  "final_head": "0d5a444f5444b4dfa574224c9f7d09652dad1df5"
+}

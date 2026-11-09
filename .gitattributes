@@ -1,0 +1,2 @@
+# Preserve source/checksum bytes across Windows/Linux clones; no implicit CRLF conversion.
+* -text

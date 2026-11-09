@@ -1,0 +1,18 @@
+Stage 5 fixed evaluation; one run/case; Python allocations only.
+line_nominal: 0.063374 s; 321694 bytes; balanced/continue:SUCCESS, balanced/return:SUCCESS
+line_conservative: 0.037631 s; 215029 bytes; balanced/continue:INFEASIBLE, balanced/return:SUCCESS
+line_completed: 0.044584 s; 297300 bytes; balanced/continue:SUCCESS, balanced/return:SUCCESS
+line_at_goal: 0.046092 s; 307844 bytes; balanced/continue:SUCCESS, balanced/return:SUCCESS
+line_at_base: 0.046520 s; 312734 bytes; balanced/continue:SUCCESS, balanced/return:SUCCESS
+line_low: 0.040035 s; 212829 bytes; balanced/continue:INFEASIBLE, balanced/return:SUCCESS
+line_limit: 0.031478 s; 170211 bytes; balanced/continue:SEARCH_LIMIT_REACHED, balanced/return:SEARCH_LIMIT_REACHED
+line_unknown: 0.021643 s; 136769 bytes; balanced/continue:INFEASIBLE, balanced/return:INFEASIBLE
+grid_original: 0.498208 s; 1038385 bytes; balanced/continue:SUCCESS, minimum_time/continue:SUCCESS, terrain_caution/continue:SUCCESS
+grid_detour: 0.575026 s; 872665 bytes; balanced/continue:SUCCESS, minimum_time/continue:SUCCESS, terrain_caution/continue:SUCCESS
+grid_wall: 0.107727 s; 243226 bytes; balanced/continue:INFEASIBLE, balanced/return:SUCCESS
+grid_elevation: 0.467362 s; 1029338 bytes; balanced/continue:SUCCESS, minimum_time/continue:SUCCESS, terrain_caution/continue:SUCCESS
+grid_penalty: 0.512540 s; 870066 bytes; balanced/continue:SUCCESS, minimum_time/continue:SUCCESS, terrain_caution/continue:SUCCESS
+ctx_nominal: 0.455719 s; 666918 bytes; balanced/continue:SUCCESS, minimum_time/continue:SUCCESS, terrain_caution/continue:SUCCESS
+ctx_obstacle: 0.062337 s; 263690 bytes; balanced/continue:INFEASIBLE, balanced/return:SUCCESS
+ctx_unknown: 0.035942 s; 200587 bytes; balanced/continue:INFEASIBLE, balanced/return:INFEASIBLE
+ctx_limit: 0.050405 s; 240181 bytes; balanced/continue:SEARCH_LIMIT_REACHED, balanced/return:SEARCH_LIMIT_REACHED

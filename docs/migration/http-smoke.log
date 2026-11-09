@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "C:\Users\laura\OneDrive\Escritorio\MARS GOD EYE\NASA-PLANIFICATION-SANDBOX\examples\http_smoke.py", line 20, in <module>
+    checks = {p: len(request(p)) for p in ('/', '/map-app.js', '/map.css',
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\laura\OneDrive\Escritorio\MARS GOD EYE\NASA-PLANIFICATION-SANDBOX\examples\http_smoke.py", line 20, in <dictcomp>
+    checks = {p: len(request(p)) for p in ('/', '/map-app.js', '/map.css',
+                     ^^^^^^^^^^
+  File "C:\Users\laura\OneDrive\Escritorio\MARS GOD EYE\NASA-PLANIFICATION-SANDBOX\examples\http_smoke.py", line 9, in request
+    c.request('GET' if value is None else 'POST', path,
+  File "C:\Users\laura\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1303, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Users\laura\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1349, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "C:\Users\laura\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1298, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "C:\Users\laura\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 1058, in _send_output
+    self.send(msg)
+  File "C:\Users\laura\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 996, in send
+    self.connect()
+  File "C:\Users\laura\AppData\Local\Programs\Python\Python311\Lib\http\client.py", line 962, in connect
+    self.sock = self._create_connection(
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\laura\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 851, in create_connection
+    raise exceptions[0]
+  File "C:\Users\laura\AppData\Local\Programs\Python\Python311\Lib\socket.py", line 836, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] Se produjo un error durante el intento de conexi�n ya que la parte conectada no respondi� adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexi�n establecida ya que el host conectado no ha podido responder

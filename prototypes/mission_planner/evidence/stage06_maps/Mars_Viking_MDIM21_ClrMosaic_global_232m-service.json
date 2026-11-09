@@ -1,0 +1,49 @@
+{
+  "responseHeader": {
+    "status": 0,
+    "QTime": 0,
+    "params": {
+      "q": "item_UUID:8bc9352d-ee73-4d1f-94b8-de5495fd8dfa",
+      "indent": "on",
+      "version": "2.2",
+      "wt": "json"
+    }
+  },
+  "response": {
+    "numFound": 3,
+    "start": 0,
+    "docs": [
+      {
+        "serviceType": "Mosaic",
+        "endPoint": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_Viking_MDIM21_ClrMosaic_global_232m",
+        "protocol": "WMTS",
+        "item_UUID": "8bc9352d-ee73-4d1f-94b8-de5495fd8dfa",
+        "wmts_mode": "rest",
+        "layerId": "Mars_Viking_MDIM21_ClrMosaic_global_232m",
+        "item_DBID": 37610,
+        "id": "358a2092-103a-474c-b429-7a364b197570",
+        "_version_": 1660456280991465472
+      },
+      {
+        "serviceType": "Mosaic",
+        "endPoint": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_Viking_MDIM21_ClrMosaic_global_232m",
+        "protocol": "WMTS",
+        "item_UUID": "8bc9352d-ee73-4d1f-94b8-de5495fd8dfa",
+        "wmts_mode": "rest",
+        "layerId": "Mars_Viking_MDIM21_ClrMosaic_global_232m",
+        "item_DBID": 294081,
+        "id": "b6a770ec-620c-41d0-b8d8-da8982625aaa",
+        "_version_": 1683908384434159616
+      },
+      {
+        "serviceType": "raster",
+        "endPoint": "https://trek.nasa.gov/mars/trekarcgis/rest/services/Mars_Viking_MDIM21_ClrMosaic_global_232m/ImageServer",
+        "protocol": "ArcGISImageService",
+        "item_UUID": "8bc9352d-ee73-4d1f-94b8-de5495fd8dfa",
+        "item_DBID": 294081,
+        "id": "0f1a28c7-6e6a-4b19-b42f-0d9a794cfdd7",
+        "_version_": 1683908384259047424
+      }
+    ]
+  }
+}

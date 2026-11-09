@@ -1,0 +1,31 @@
+ASTRONAUTA: BUSQUEDA INTERRUMPIDA; FACTIBILIDAD NO DETERMINADA: max_labels=120000; etiquetas generadas=120000; busqueda interrumpida; factibilidad no determinada
+
+ROVER: MISION FACTIBLE (escenario sintetico)
+  Distancia ida + regreso: 12.8 m
+  Tiempo total con actividad: 91.0 min
+  O2 simulado: 0.00 u
+  Agua estimada: 0.000 L
+  Bateria estimada: 81.9 Wh
+  Demanda calorica estimada: 0 kcal
+  Tramos: ida 28 celdas, regreso 28 celdas
+  Etiquetas exploradas: 1145
+
+ASTRONAUTA PEQUENO: MISION FACTIBLE (escenario sintetico)
+  Distancia ida + regreso: 4.0 m
+  Tiempo total con actividad: 6.0 min
+  O2 simulado: 10.00 u
+  Agua estimada: 1.200 L
+  Bateria estimada: 18.0 Wh
+  Demanda calorica estimada: 28 kcal
+  Tramos: ida 3 celdas, regreso 3 celdas
+  Etiquetas exploradas: 5
+
+ROVER PEQUENO: MISION FACTIBLE (escenario sintetico)
+  Distancia ida + regreso: 4.0 m
+  Tiempo total con actividad: 6.0 min
+  O2 simulado: 0.00 u
+  Agua estimada: 0.000 L
+  Bateria estimada: 18.0 Wh
+  Demanda calorica estimada: 0 kcal
+  Tramos: ida 3 celdas, regreso 3 celdas
+  Etiquetas exploradas: 5

@@ -1,0 +1,228 @@
+{
+  "recorded_utc": "2026-11-06T04:05:05.822895+00:00",
+  "scope": "Bounded research downloads and stage 6 map evidence; original Jezero data unchanged",
+  "files": {
+    "acceptance-plan.json": {
+      "bytes": 1298,
+      "sha256": "362dfdd90f10d2a5c96fd35f005e1417d686f18f6d6eb58424372157b3f6e4e3"
+    },
+    "browser-configuration.json": {
+      "bytes": 68140,
+      "sha256": "f8aa755add67b6ff6828962fe48849b80d584b1d4d1727acadaae06af1ffb382"
+    },
+    "browser-console.json": {
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "browser-final-dom.txt": {
+      "bytes": 6409,
+      "sha256": "80be9219ee0781115d29c4fe83fd73ad2b6591ec83f811ff0d192f2d243a7c2d"
+    },
+    "browser-result.json": {
+      "bytes": 228329,
+      "sha256": "ee11466d9fa6e87e61f06062580327e2d562f50de03c6200dda1ebaab454b6df"
+    },
+    "browser-verification.json": {
+      "bytes": 1489,
+      "sha256": "f4a3c273bde0e831b936982505463b826af217f3edc91881e34f4a81f3cab17c"
+    },
+    "browser-waypoints.json": {
+      "bytes": 12801,
+      "sha256": "7bb3af4e9b0b2d0dc86f00aaecc82b132fb78e0a0ee51a1f8c81328a31af4d50"
+    },
+    "context-coverage.jpg": {
+      "bytes": 182748,
+      "sha256": "2deebaa5d3a6436f45fe99d98df1f02dfd8f07b05d56c3522643aca3ed8d2a07"
+    },
+    "continue-return.jpg": {
+      "bytes": 87825,
+      "sha256": "416a04b29728d9c20203ad8f0692b6ead8ee58dc4bb19b532591ce468e970fe8"
+    },
+    "frontend-unit.log": {
+      "bytes": 225,
+      "sha256": "dbf12cb6a58a1b2129235fe671c4e0bfac47ce3d2b533f5b131397069032b0a9"
+    },
+    "insufficient.jpg": {
+      "bytes": 83242,
+      "sha256": "8dc734a26600f8c47655143a6a4fca55b95d62101cfb0b36492644db4ee825fc"
+    },
+    "interrupted.jpg": {
+      "bytes": 82909,
+      "sha256": "ba823882d00fcd98e8d1fd37969f32378f0ee6ad6f704af0393a6b3ae1ac82c6"
+    },
+    "invalid.jpg": {
+      "bytes": 81910,
+      "sha256": "c87bfba2c8e3e9e12766591754cd2626646ccddfa34450e2376cd99aa577bed4"
+    },
+    "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0-getAbstractUrl.html": {
+      "bytes": 1402,
+      "sha256": "e188839ecb66940bf94025d3ea803e1558aaa1506eb5d61c8bee7d00d9e0135f"
+    },
+    "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0-getMetadataUrl.html": {
+      "bytes": 6415,
+      "sha256": "01e81c47df4e81cf8275484a5414f8317e72aa4d19d2a76b41f4baab8ff585e7"
+    },
+    "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0-sample.png": {
+      "bytes": 19737,
+      "sha256": "24780cb29dbaf5d52d705be87b41d0c9b2c34146b709aea4a5baaff78c00f908"
+    },
+    "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0-service.json": {
+      "bytes": 784,
+      "sha256": "e0848c9cd364615f791dcff3076c50d34a60312df23e509fc02b36490825303e"
+    },
+    "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0.xml": {
+      "bytes": 8810,
+      "sha256": "bb58f640da78bcc404a9109f613f2b3f0e3e683ff6625e8f48dcb23e602813b8"
+    },
+    "leaflet.html": {
+      "bytes": 1087272,
+      "sha256": "c46a2132bcd3cd9c78e216d40b2e59e6f87620a1eaa039bceaacc1b22052417b"
+    },
+    "Mars_MOLA_blend200ppx_HRSC_Shade_clon0dd_200mpp_lzw-getAbstractUrl.html": {
+      "bytes": 1860,
+      "sha256": "41941ab99e4eadfc982ab3ec52d5c69ae5743d52ea5c73aa18d4d45f01baef26"
+    },
+    "Mars_MOLA_blend200ppx_HRSC_Shade_clon0dd_200mpp_lzw-getMetadataUrl.html": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "Mars_MOLA_blend200ppx_HRSC_Shade_clon0dd_200mpp_lzw-sample.jpg": {
+      "bytes": 37703,
+      "sha256": "d9d400141118d8638c79b6b7c0e49b5d8f0b952f9cc95743ff54087d919970af"
+    },
+    "Mars_MOLA_blend200ppx_HRSC_Shade_clon0dd_200mpp_lzw-service.json": {
+      "bytes": 790,
+      "sha256": "f63a9a51d7f8d8773e8cd2e61ca91a19dbb30c4b4cc8381a7676c8edce5015b5"
+    },
+    "Mars_MOLA_blend200ppx_HRSC_Shade_clon0dd_200mpp_lzw.xml": {
+      "bytes": 7396,
+      "sha256": "ee6b02c37e1dbd2809eff0e499c2f3827ef9532e02d35d43f1a6d991f6ce9284"
+    },
+    "Mars_Viking_MDIM21_ClrMosaic_global_232m-getAbstractUrl.html": {
+      "bytes": 437,
+      "sha256": "6bfdd6121481bfbfcf0488db4b3255493dbba5b9eef23fdc2d2570a46e97f959"
+    },
+    "Mars_Viking_MDIM21_ClrMosaic_global_232m-getMetadataUrl.html": {
+      "bytes": 3692,
+      "sha256": "3d92c99dd8d0bad34b2b1c72cf029619c2b808b594566d06a93f22a5e8c86d14"
+    },
+    "Mars_Viking_MDIM21_ClrMosaic_global_232m-sample.jpg": {
+      "bytes": 60074,
+      "sha256": "f4b509c69a8a9fec9f81f8773237d59a920ac6c0816f0e050f671bd7ee23441f"
+    },
+    "Mars_Viking_MDIM21_ClrMosaic_global_232m-service.json": {
+      "bytes": 1647,
+      "sha256": "dcc9667bfee9bcab471cb4e39ec41f617882938a5c374a96db45c2a6193d75f0"
+    },
+    "Mars_Viking_MDIM21_ClrMosaic_global_232m.xml": {
+      "bytes": 7016,
+      "sha256": "977e2037d634f9dc70f654ce176ca7e5775e336d9d4242d323bf55f1b4be4ec6"
+    },
+    "narrow-final.jpg": {
+      "bytes": 39655,
+      "sha256": "57b0e2ea6a9fb9c3b12765470c9b162a7b06b36629434ffa268b2f42efba8a59"
+    },
+    "narrow-overview.jpg": {
+      "bytes": 65863,
+      "sha256": "d804ebdbf7a786685d51b3cf36cf6f20047a565e7e5c180ff26bec6af53a814d"
+    },
+    "narrow-results.jpg": {
+      "bytes": 39886,
+      "sha256": "d08ba054b4815b7ac8a800672ffdad82ed1ace6398bed416d4dced85196fca22"
+    },
+    "obstacle.jpg": {
+      "bytes": 117532,
+      "sha256": "8720e235729262202aeb4b9741be6607db9b3a14e7aa0ba4c1f702b50894be55"
+    },
+    "offline-local.jpg": {
+      "bytes": 115489,
+      "sha256": "85929d00864dd5e6a9abf5511ee59a3f26429d0017df6360027a4a76b3035c99"
+    },
+    "offline-orbital.jpg": {
+      "bytes": 88827,
+      "sha256": "b77961883ed9ffc698f7ba7561c3a8755fba91d5e7c9e6deab61d49dc2143c07"
+    },
+    "outside-coverage.jpg": {
+      "bytes": 108035,
+      "sha256": "df100c482f5c89d71995f61753754b80524cdb51c0e834dbdbb0f49d6a3f55f5"
+    },
+    "overview-final.jpg": {
+      "bytes": 189806,
+      "sha256": "7a965e854eaa4e723355b527cd04d00e6497576a8b3772d797e33ae9e120f904"
+    },
+    "overview-relief.jpg": {
+      "bytes": 145636,
+      "sha256": "c52c5ada77ba101cc886ed8f10a5075108729735fe00dfd70ea569958eaa9083"
+    },
+    "regional-catalog.json": {
+      "bytes": 140161,
+      "sha256": "b201ee1afcdc7b36a3a469c3a1da0204b78ad17b908fd7c6904dd34c30bf5b28"
+    },
+    "regional-evaluation.json": {
+      "bytes": 742927,
+      "sha256": "a538a8ecdfe8be3ad24af1ea394d8e8fbf7aa237cd90dad7d5fa259af96ac422"
+    },
+    "regional-performance.csv": {
+      "bytes": 379,
+      "sha256": "cb4597dd3d89a4448dc9dbbb0d39eebdaaf32fa532893e917e74de0f1b5798a4"
+    },
+    "regional-provenance.json": {
+      "bytes": 9192,
+      "sha256": "40fc4815ed7e3e5d3c1cf6e33bc2b0de09f7c3e29b9602094a764d6f217b34e3"
+    },
+    "representative.jpg": {
+      "bytes": 112676,
+      "sha256": "860a01f7e320dc053e6c18fdfdb491caa933ced706136025b96887b1d2c67738"
+    },
+    "route-elevation.jpg": {
+      "bytes": 77399,
+      "sha256": "7387c450fa688a161cdd002964d50b5f5e64546e793ce7fd83cef363f249830e"
+    },
+    "rover.jpg": {
+      "bytes": 82410,
+      "sha256": "9cf3d50271d841e61f4f2d61bb1255ae10c9f2f83c37bad8a3cec2294378f95a"
+    },
+    "selection.jpg": {
+      "bytes": 84826,
+      "sha256": "0cda5bb62d77b137b10695309c679fbaeaf531aa4a4e46a051e246219ab25048"
+    },
+    "service-verification.json": {
+      "bytes": 3630,
+      "sha256": "2e3a91f7ed2bbc2cb2245d3512a599370ea01aa0d031da0421a106e3f252ab6b"
+    },
+    "tests.log": {
+      "bytes": 12536,
+      "sha256": "d97be830d76203dc7a0d4c369e27e0d304a24a0d8c9a95dd6c4d22facf4f02f6"
+    },
+    "trek-config.json": {
+      "bytes": 1842,
+      "sha256": "70c7aed0783731789e0f3b2252398e8938e81465d0cfdb2f6e655382758ecaaf"
+    },
+    "trek-layers.json": {
+      "bytes": 311418,
+      "sha256": "5f6d60b0c3a8afd468bbb01773d472ba77cc50b2c7022c15de470ebd315f0cda"
+    },
+    "trek.html": {
+      "bytes": 4312,
+      "sha256": "7ff5aea6018ea8e4184e12c84ad456c05033dc01d3794b8c07eac1026aa1d190"
+    },
+    "trekApi.js": {
+      "bytes": 5952,
+      "sha256": "038b6ab9e3fc3ffded6c18e69a3fdba2b792708b5efc7a1b4b4f5500cf4a173a"
+    }
+  },
+  "vendor": {
+    "leaflet.css": {
+      "bytes": 14806,
+      "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6"
+    },
+    "leaflet.js": {
+      "bytes": 147552,
+      "sha256": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a"
+    },
+    "LICENSE": {
+      "bytes": 1395,
+      "sha256": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb"
+    }
+  }
+}

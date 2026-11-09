@@ -1,0 +1,1018 @@
+{
+  "evidence_schema": "stage04-jezero-mission-1",
+  "runtime": {
+    "python": "3.11.9",
+    "numpy": "2.2.6"
+  },
+  "provenance": {
+    "adaptation_hash_format": "sha256 of canonical JSON excluding adaptation_sha256; sorted keys, ASCII, compact, UTF-8",
+    "adaptation_sha256": "ca3092e3185c98b12c3b92784ab6a87af5512e62fc9ad1eef27630fe4e2d5b56",
+    "adapter_schema": "jezero-ctx-adapter-1",
+    "center_lat_planetocentric_deg": 18.45,
+    "center_lon_east_deg": 77.45,
+    "coordinates": {
+      "crop_affine_gdal": [
+        -16.0,
+        4.0,
+        0.0,
+        16.0,
+        0.0,
+        -4.0
+      ],
+      "height_offset_applied_m": 0.0,
+      "interpolation": "none; direct crop",
+      "jezero_bounds_m": [
+        -16.0,
+        -12.0,
+        12.0,
+        16.0
+      ],
+      "jezero_frame": "JEZERO_LOCAL_EQUIRECTANGULAR_EAST_NORTH",
+      "parent_affine_gdal": [
+        -256.0,
+        4.0,
+        0.0,
+        256.0,
+        0.0,
+        -4.0
+      ],
+      "parent_shape": [
+        128,
+        128
+      ],
+      "pixel_centers": "(column+0.5,row+0.5); integer edges are outer corners",
+      "planner_frame": {
+        "cell_order": "row,column",
+        "coordinate_unit": "m",
+        "frame_id": "JEZERO_CTX_CROP_EAST_SOUTH",
+        "height_unit": "m",
+        "origin_location": "outer_corner_row0_col0",
+        "origin_xy_m": [
+          0.0,
+          0.0
+        ],
+        "resolution_m": 4.0,
+        "time_unit": "min",
+        "x_axis": "increasing_column",
+        "y_axis": "increasing_row"
+      },
+      "planner_to_jezero": "E=crop_left+X; N=crop_top-Y",
+      "point_containment": "west/north inclusive; east/south exclusive",
+      "window": {
+        "column": 60,
+        "columns": 7,
+        "row": 60,
+        "rows": 7
+      },
+      "window_index_bounds": "row/column start inclusive, end exclusive"
+    },
+    "crop_unknown_cells": 0,
+    "height_policy": "CTX absolute elevations unchanged; HiRISE-derived origin_z_m ignored",
+    "input_layer": "prior",
+    "input_role": "public CTX prior",
+    "inventory": {
+      "prior": {
+        "decoded": true,
+        "dtype": "float32",
+        "role": "public CTX prior",
+        "shape": [
+          128,
+          128
+        ]
+      },
+      "reference": {
+        "decoded": false,
+        "dtype": "float32",
+        "role": "held-out HiRISE",
+        "shape": [
+          128,
+          128
+        ]
+      },
+      "valid": {
+        "decoded": false,
+        "dtype": "bool",
+        "role": "joint CTX/HiRISE mask; not used",
+        "shape": [
+          128,
+          128
+        ]
+      }
+    },
+    "layers": {
+      "obstacles": "No observed obstacle layer; False means no additional scenario obstacle, not physical absence",
+      "risk": "Unavailable; zeros disable additional penalty, not measured zero risk",
+      "roughness": "Unavailable; zeros disable additional penalty, not measured smoothness",
+      "slope": "Existing CORE gradient and edge slopes from this CTX crop; one-sided at crop boundaries"
+    },
+    "limitations": [
+      "Real orbital terrain; CTX native 20 m information resampled upstream to 4 m, no new detail",
+      "Experimental prior-only planning with incomplete local knowledge, no local certification",
+      "Demonstration targets and agent parameters simulated, no science detection or physical/EVA validation",
+      "No HiRISE payload, joint validity mask, sensor or estimated/observed state used"
+    ],
+    "local_crs_wkt": "PROJCS[\"unknown\",GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",3396190,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.45],PARAMETER[\"latitude_of_origin\",18.45],PARAMETER[\"central_meridian\",77.45],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+    "longitude_direction": "east",
+    "mars_sphere_radius_m": 3396190,
+    "metadata_file": "metadata.json",
+    "metadata_file_sha256": "a3800c66726f12d4d6db012fc9e73c695452143dcde5512e0912c685580f66cb",
+    "package_integrity": "verified SHA-256 against existing metadata; not an external signature",
+    "parent_known_cells": 16384,
+    "parent_unknown_cells": 0,
+    "resampling_upstream": "bilinear; CTX remains 20 m information on the 4 m computational grid",
+    "retrieved_utc": "2026-11-04T21:09:48.860624+00:00",
+    "snapshot": {
+      "columns": 7,
+      "hash_format": "terrain-snapshot-v1",
+      "resolution_m": 4.0,
+      "revision_sha256": "639340f9c4b722cc9f445c9b10398bcea90f56988cc5f3fc59f0434bc2013e1f",
+      "rows": 7,
+      "terrain_id": "jezero-ctx-r60-c60-7x7"
+    },
+    "source": {
+      "citation": "Fergason et al. (2020), Mars 2020 Terrain Relative Navigation CTX DTM Mosaic, USGS.",
+      "doi": "10.5066/P906QQT8",
+      "instrument": "MRO/CTX",
+      "native_post_spacing_m": 20,
+      "source_crs_wkt": "PROJCS[\"Equirectangular Mars 2000 Sphere IAU\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere_IAU\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "source_nodata": "-3.4028226550889045e+38",
+      "source_pixel_size": [
+        20.0,
+        20.0
+      ],
+      "source_shape": [
+        1512,
+        1596
+      ],
+      "source_window_sha256": "be1a0302f5daaf5bbb9063cc5fc11cfbfebb63eb83a40b15c6abae28eafa0c06",
+      "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+      "valid_fraction": 1.0,
+      "window_col_row_width_height": [
+        841,
+        787,
+        34,
+        33
+      ]
+    },
+    "source_window_hash_verification": "recorded only; native source tile absent",
+    "terrain_file": "terrain.npz",
+    "terrain_file_sha256": "18d20b39a680d93addc3c3151bb3f19a5f41fc8f9a170396d4094694bbd76d6b",
+    "upstream_versions": {
+      "numpy": "2.2.6",
+      "python": "3.11.18",
+      "rasterio": "1.4.3"
+    },
+    "validity_policy": "CTX finite and not source nodata; unknown -> None -> CORE blocking; no fill",
+    "vertical_reference": "source product MOLA topography / DeltaGeoid; no Earth datum conversion"
+  },
+  "request": {
+    "schema_version": "3.0",
+    "request_id": "jezero-ctx-astronaut",
+    "terrain": {
+      "terrain_id": "jezero-ctx-r60-c60-7x7",
+      "revision_sha256": "639340f9c4b722cc9f445c9b10398bcea90f56988cc5f3fc59f0434bc2013e1f",
+      "hash_format": "terrain-snapshot-v1",
+      "rows": 7,
+      "columns": 7,
+      "resolution_m": 4.0
+    },
+    "frame": {
+      "frame_id": "JEZERO_CTX_CROP_EAST_SOUTH",
+      "resolution_m": 4.0,
+      "origin_xy_m": [
+        0.0,
+        0.0
+      ],
+      "coordinate_unit": "m",
+      "height_unit": "m",
+      "time_unit": "min",
+      "cell_order": "row,column",
+      "x_axis": "increasing_column",
+      "y_axis": "increasing_row",
+      "origin_location": "outer_corner_row0_col0"
+    },
+    "profile": {
+      "agent_type": "astronaut",
+      "profile_id": "sim-jezero-ctx-astronaut",
+      "version": "4.0",
+      "parameter_nature": "simulated",
+      "provenance": "Stage 4 fixed arithmetic demonstration configuration; not fitted to measurements or run outcomes",
+      "limitations": "Uncalibrated mobility, capacities and consumption; no physical or EVA certification; oxygen in simulated_u",
+      "mobility": {
+        "agent_radius_m": 0.35,
+        "safety_margin_m": 0.15,
+        "max_slope_deg": 15.0,
+        "near_obstacle_m": 0.0,
+        "slope_weight": 3.0,
+        "risk_weight": 0.0,
+        "roughness_weight": 0.0,
+        "proximity_weight": 0.0
+      },
+      "motion": {
+        "speed_m_per_min": 4.0,
+        "uphill_speed_penalty": 2.0,
+        "roughness_speed_penalty": 0.0,
+        "uphill_effort_penalty": 2.0,
+        "climb_battery_wh_per_m": 0.5,
+        "hazard_cost_weight": 2.0,
+        "battery_cost_weight": 0.01
+      },
+      "resources": {
+        "time": {
+          "status": "modeled",
+          "unit": "min",
+          "capacity": 60.0,
+          "reserve": 5.0,
+          "movement_rate": 1.0,
+          "activity_rate": 1.0
+        },
+        "battery": {
+          "status": "modeled",
+          "unit": "Wh",
+          "capacity": 100.0,
+          "reserve": 10.0,
+          "movement_rate": 2.0,
+          "activity_rate": 4.0
+        },
+        "oxygen": {
+          "status": "modeled",
+          "unit": "simulated_u",
+          "capacity": 20.0,
+          "reserve": 2.0,
+          "movement_rate": 0.25,
+          "activity_rate": 0.3
+        },
+        "water": {
+          "status": "modeled",
+          "unit": "L",
+          "capacity": 2.0,
+          "reserve": 0.2,
+          "movement_rate": 0.01,
+          "activity_rate": 0.02
+        },
+        "nutrition": {
+          "status": "modeled",
+          "unit": "kcal",
+          "capacity": 200.0,
+          "reserve": 20.0,
+          "movement_rate": 4.0,
+          "activity_rate": 5.0
+        }
+      },
+      "revision_sha256": "9455b663f8ad36fccbe9fe2efc47482b57c73ff09cb603693a5a0131ceeb73ea"
+    },
+    "base": [
+      4,
+      2
+    ],
+    "start": [
+      4,
+      2
+    ],
+    "goal": [
+      2,
+      4
+    ],
+    "activity_min": 2.0,
+    "max_labels": 5000
+  },
+  "result": {
+    "schema_version": "3.0",
+    "request_id": "jezero-ctx-astronaut",
+    "status": "SUCCESS",
+    "reason_code": "MISSION_FOUND",
+    "message": "Mision admisible bajo el perfil y snapshot indicados: ida, ciencia y regreso; restricciones de movilidad y presupuestos con reservas verificados (tolerancia 1e-9). El costo combina tiempo ponderado por peligro y bateria; no certifica la ruta mas segura ni optimalidad operacional global.",
+    "terrain": {
+      "terrain_id": "jezero-ctx-r60-c60-7x7",
+      "revision_sha256": "639340f9c4b722cc9f445c9b10398bcea90f56988cc5f3fc59f0434bc2013e1f",
+      "hash_format": "terrain-snapshot-v1",
+      "rows": 7,
+      "columns": 7,
+      "resolution_m": 4.0
+    },
+    "profile": {
+      "agent_type": "astronaut",
+      "profile_id": "sim-jezero-ctx-astronaut",
+      "version": "4.0",
+      "parameter_nature": "simulated",
+      "provenance": "Stage 4 fixed arithmetic demonstration configuration; not fitted to measurements or run outcomes",
+      "limitations": "Uncalibrated mobility, capacities and consumption; no physical or EVA certification; oxygen in simulated_u",
+      "mobility": {
+        "agent_radius_m": 0.35,
+        "safety_margin_m": 0.15,
+        "max_slope_deg": 15.0,
+        "near_obstacle_m": 0.0,
+        "slope_weight": 3.0,
+        "risk_weight": 0.0,
+        "roughness_weight": 0.0,
+        "proximity_weight": 0.0
+      },
+      "motion": {
+        "speed_m_per_min": 4.0,
+        "uphill_speed_penalty": 2.0,
+        "roughness_speed_penalty": 0.0,
+        "uphill_effort_penalty": 2.0,
+        "climb_battery_wh_per_m": 0.5,
+        "hazard_cost_weight": 2.0,
+        "battery_cost_weight": 0.01
+      },
+      "resources": {
+        "time": {
+          "status": "modeled",
+          "unit": "min",
+          "capacity": 60.0,
+          "reserve": 5.0,
+          "movement_rate": 1.0,
+          "activity_rate": 1.0
+        },
+        "battery": {
+          "status": "modeled",
+          "unit": "Wh",
+          "capacity": 100.0,
+          "reserve": 10.0,
+          "movement_rate": 2.0,
+          "activity_rate": 4.0
+        },
+        "oxygen": {
+          "status": "modeled",
+          "unit": "simulated_u",
+          "capacity": 20.0,
+          "reserve": 2.0,
+          "movement_rate": 0.25,
+          "activity_rate": 0.3
+        },
+        "water": {
+          "status": "modeled",
+          "unit": "L",
+          "capacity": 2.0,
+          "reserve": 0.2,
+          "movement_rate": 0.01,
+          "activity_rate": 0.02
+        },
+        "nutrition": {
+          "status": "modeled",
+          "unit": "kcal",
+          "capacity": 200.0,
+          "reserve": 20.0,
+          "movement_rate": 4.0,
+          "activity_rate": 5.0
+        }
+      },
+      "revision_sha256": "9455b663f8ad36fccbe9fe2efc47482b57c73ff09cb603693a5a0131ceeb73ea"
+    },
+    "frame": {
+      "frame_id": "JEZERO_CTX_CROP_EAST_SOUTH",
+      "resolution_m": 4.0,
+      "origin_xy_m": [
+        0.0,
+        0.0
+      ],
+      "coordinate_unit": "m",
+      "height_unit": "m",
+      "time_unit": "min",
+      "cell_order": "row,column",
+      "x_axis": "increasing_column",
+      "y_axis": "increasing_row",
+      "origin_location": "outer_corner_row0_col0"
+    },
+    "assumptions": [
+      "Modelo determinista local; geometria conservadora y snapshot inmutable.",
+      "Consumos parametrizados; sin certificacion fisica/EVA.",
+      "Uncalibrated mobility, capacities and consumption; no physical or EVA certification; oxygen in simulated_u"
+    ],
+    "exclusions": {},
+    "search_metrics": {
+      "generated_labels": 107,
+      "meaning": "explored_labels del motor cuenta etiquetas generadas, no expansiones"
+    },
+    "plan": {
+      "path": [
+        [
+          4,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "goal_cell": [
+        2,
+        4
+      ],
+      "goal_index": 2,
+      "base_cell": [
+        4,
+        2
+      ],
+      "waypoints_xy_m": [
+        [
+          10.0,
+          18.0
+        ],
+        [
+          14.0,
+          14.0
+        ],
+        [
+          18.0,
+          10.0
+        ],
+        [
+          14.0,
+          14.0
+        ],
+        [
+          10.0,
+          18.0
+        ]
+      ],
+      "events": [
+        {
+          "index": 0,
+          "phase": "outbound",
+          "kind": "movement",
+          "start_cell": [
+            4,
+            2
+          ],
+          "end_cell": [
+            3,
+            3
+          ],
+          "duration_min": 1.4142135623730951,
+          "distance_m": 5.656854249492381,
+          "incremental": {
+            "time": 1.4142135623730951,
+            "battery": 2.8284271247461903,
+            "oxygen": 0.3535533905932738,
+            "water": 0.014142135623730952,
+            "nutrition": 5.656854249492381
+          },
+          "cumulative": {
+            "time": 1.4142135623730951,
+            "battery": 2.8284271247461903,
+            "oxygen": 0.3535533905932738,
+            "water": 0.014142135623730952,
+            "nutrition": 5.656854249492381
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 1.4142135623730951,
+              "capacity": 60.0,
+              "reserve": 5.0,
+              "remaining": 58.58578643762691,
+              "margin_above_reserve": 53.58578643762691
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 2.8284271247461903,
+              "capacity": 100.0,
+              "reserve": 10.0,
+              "remaining": 97.17157287525382,
+              "margin_above_reserve": 87.17157287525382
+            },
+            "oxygen": {
+              "status": "modeled",
+              "unit": "simulated_u",
+              "consumed": 0.3535533905932738,
+              "capacity": 20.0,
+              "reserve": 2.0,
+              "remaining": 19.646446609406727,
+              "margin_above_reserve": 17.646446609406727
+            },
+            "water": {
+              "status": "modeled",
+              "unit": "L",
+              "consumed": 0.014142135623730952,
+              "capacity": 2.0,
+              "reserve": 0.2,
+              "remaining": 1.985857864376269,
+              "margin_above_reserve": 1.785857864376269
+            },
+            "nutrition": {
+              "status": "modeled",
+              "unit": "kcal",
+              "consumed": 5.656854249492381,
+              "capacity": 200.0,
+              "reserve": 20.0,
+              "remaining": 194.34314575050763,
+              "margin_above_reserve": 174.34314575050763
+            }
+          }
+        },
+        {
+          "index": 1,
+          "phase": "outbound",
+          "kind": "movement",
+          "start_cell": [
+            3,
+            3
+          ],
+          "end_cell": [
+            2,
+            4
+          ],
+          "duration_min": 1.4142135623730951,
+          "distance_m": 5.656854249492381,
+          "incremental": {
+            "time": 1.4142135623730951,
+            "battery": 2.8284271247461903,
+            "oxygen": 0.3535533905932738,
+            "water": 0.014142135623730952,
+            "nutrition": 5.656854249492381
+          },
+          "cumulative": {
+            "time": 2.8284271247461903,
+            "battery": 5.656854249492381,
+            "oxygen": 0.7071067811865476,
+            "water": 0.028284271247461905,
+            "nutrition": 11.313708498984761
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 2.8284271247461903,
+              "capacity": 60.0,
+              "reserve": 5.0,
+              "remaining": 57.17157287525381,
+              "margin_above_reserve": 52.17157287525381
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 5.656854249492381,
+              "capacity": 100.0,
+              "reserve": 10.0,
+              "remaining": 94.34314575050762,
+              "margin_above_reserve": 84.34314575050762
+            },
+            "oxygen": {
+              "status": "modeled",
+              "unit": "simulated_u",
+              "consumed": 0.7071067811865476,
+              "capacity": 20.0,
+              "reserve": 2.0,
+              "remaining": 19.292893218813454,
+              "margin_above_reserve": 17.292893218813454
+            },
+            "water": {
+              "status": "modeled",
+              "unit": "L",
+              "consumed": 0.028284271247461905,
+              "capacity": 2.0,
+              "reserve": 0.2,
+              "remaining": 1.9717157287525382,
+              "margin_above_reserve": 1.7717157287525382
+            },
+            "nutrition": {
+              "status": "modeled",
+              "unit": "kcal",
+              "consumed": 11.313708498984761,
+              "capacity": 200.0,
+              "reserve": 20.0,
+              "remaining": 188.68629150101523,
+              "margin_above_reserve": 168.68629150101523
+            }
+          }
+        },
+        {
+          "index": 2,
+          "phase": "activity",
+          "kind": "science",
+          "start_cell": [
+            2,
+            4
+          ],
+          "end_cell": [
+            2,
+            4
+          ],
+          "duration_min": 2.0,
+          "distance_m": 0.0,
+          "incremental": {
+            "time": 2.0,
+            "battery": 8.0,
+            "oxygen": 0.6,
+            "water": 0.04,
+            "nutrition": 10.0
+          },
+          "cumulative": {
+            "time": 4.82842712474619,
+            "battery": 13.65685424949238,
+            "oxygen": 1.3071067811865476,
+            "water": 0.0682842712474619,
+            "nutrition": 21.31370849898476
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 4.82842712474619,
+              "capacity": 60.0,
+              "reserve": 5.0,
+              "remaining": 55.17157287525381,
+              "margin_above_reserve": 50.17157287525381
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 13.65685424949238,
+              "capacity": 100.0,
+              "reserve": 10.0,
+              "remaining": 86.34314575050762,
+              "margin_above_reserve": 76.34314575050762
+            },
+            "oxygen": {
+              "status": "modeled",
+              "unit": "simulated_u",
+              "consumed": 1.3071067811865476,
+              "capacity": 20.0,
+              "reserve": 2.0,
+              "remaining": 18.692893218813452,
+              "margin_above_reserve": 16.692893218813452
+            },
+            "water": {
+              "status": "modeled",
+              "unit": "L",
+              "consumed": 0.0682842712474619,
+              "capacity": 2.0,
+              "reserve": 0.2,
+              "remaining": 1.9317157287525382,
+              "margin_above_reserve": 1.7317157287525382
+            },
+            "nutrition": {
+              "status": "modeled",
+              "unit": "kcal",
+              "consumed": 21.31370849898476,
+              "capacity": 200.0,
+              "reserve": 20.0,
+              "remaining": 178.68629150101523,
+              "margin_above_reserve": 158.68629150101523
+            }
+          }
+        },
+        {
+          "index": 3,
+          "phase": "inbound",
+          "kind": "movement",
+          "start_cell": [
+            2,
+            4
+          ],
+          "end_cell": [
+            3,
+            3
+          ],
+          "duration_min": 1.5251754764355951,
+          "distance_m": 5.656854249492381,
+          "incremental": {
+            "time": 1.5251754764355951,
+            "battery": 3.1613128669336903,
+            "oxygen": 0.41121091888292566,
+            "water": 0.016448436755317025,
+            "nutrition": 6.5793747021268105
+          },
+          "cumulative": {
+            "time": 6.353602601181785,
+            "battery": 16.81816711642607,
+            "oxygen": 1.7183177000694732,
+            "water": 0.08473270800277893,
+            "nutrition": 27.89308320111157
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 6.353602601181785,
+              "capacity": 60.0,
+              "reserve": 5.0,
+              "remaining": 53.646397398818216,
+              "margin_above_reserve": 48.646397398818216
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 16.81816711642607,
+              "capacity": 100.0,
+              "reserve": 10.0,
+              "remaining": 83.18183288357393,
+              "margin_above_reserve": 73.18183288357393
+            },
+            "oxygen": {
+              "status": "modeled",
+              "unit": "simulated_u",
+              "consumed": 1.7183177000694732,
+              "capacity": 20.0,
+              "reserve": 2.0,
+              "remaining": 18.281682299930527,
+              "margin_above_reserve": 16.281682299930527
+            },
+            "water": {
+              "status": "modeled",
+              "unit": "L",
+              "consumed": 0.08473270800277893,
+              "capacity": 2.0,
+              "reserve": 0.2,
+              "remaining": 1.9152672919972211,
+              "margin_above_reserve": 1.7152672919972212
+            },
+            "nutrition": {
+              "status": "modeled",
+              "unit": "kcal",
+              "consumed": 27.89308320111157,
+              "capacity": 200.0,
+              "reserve": 20.0,
+              "remaining": 172.10691679888842,
+              "margin_above_reserve": 152.10691679888842
+            }
+          }
+        },
+        {
+          "index": 4,
+          "phase": "inbound",
+          "kind": "movement",
+          "start_cell": [
+            3,
+            3
+          ],
+          "end_cell": [
+            4,
+            2
+          ],
+          "duration_min": 1.5235885623730951,
+          "distance_m": 5.656854249492381,
+          "incremental": {
+            "time": 1.5235885623730951,
+            "battery": 3.1565521247461903,
+            "oxygen": 0.4103556508641564,
+            "water": 0.016414226034566257,
+            "nutrition": 6.565690413826502
+          },
+          "cumulative": {
+            "time": 7.87719116355488,
+            "battery": 19.974719241172263,
+            "oxygen": 2.1286733509336297,
+            "water": 0.10114693403734519,
+            "nutrition": 34.45877361493807
+          },
+          "resources": {
+            "time": {
+              "status": "modeled",
+              "unit": "min",
+              "consumed": 7.87719116355488,
+              "capacity": 60.0,
+              "reserve": 5.0,
+              "remaining": 52.12280883644512,
+              "margin_above_reserve": 47.12280883644512
+            },
+            "battery": {
+              "status": "modeled",
+              "unit": "Wh",
+              "consumed": 19.974719241172263,
+              "capacity": 100.0,
+              "reserve": 10.0,
+              "remaining": 80.02528075882773,
+              "margin_above_reserve": 70.02528075882773
+            },
+            "oxygen": {
+              "status": "modeled",
+              "unit": "simulated_u",
+              "consumed": 2.1286733509336297,
+              "capacity": 20.0,
+              "reserve": 2.0,
+              "remaining": 17.87132664906637,
+              "margin_above_reserve": 15.871326649066368
+            },
+            "water": {
+              "status": "modeled",
+              "unit": "L",
+              "consumed": 0.10114693403734519,
+              "capacity": 2.0,
+              "reserve": 0.2,
+              "remaining": 1.8988530659626548,
+              "margin_above_reserve": 1.6988530659626548
+            },
+            "nutrition": {
+              "status": "modeled",
+              "unit": "kcal",
+              "consumed": 34.45877361493807,
+              "capacity": 200.0,
+              "reserve": 20.0,
+              "remaining": 165.54122638506192,
+              "margin_above_reserve": 145.54122638506192
+            }
+          }
+        }
+      ],
+      "phases": {
+        "outbound": {
+          "duration_min": 2.8284271247461903,
+          "distance_m": 11.313708498984761,
+          "consumed": {
+            "time": 2.8284271247461903,
+            "battery": 5.656854249492381,
+            "oxygen": 0.7071067811865476,
+            "water": 0.028284271247461905,
+            "nutrition": 11.313708498984761
+          }
+        },
+        "activity": {
+          "duration_min": 2.0,
+          "distance_m": 0.0,
+          "consumed": {
+            "time": 2.0,
+            "battery": 8.0,
+            "oxygen": 0.6,
+            "water": 0.04,
+            "nutrition": 10.0
+          }
+        },
+        "inbound": {
+          "duration_min": 3.0487640388086903,
+          "distance_m": 11.313708498984761,
+          "consumed": {
+            "time": 3.0487640388086903,
+            "battery": 6.317864991679881,
+            "oxygen": 0.821566569747082,
+            "water": 0.032862662789883285,
+            "nutrition": 13.145065115953312
+          }
+        }
+      },
+      "total": {
+        "duration_min": 7.87719116355488,
+        "distance_m": 22.627416997969522,
+        "resources": {
+          "time": {
+            "status": "modeled",
+            "unit": "min",
+            "consumed": 7.87719116355488,
+            "capacity": 60.0,
+            "reserve": 5.0,
+            "remaining": 52.12280883644512,
+            "margin_above_reserve": 47.12280883644512
+          },
+          "battery": {
+            "status": "modeled",
+            "unit": "Wh",
+            "consumed": 19.974719241172263,
+            "capacity": 100.0,
+            "reserve": 10.0,
+            "remaining": 80.02528075882773,
+            "margin_above_reserve": 70.02528075882773
+          },
+          "oxygen": {
+            "status": "modeled",
+            "unit": "simulated_u",
+            "consumed": 2.1286733509336297,
+            "capacity": 20.0,
+            "reserve": 2.0,
+            "remaining": 17.87132664906637,
+            "margin_above_reserve": 15.871326649066368
+          },
+          "water": {
+            "status": "modeled",
+            "unit": "L",
+            "consumed": 0.10114693403734519,
+            "capacity": 2.0,
+            "reserve": 0.2,
+            "remaining": 1.8988530659626548,
+            "margin_above_reserve": 1.6988530659626548
+          },
+          "nutrition": {
+            "status": "modeled",
+            "unit": "kcal",
+            "consumed": 34.45877361493807,
+            "capacity": 200.0,
+            "reserve": 20.0,
+            "remaining": 165.54122638506192,
+            "margin_above_reserve": 145.54122638506192
+          }
+        }
+      },
+      "cost": 8.968804329353969,
+      "cost_objective": "sum(move_minutes*(1+hazard_cost_weight*max(0,edge_cost/distance-1))+activity_minutes+battery_cost_weight*(move_Wh+activity_Wh))",
+      "consistency_tolerance_absolute": 1e-09
+    }
+  },
+  "jezero_waypoints": [
+    {
+      "index": 0,
+      "crop_cell": [
+        4,
+        2
+      ],
+      "product_cell": [
+        64,
+        62
+      ],
+      "planner_xy_m": [
+        10.0,
+        18.0
+      ],
+      "jezero_xy_m": [
+        -6.0,
+        -2.0
+      ],
+      "ctx_elevation_m": -2571.708984375
+    },
+    {
+      "index": 1,
+      "crop_cell": [
+        3,
+        3
+      ],
+      "product_cell": [
+        63,
+        63
+      ],
+      "planner_xy_m": [
+        14.0,
+        14.0
+      ],
+      "jezero_xy_m": [
+        -2.0,
+        2.0
+      ],
+      "ctx_elevation_m": -2571.927734375
+    },
+    {
+      "index": 2,
+      "crop_cell": [
+        2,
+        4
+      ],
+      "product_cell": [
+        62,
+        64
+      ],
+      "planner_xy_m": [
+        18.0,
+        10.0
+      ],
+      "jezero_xy_m": [
+        2.0,
+        6.0
+      ],
+      "ctx_elevation_m": -2572.149658203125
+    },
+    {
+      "index": 3,
+      "crop_cell": [
+        3,
+        3
+      ],
+      "product_cell": [
+        63,
+        63
+      ],
+      "planner_xy_m": [
+        14.0,
+        14.0
+      ],
+      "jezero_xy_m": [
+        -2.0,
+        2.0
+      ],
+      "ctx_elevation_m": -2571.927734375
+    },
+    {
+      "index": 4,
+      "crop_cell": [
+        4,
+        2
+      ],
+      "product_cell": [
+        64,
+        62
+      ],
+      "planner_xy_m": [
+        10.0,
+        18.0
+      ],
+      "jezero_xy_m": [
+        -6.0,
+        -2.0
+      ],
+      "ctx_elevation_m": -2571.708984375
+    }
+  ],
+  "selection": "Fixed crop [60:67,60:67], base (4,2), goal (2,4); demonstration locations, not detected science sites"
+}

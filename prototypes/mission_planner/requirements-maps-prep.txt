@@ -1,0 +1,2 @@
+# Only for bounded offline CTX acquisition, not for the CORE/runtime JSON reader.
+rasterio==1.4.3

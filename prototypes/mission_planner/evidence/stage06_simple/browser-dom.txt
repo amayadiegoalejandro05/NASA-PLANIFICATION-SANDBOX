@@ -1,0 +1,189 @@
+- banner:
+  - generic: MARS GOD’S EYE / MISSION PLANNER
+  - heading "Jezero · Planificación de misión" [level=1]
+  - generic: LOCAL · ETAPA 6
+- main:
+  - region "Mapa navegable de Jezero":
+    - button "Ver Jezero"
+    - button "Zona disponible" [active]
+    - button "Ajustar a la ruta"
+    - generic: ↑ Norte
+    - generic "Mapa de Marte. Flechas para desplazar; más y menos para zoom":
+      - tooltip "Salida / base"
+      - tooltip "Destino / actividad"
+      - button "Zoom in": +
+      - button "Zoom out": −
+    - text: Capa del mapa
+    - combobox "Capa del mapa":
+      - option "Imagen orbital · CTX" [selected]
+      - option "Relieve · MOLA/HRSC + CTX local"
+      - option "Elevación · CTX local"
+    - generic "Fuentes y leyenda"
+    - status
+    - generic: 409,507 m
+    - paragraph: "Área de cálculo: 2 × 2 km · Resolución 20 m. Marca los centros usados por el motor."
+    - paragraph: "Elegido: 18.4498322° N, 77.4501801° E · CTX -2571,57 m · Ajuste 0,135 m"
+    - paragraph: "Cartografía: NASA/JPL-Caltech/USGS · MRO CTX; NASA MGS MOLA / ESA Mars Express HRSC. Sin respaldo institucional implícito."
+  - complementary:
+    - text: TU MISIÓN
+    - heading "Prepara tu recorrido" [level=2]
+    - paragraph: 1. Marca la salida · 2. Elige destino · 3. Calcula
+    - paragraph:
+      - text: "Calcula dentro del área delimitada:"
+      - strong: 2 × 2 km · celdas de 20 m
+      - text: .
+    - text: Modo de misión
+    - combobox "Modo de misión":
+      - option "Misión nueva" [selected]
+      - option "Misión en curso"
+    - text: Agente
+    - combobox "Agente":
+      - option "Astronauta" [selected]
+      - option "Rover"
+    - paragraph: "Saldos al calcular: 60 min y 100 Wh. Reservas: 5 min y 10 Wh. Editables en Recursos y reservas."
+    - button "Marcar salida"
+    - button "Retirar salida": ×
+    - paragraph: Punto de ejemplo · puedes cambiarlo
+    - button "Marcar destino"
+    - button "Retirar destino": ×
+    - paragraph: Punto elegido · ajuste 1,092 m
+    - button "Consultar un punto"
+    - status: Haz clic para alternar un obstáculo SIMULADO; el CTX original no cambia.
+    - text: Actividad
+    - combobox "Actividad":
+      - option "Pendiente" [selected]
+      - option "Completada"
+    - text: Tiempo de actividad (min)
+    - spinbutton "Tiempo de actividad (min)": "2"
+    - generic "Recursos y reservas"
+    - option "Modelado" [selected]
+    - option "Exclusión explícita"
+    - option "Modelado" [selected]
+    - option "Exclusión explícita"
+    - option "Modelado" [selected]
+    - option "Exclusión explícita"
+    - generic "Ajustes del modelo"
+    - option "Nominal · tasas declaradas" [selected]
+    - option "Conservador · sensibilidad de tasas"
+    - generic "Obstáculos simulados y laboratorio"
+    - button "Añadir / retirar obstáculo simulado"
+    - button "Restaurar terreno original"
+    - paragraph: 1 obstáculos simulados. Ninguno representa una observación científica.
+    - link "Laboratorio de retícula CTX 4 m y sintético":
+      - /url: /legacy/
+    - paragraph: El cálculo incluye ida, actividad y regreso a la base. El perfil inicial es una demostración corta; el cuadro marca datos disponibles, no autonomía.
+    - button "Calcular misión"
+  - complementary:
+    - heading "Tu misión" [level=2]
+    - status: Misión posible bajo el modelo
+    - region "Resultados de la misión":
+      - heading "Alternativas calculadas" [level=2]
+      - paragraph: "Ruta recomendada según el perfil, los recursos y el criterio configurado: Equilibrada. Entre las satisfactorias se elige menor tiempo, luego batería y finalmente Equilibrada → Tiempo mínimo → Cautela de terreno."
+      - paragraph: "1 ruta distinta: las políticas coinciden. Grupos: Equilibrada + Tiempo mínimo + Cautela de terreno"
+      - text: Mostrar fases
+      - combobox "Mostrar fases":
+        - option "Ida y regreso" [selected]
+        - option "Ida"
+        - option "Regreso"
+      - button "Equilibrada Misión posible bajo el modelo 120 m · 32,66 min · 69,981 Wh":
+        - strong: Equilibrada
+        - generic: Misión posible bajo el modelo
+        - generic: 120 m · 32,66 min · 69,981 Wh
+      - button "Tiempo mínimo Misión posible bajo el modelo 120 m · 32,66 min · 69,981 Wh":
+        - strong: Tiempo mínimo
+        - generic: Misión posible bajo el modelo
+        - generic: 120 m · 32,66 min · 69,981 Wh
+      - button "Cautela de terreno Misión posible bajo el modelo 120 m · 32,66 min · 69,981 Wh":
+        - strong: Cautela de terreno
+        - generic: Misión posible bajo el modelo
+        - generic: 120 m · 32,66 min · 69,981 Wh
+      - heading "¿Qué necesita esta misión?" [level=3]
+      - paragraph: Para esta ruta calculada necesitas estos saldos iniciales, incluyendo las reservas.
+      - table:
+        - rowgroup:
+          - row "Recurso Necesitas Tienes":
+            - columnheader "Recurso"
+            - columnheader "Necesitas"
+            - columnheader "Tienes"
+        - rowgroup:
+          - row "Batería 79,981 Wh 100 Wh":
+            - cell "Batería"
+            - cell "79,981 Wh"
+            - cell "100 Wh"
+          - row "Demanda energética 155,412 kcal 200 kcal":
+            - cell "Demanda energética"
+            - cell "155,412 kcal"
+            - cell "200 kcal"
+          - row "Oxígeno simulado 10,438 simulated_u 20 simulated_u":
+            - cell "Oxígeno simulado"
+            - cell "10,438 simulated_u"
+            - cell "20 simulated_u"
+          - row "Tiempo 37,66 min 60 min":
+            - cell "Tiempo"
+            - cell "37,66 min"
+            - cell "60 min"
+          - row "Agua 0,554 L 2 L":
+            - cell "Agua"
+            - cell "0,554 L"
+            - cell "2 L"
+      - heading "Equilibrada" [level=3]
+      - paragraph: Plan futuro admisible en este modelo experimental; sin garantia EVA o evacuacion.
+      - strong: Batería (Wh)
+      - term: Saldo inicial del cálculo
+      - definition: "100"
+      - term: Consumo futuro
+      - definition: 69,981
+      - term: Restante al regresar
+      - definition: 30,019
+      - term: Reserva absoluta
+      - definition: "10"
+      - term: Margen sobre reserva
+      - definition: 20,019
+      - strong: Demanda energética (kcal)
+      - term: Saldo inicial del cálculo
+      - definition: "200"
+      - term: Consumo futuro
+      - definition: 135,412
+      - term: Restante al regresar
+      - definition: 64,588
+      - term: Reserva absoluta
+      - definition: "20"
+      - term: Margen sobre reserva
+      - definition: 44,588
+      - strong: Oxígeno simulado (simulated_u)
+      - term: Saldo inicial del cálculo
+      - definition: "20"
+      - term: Consumo futuro
+      - definition: 8,438
+      - term: Restante al regresar
+      - definition: 11,562
+      - term: Reserva absoluta
+      - definition: "2"
+      - term: Margen sobre reserva
+      - definition: 9,562
+      - strong: Tiempo (min)
+      - term: Saldo inicial del cálculo
+      - definition: "60"
+      - term: Consumo futuro
+      - definition: 32,66
+      - term: Restante al regresar
+      - definition: 27,34
+      - term: Reserva absoluta
+      - definition: "5"
+      - term: Margen sobre reserva
+      - definition: 22,34
+      - strong: Agua (L)
+      - term: Saldo inicial del cálculo
+      - definition: "2"
+      - term: Consumo futuro
+      - definition: 0,354
+      - term: Restante al regresar
+      - definition: 1,646
+      - term: Reserva absoluta
+      - definition: 0,2
+      - term: Margen sobre reserva
+      - definition: 1,446
+      - generic "Ida, actividad, regreso y eventos"
+      - generic "Códigos, criterio y perfil efectivo"
+    - generic "Exportaciones y trazabilidad"
+    - generic "Fuentes, cobertura y limitaciones"

@@ -1,0 +1,29 @@
+{
+  "responseHeader": {
+    "status": 0,
+    "QTime": 0,
+    "params": {
+      "q": "item_UUID:595e535f-942d-41f4-b650-31e64ab63246",
+      "indent": "on",
+      "version": "2.2",
+      "wt": "json"
+    }
+  },
+  "response": {
+    "numFound": 1,
+    "start": 0,
+    "docs": [
+      {
+        "serviceType": "Mosaic",
+        "endPoint": "https://trek.nasa.gov/tiles/Mars/EQ/Mars_MOLA_blend200ppx_HRSC_Shade_clon0dd_200mpp_lzw",
+        "protocol": "WMTS",
+        "item_UUID": "595e535f-942d-41f4-b650-31e64ab63246",
+        "wmts_mode": "rest",
+        "layerId": "Mars_MOLA_blend200ppx_HRSC_Shade_clon0dd_200mpp_lzw",
+        "item_DBID": 294241,
+        "id": "d6c94a82-4ad4-4398-9ff0-a9f19765a50a",
+        "_version_": 1670513145383223296
+      }
+    ]
+  }
+}

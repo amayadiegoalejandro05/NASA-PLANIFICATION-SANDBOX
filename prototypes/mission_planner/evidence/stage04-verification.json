@@ -1,0 +1,35 @@
+[
+  {
+    "log": "stage04-tests.log",
+    "exit_code": 0
+  },
+  {
+    "log": "stage04-core-without-numpy.log",
+    "exit_code": 0
+  },
+  {
+    "log": "stage04-demo.log",
+    "exit_code": 0
+  },
+  {
+    "stage04_json_cli_exit": 0,
+    "matches_saved_records": true
+  },
+  {
+    "stage03_json_cli_exit": 0,
+    "five_states_preserved": true
+  },
+  {
+    "preexisting_files": 50,
+    "changed": [
+      "prototypes/mission_planner/README.md"
+    ],
+    "engine_pilot_data_and_earlier_tests_unchanged": true,
+    "global_optional_dependencies": {
+      "numpy": false,
+      "rasterio": false,
+      "pyproj": false,
+      "matplotlib": false
+    }
+  }
+]

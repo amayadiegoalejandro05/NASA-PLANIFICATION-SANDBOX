@@ -1,0 +1,12 @@
+Referencia inicial ejecutada antes de editar, 2026-11-05 America/Bogota.
+Captura resumida del resultado de herramienta (no reejecucion posterior).
+Checkout: NASA-Sandbox-etapa01
+Python 3.11.9; git version 2.56.0.windows.4
+Rama: etapa01-base-confiable
+HEAD: 0d5a444f5444b4dfa574224c9f7d09652dad1df5
+Estado heredado: ?? docs/continuidad/ ; ?? prototypes/
+Comando desde checkout:
+& 'C:\Users\laura\AppData\Local\Programs\Python\Python311\python.exe' -m unittest discover -s prototypes/mission_planner -v
+Ran 30 tests in 0.356s
+OK
+Sin fallos heredados. Las 30 pruebas existentes no se editaron.

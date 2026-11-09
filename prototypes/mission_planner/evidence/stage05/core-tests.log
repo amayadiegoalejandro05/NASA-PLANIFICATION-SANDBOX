@@ -1,0 +1,21 @@
+test_comparison_common_constraints_and_coincidence (test_stage05.StageFive.test_comparison_common_constraints_and_coincidence) ... ok
+test_completed_and_initial_goal_science_once (test_stage05.StageFive.test_completed_and_initial_goal_science_once) ... ok
+test_continuation_independent_expected_accounts (test_stage05.StageFive.test_continuation_independent_expected_accounts) ... ok
+test_core_without_optional_dependencies (test_stage05.StageFive.test_core_without_optional_dependencies) ... ok
+test_decision_infeasible_interrupted_and_no_confirmed_return (test_stage05.StageFive.test_decision_infeasible_interrupted_and_no_confirmed_return) ... ok
+test_direct_return_and_base_zero (test_stage05.StageFive.test_direct_return_and_base_zero) ... ok
+test_events_phases_and_strict_json (test_stage05.StageFive.test_events_phases_and_strict_json) ... ok
+test_excluded_and_v3_compatibility (test_stage05.StageFive.test_excluded_and_v3_compatibility) ... ok
+test_history_not_debited_reserves_absolute (test_stage05.StageFive.test_history_not_debited_reserves_absolute) ... ok
+test_independent_small_reference_continue_return (test_stage05.StageFive.test_independent_small_reference_continue_return) ... ok
+test_new_snapshots_detour_wall_unknown_elevation (test_stage05.StageFive.test_new_snapshots_detour_wall_unknown_elevation) ... ok
+test_personal_validation_and_no_effect (test_stage05.StageFive.test_personal_validation_and_no_effect) ... ok
+test_position_blocked_unknown_no_relocation (test_stage05.StageFive.test_position_blocked_unknown_no_relocation) ... ok
+test_preferences_use_computed_metrics (test_stage05.StageFive.test_preferences_use_computed_metrics) ... ok
+test_provenance_and_conservative_scenario (test_stage05.StageFive.test_provenance_and_conservative_scenario) ... ok
+test_state_validation_and_identity (test_stage05.StageFive.test_state_validation_and_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 1.342s
+
+OK

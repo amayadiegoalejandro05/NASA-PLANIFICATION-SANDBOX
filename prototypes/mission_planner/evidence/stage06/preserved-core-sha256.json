@@ -1,0 +1,9 @@
+{
+  "mars_route_planner.py": "d27c42d26899c85ea7c772f7bc7cab39c447b75ccfd36f48f65dc61ab1463ad6",
+  "mars_mission_resources.py": "5d9752951f0a9ae825417488391261fead17cdef3e398b13141181b0c3eefc2f",
+  "mission_api.py": "c99a4244b101eeaa836e883b2e0a45b185337844e6e44535196ba5633dc8ac6b",
+  "mission_decisions.py": "ab53dd13165c8f08b99db6b8e9556ff649f918ddc4ef08b5cb40ff24255e022c",
+  "jezero_adapter.py": "21f3ccccbd59d9d446aa1c8b043583db6d95f0cbf47e2f64070018d584a4f697",
+  "demo_stage04.py": "6534474c807ce0d97b718e98dff5b7c860f2a76eee32f217cfd58c1c11c5e2fb",
+  "demo_stage05.py": "9cbbdc95d1cf711b5fd3e807b4f975574ea7ebc248c8879a3f346dd945e81b2d"
+}

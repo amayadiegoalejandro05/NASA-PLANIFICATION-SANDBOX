@@ -1,0 +1,14 @@
+ctx_compare: SUCCESS, SUCCESS, SUCCESS
+ctx_rover: SUCCESS, SUCCESS, SUCCESS
+ctx_evaluate: SUCCESS, SUCCESS; decision=CONTINUE
+ctx_changed_activity: SUCCESS, SUCCESS, SUCCESS
+ctx_completed: SUCCESS, SUCCESS; decision=CONTINUE
+ctx_limit: SEARCH_LIMIT_REACHED, SEARCH_LIMIT_REACHED; decision=REVIEW_RETURN_UNCONFIRMED
+ctx_invalid_semantic: INVALID_INPUT, INVALID_INPUT; decision=REVIEW_INVALID_INPUT
+ctx_blocked_goal: INFEASIBLE, SUCCESS; decision=RETURN
+ctx_conservative: SUCCESS, SUCCESS, SUCCESS
+synthetic_compare: SUCCESS, SUCCESS, SUCCESS
+synthetic_obstacle: SUCCESS, SUCCESS, SUCCESS
+synthetic_restored: SUCCESS, SUCCESS, SUCCESS
+ctx_insufficient: INFEASIBLE, INFEASIBLE; decision=REVIEW_RETURN_UNCONFIRMED
+ctx_invalid_construction: INVALID_INPUT

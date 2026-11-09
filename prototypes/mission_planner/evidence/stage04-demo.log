@@ -1,0 +1,42 @@
+ETAPA 4 — Jezero CTX / Mission Planner
+
+Terreno orbital real MRO/CTX: informacion nativa 20 m sobre reticula de 4 m.
+Prior experimental con conocimiento local incompleto; no certifica el detalle de 4 m.
+Objetivos y perfiles SIMULADOS; sin validacion fisica/EVA ni informacion local de obstaculos.
+No se leyeron alturas HiRISE, mascara conjunta ni origin_z_m para planificar.
+Ventana fija filas [60,67), columnas [60,67): 7x7, 28x28 m; sin remuestreo.
+Base producto (64,62), objetivo (62,64). Ciencia estacionaria 2 min.
+Marcos: planner X este/Y sur, origen esquina NW del recorte; Jezero E este/N norte.
+E=-16+X; N=16-Y (m). Alturas CTX absolutas, desplazamiento vertical aplicado 0 m.
+Limite suficiente 5000 etiquetas; prueba de interrupcion 1; no mide expansiones.
+Bateria insuficiente: 5 Wh utilizables < 8 Wh de ciencia, antes de movimientos.
+
+rover_success: SUCCESS / MISSION_FOUND; etiquetas=107
+  22.627416998 m; 7.877191164 min; costo 8.696289726
+  outbound: 11.313708499 m; 2.828427125 min
+  activity: 0.000000000 m; 2.000000000 min
+  inbound: 11.313708499 m; 3.048764039 min
+  time: consumo=7.87719116355488, restante=52.12280883644512, reserva=5.0 min (modeled)
+  battery: consumo=19.974719241172263, restante=80.02528075882773, reserva=10.0 Wh (modeled)
+  oxygen: consumo=None, restante=None, reserva=None simulated_u (not_applicable)
+  water: consumo=None, restante=None, reserva=None L (not_applicable)
+  nutrition: consumo=None, restante=None, reserva=None kcal (not_applicable)
+  Mision admisible bajo el perfil y snapshot indicados: ida, ciencia y regreso; restricciones de movilidad y presupuestos con reservas verificados (tolerancia 1e-9). El costo combina tiempo ponderado por peligro y bateria; no certifica la ruta mas segura ni optimalidad operacional global.
+astronaut_success: SUCCESS / MISSION_FOUND; etiquetas=107
+  22.627416998 m; 7.877191164 min; costo 8.968804329
+  outbound: 11.313708499 m; 2.828427125 min
+  activity: 0.000000000 m; 2.000000000 min
+  inbound: 11.313708499 m; 3.048764039 min
+  time: consumo=7.87719116355488, restante=52.12280883644512, reserva=5.0 min (modeled)
+  battery: consumo=19.974719241172263, restante=80.02528075882773, reserva=10.0 Wh (modeled)
+  oxygen: consumo=2.1286733509336297, restante=17.87132664906637, reserva=2.0 simulated_u (modeled)
+  water: consumo=0.10114693403734519, restante=1.8988530659626548, reserva=0.2 L (modeled)
+  nutrition: consumo=34.45877361493807, restante=165.54122638506192, reserva=20.0 kcal (modeled)
+  Mision admisible bajo el perfil y snapshot indicados: ida, ciencia y regreso; restricciones de movilidad y presupuestos con reservas verificados (tolerancia 1e-9). El costo combina tiempo ponderado por peligro y bateria; no certifica la ruta mas segura ni optimalidad operacional global.
+insufficient_budget: INFEASIBLE / SEARCH_EXHAUSTED; etiquetas=None
+  Busqueda agotada sin mision admisible con ida, ciencia, regreso y reservas; no se identifica una causa unica.
+label_limit: SEARCH_LIMIT_REACHED / LABEL_LIMIT_REACHED; etiquetas=1
+  Busqueda interrumpida por limite de etiquetas; factibilidad desconocida.
+invalid_request: INVALID_INPUT / REQUEST_VALIDATION_FAILED; etiquetas=None
+  goal: coordenadas fuera del mapa
+

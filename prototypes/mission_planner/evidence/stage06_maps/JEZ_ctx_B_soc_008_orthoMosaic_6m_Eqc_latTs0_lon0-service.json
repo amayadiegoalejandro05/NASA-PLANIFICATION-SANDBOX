@@ -1,0 +1,29 @@
+{
+  "responseHeader": {
+    "status": 0,
+    "QTime": 0,
+    "params": {
+      "q": "item_UUID:32003f69-a6f6-4441-bb46-4c46689c42eb",
+      "indent": "on",
+      "version": "2.2",
+      "wt": "json"
+    }
+  },
+  "response": {
+    "numFound": 1,
+    "start": 0,
+    "docs": [
+      {
+        "serviceType": "Mosaic",
+        "endPoint": "https://trek.nasa.gov/tiles/Mars/EQ/JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+        "protocol": "WMTS",
+        "item_UUID": "32003f69-a6f6-4441-bb46-4c46689c42eb",
+        "wmts_mode": "rest",
+        "layerId": "JEZ_ctx_B_soc_008_orthoMosaic_6m_Eqc_latTs0_lon0",
+        "item_DBID": 295942,
+        "id": "65a8822e-276a-470c-a678-849cbecf844b",
+        "_version_": 1674045587320733696
+      }
+    ]
+  }
+}

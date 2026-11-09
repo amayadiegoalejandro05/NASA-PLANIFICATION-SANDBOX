@@ -1,0 +1,69 @@
+{
+  "fixed_before_regional_evaluation": true,
+  "area": "E/N [-240,240] m relative Jezero origin 77.45 E,18.45 N",
+  "source": "existing parent prior CTX, crop [4:124,4:124]",
+  "aggregation": "mean nonoverlapping 5x5 of 4m samples; any unknown -> unknown",
+  "grid": [
+    24,
+    24
+  ],
+  "resolution_m": 20,
+  "max_labels": 5000,
+  "missions": [
+    {
+      "case": "astronaut_success",
+      "base": [
+        12,
+        10
+      ],
+      "current": [
+        12,
+        10
+      ],
+      "goal": [
+        12,
+        12
+      ],
+      "activity_min": 2
+    },
+    {
+      "case": "rover_success",
+      "base": [
+        12,
+        10
+      ],
+      "current": [
+        12,
+        10
+      ],
+      "goal": [
+        12,
+        12
+      ],
+      "activity_min": 2
+    },
+    {
+      "case": "insufficient",
+      "same_as": "astronaut_success",
+      "battery_remaining": 9
+    },
+    {
+      "case": "interrupted",
+      "same_as": "astronaut_success",
+      "max_labels": 1
+    },
+    {
+      "case": "changed",
+      "same_as": "astronaut_success",
+      "activity_min": 3
+    },
+    {
+      "case": "in_progress",
+      "same_as": "astronaut_success",
+      "current": [
+        12,
+        11
+      ]
+    }
+  ]
+}

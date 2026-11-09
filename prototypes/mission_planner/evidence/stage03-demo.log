@@ -1,0 +1,34 @@
+ETAPA 3: escenarios y perfiles SIMULADOS, sin calibracion fisica
+astronaut_success: SUCCESS / MISSION_FOUND
+  Mision admisible bajo el perfil y snapshot indicados: ida, ciencia y regreso; restricciones de movilidad y presupuestos con reservas verificados (tolerancia 1e-9). El costo combina tiempo ponderado por peligro y bateria; no certifica la ruta mas segura ni optimalidad operacional global.
+  Etiquetas generadas: 5
+  4 m; 6 min; costo 6.18
+  outbound: 2 m; 2 min
+  activity: 0 m; 2 min
+  inbound: 2 m; 2 min
+  time: consumo 6; restante 2; reserva 1 min
+  battery: consumo 18; restante 1; reserva 1 Wh
+  oxygen: consumo 10; restante 1; reserva 1 simulated_u
+  water: consumo 1.2; restante 0.8; reserva 0.2 L
+  nutrition: consumo 28; restante 1; reserva 1 kcal
+rover_success: SUCCESS / MISSION_FOUND
+  Mision admisible bajo el perfil y snapshot indicados: ida, ciencia y regreso; restricciones de movilidad y presupuestos con reservas verificados (tolerancia 1e-9). El costo combina tiempo ponderado por peligro y bateria; no certifica la ruta mas segura ni optimalidad operacional global.
+  Etiquetas generadas: 5
+  4 m; 6 min; costo 6.18
+  outbound: 2 m; 2 min
+  activity: 0 m; 2 min
+  inbound: 2 m; 2 min
+  time: consumo 6; restante 2; reserva 1 min
+  battery: consumo 18; restante 1; reserva 1 Wh
+  oxygen: not_applicable
+  water: not_applicable
+  nutrition: not_applicable
+insufficient_budget: INFEASIBLE / SEARCH_EXHAUSTED
+  Busqueda agotada sin mision admisible con ida, ciencia, regreso y reservas; no se identifica una causa unica.
+  Etiquetas generadas: None
+label_limit: SEARCH_LIMIT_REACHED / LABEL_LIMIT_REACHED
+  Busqueda interrumpida por limite de etiquetas; factibilidad desconocida.
+  Etiquetas generadas: 1
+invalid_request: INVALID_INPUT / REQUEST_VALIDATION_FAILED
+  goal: coordenadas fuera del mapa
+  Etiquetas generadas: None

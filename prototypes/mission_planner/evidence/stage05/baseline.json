@@ -1,0 +1,23 @@
+{
+  "checkout": "C:\\Users\\laura\\OneDrive\\Escritorio\\MARS GOD EYE\\NASA-Sandbox-etapa01",
+  "branch": "etapa01-base-confiable",
+  "commit_base": "0d5a444f5444b4dfa574224c9f7d09652dad1df5",
+  "inherited_git_status": " M .gitignore\n?? docs/continuidad/\n?? prototypes/",
+  "python_global": "C:\\Users\\laura\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "python_jezero": "C:\\Users\\laura\\OneDrive\\Escritorio\\MARS GOD EYE\\NASA-Sandbox-etapa01\\.venv-stage04\\Scripts\\python.exe",
+  "python_version": "3.11.9",
+  "numpy_version": "2.2.6",
+  "git_executable": "C:\\Users\\laura\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\native\\git\\cmd\\git.exe",
+  "git_version": "git version 2.56.0.windows.4",
+  "first_suite": {
+    "tests": 53,
+    "seconds": 1.93,
+    "skips": 0
+  },
+  "recorded_pre_edit_suite": {
+    "tests": 53,
+    "seconds": 2.148,
+    "skips": 0
+  },
+  "inherited_file_count": 56
+}

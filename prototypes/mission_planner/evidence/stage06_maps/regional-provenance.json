@@ -1,0 +1,250 @@
+{
+  "source": {
+    "adaptation_hash_format": "sha256 of canonical JSON excluding adaptation_sha256; sorted keys, ASCII, compact, UTF-8",
+    "adaptation_sha256": "8c593b25fa1c00e8c6a358f9da2de190d0e7beade2435ef48254bbd8929be14e",
+    "adapter_schema": "jezero-ctx-adapter-1",
+    "center_lat_planetocentric_deg": 18.45,
+    "center_lon_east_deg": 77.45,
+    "coordinates": {
+      "crop_affine_gdal": [
+        -240.0,
+        4.0,
+        0.0,
+        240.0,
+        0.0,
+        -4.0
+      ],
+      "height_offset_applied_m": 0.0,
+      "interpolation": "none; direct crop",
+      "jezero_bounds_m": [
+        -240.0,
+        -240.0,
+        240.0,
+        240.0
+      ],
+      "jezero_frame": "JEZERO_LOCAL_EQUIRECTANGULAR_EAST_NORTH",
+      "parent_affine_gdal": [
+        -256.0,
+        4.0,
+        0.0,
+        256.0,
+        0.0,
+        -4.0
+      ],
+      "parent_shape": [
+        128,
+        128
+      ],
+      "pixel_centers": "(column+0.5,row+0.5); integer edges are outer corners",
+      "planner_frame": {
+        "cell_order": "row,column",
+        "coordinate_unit": "m",
+        "frame_id": "JEZERO_CTX_CROP_EAST_SOUTH",
+        "height_unit": "m",
+        "origin_location": "outer_corner_row0_col0",
+        "origin_xy_m": [
+          0.0,
+          0.0
+        ],
+        "resolution_m": 4.0,
+        "time_unit": "min",
+        "x_axis": "increasing_column",
+        "y_axis": "increasing_row"
+      },
+      "planner_to_jezero": "E=crop_left+X; N=crop_top-Y",
+      "point_containment": "west/north inclusive; east/south exclusive",
+      "window": {
+        "column": 4,
+        "columns": 120,
+        "row": 4,
+        "rows": 120
+      },
+      "window_index_bounds": "row/column start inclusive, end exclusive"
+    },
+    "crop_unknown_cells": 0,
+    "height_policy": "CTX absolute elevations unchanged; HiRISE-derived origin_z_m ignored",
+    "input_layer": "prior",
+    "input_role": "public CTX prior",
+    "inventory": {
+      "prior": {
+        "decoded": true,
+        "dtype": "float32",
+        "role": "public CTX prior",
+        "shape": [
+          128,
+          128
+        ]
+      },
+      "reference": {
+        "decoded": false,
+        "dtype": "float32",
+        "role": "held-out HiRISE",
+        "shape": [
+          128,
+          128
+        ]
+      },
+      "valid": {
+        "decoded": false,
+        "dtype": "bool",
+        "role": "joint CTX/HiRISE mask; not used",
+        "shape": [
+          128,
+          128
+        ]
+      }
+    },
+    "layers": {
+      "obstacles": "No observed obstacle layer; False means no additional scenario obstacle, not physical absence",
+      "risk": "Unavailable; zeros disable additional penalty, not measured zero risk",
+      "roughness": "Unavailable; zeros disable additional penalty, not measured smoothness",
+      "slope": "Existing CORE gradient and edge slopes from this CTX crop; one-sided at crop boundaries"
+    },
+    "limitations": [
+      "Real orbital terrain; CTX native 20 m information resampled upstream to 4 m, no new detail",
+      "Experimental prior-only planning with incomplete local knowledge, no local certification",
+      "Demonstration targets and agent parameters simulated, no science detection or physical/EVA validation",
+      "No HiRISE payload, joint validity mask, sensor or estimated/observed state used"
+    ],
+    "local_crs_wkt": "PROJCS[\"unknown\",GEOGCS[\"unknown\",DATUM[\"unknown\",SPHEROID[\"unknown\",3396190,0]],PRIMEM[\"Reference meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",18.45],PARAMETER[\"latitude_of_origin\",18.45],PARAMETER[\"central_meridian\",77.45],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+    "longitude_direction": "east",
+    "mars_sphere_radius_m": 3396190,
+    "metadata_file": "metadata.json",
+    "metadata_file_sha256": "a3800c66726f12d4d6db012fc9e73c695452143dcde5512e0912c685580f66cb",
+    "package_integrity": "verified SHA-256 against existing metadata; not an external signature",
+    "parent_known_cells": 16384,
+    "parent_unknown_cells": 0,
+    "resampling_upstream": "bilinear; CTX remains 20 m information on the 4 m computational grid",
+    "retrieved_utc": "2026-11-04T21:09:48.860624+00:00",
+    "snapshot": {
+      "columns": 120,
+      "hash_format": "terrain-snapshot-v1",
+      "resolution_m": 4.0,
+      "revision_sha256": "11cd75bfd7d316ee4215eb02e26c5b2b1908aaf3669075a7645e18d2ccbb366f",
+      "rows": 120,
+      "terrain_id": "jezero-ctx-r4-c4-120x120"
+    },
+    "source": {
+      "citation": "Fergason et al. (2020), Mars 2020 Terrain Relative Navigation CTX DTM Mosaic, USGS.",
+      "doi": "10.5066/P906QQT8",
+      "instrument": "MRO/CTX",
+      "native_post_spacing_m": 20,
+      "source_crs_wkt": "PROJCS[\"Equirectangular Mars 2000 Sphere IAU\",GEOGCS[\"GCS_Mars_2000_Sphere\",DATUM[\"Mars_2000_(Sphere)\",SPHEROID[\"Mars_2000_Sphere_IAU\",3396190,0]],PRIMEM[\"Reference_Meridian\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Equirectangular\"],PARAMETER[\"standard_parallel_1\",0],PARAMETER[\"central_meridian\",0],PARAMETER[\"false_easting\",0],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "source_nodata": "-3.4028226550889045e+38",
+      "source_pixel_size": [
+        20.0,
+        20.0
+      ],
+      "source_shape": [
+        1512,
+        1596
+      ],
+      "source_window_sha256": "be1a0302f5daaf5bbb9063cc5fc11cfbfebb63eb83a40b15c6abae28eafa0c06",
+      "url": "https://asc-pds-services.s3.us-west-2.amazonaws.com/mosaic/mars2020_trn/CTX/JEZ_ctx_B_soc_008_DTM_MOLAtopography_DeltaGeoid_20m_Eqc_latTs0_lon0.tif",
+      "valid_fraction": 1.0,
+      "window_col_row_width_height": [
+        841,
+        787,
+        34,
+        33
+      ]
+    },
+    "source_window_hash_verification": "recorded only; native source tile absent",
+    "terrain_file": "terrain.npz",
+    "terrain_file_sha256": "18d20b39a680d93addc3c3151bb3f19a5f41fc8f9a170396d4094694bbd76d6b",
+    "upstream_versions": {
+      "numpy": "2.2.6",
+      "python": "3.11.18",
+      "rasterio": "1.4.3"
+    },
+    "validity_policy": "CTX finite and not source nodata; unknown -> None -> CORE blocking; no fill",
+    "vertical_reference": "source product MOLA topography / DeltaGeoid; no Earth datum conversion"
+  },
+  "derived_schema": "ctx-regional-1",
+  "aggregation": "Area mean of 5x5 existing 4 m CTX prior samples; any unknown -> unknown; no filling",
+  "source_native_resolution_m": 20,
+  "input_grid_resolution_m": 4,
+  "output_grid_resolution_m": 20,
+  "parent_window": [
+    4,
+    124,
+    4,
+    124
+  ],
+  "bounds_east_north_m": [
+    -240,
+    -240,
+    240,
+    240
+  ],
+  "loss": "Averages the upstream bilinear prior; smooths extremes, no native detail recovered",
+  "scientific_limit": "Regional DEM average does not resolve rocks, paths or subcell hazards",
+  "mapping": {
+    "parent_shape": [
+      24,
+      24
+    ],
+    "window": {
+      "row": 0,
+      "column": 0,
+      "rows": 24,
+      "columns": 24
+    },
+    "window_index_bounds": "row/column start inclusive, end exclusive",
+    "parent_affine_gdal": [
+      -240.0,
+      20.0,
+      0.0,
+      240.0,
+      0.0,
+      -20.0
+    ],
+    "crop_affine_gdal": [
+      -240.0,
+      20.0,
+      0.0,
+      240.0,
+      0.0,
+      -20.0
+    ],
+    "jezero_frame": "JEZERO_LOCAL_EQUIRECTANGULAR_EAST_NORTH",
+    "planner_frame": {
+      "frame_id": "JEZERO_CTX_CROP_EAST_SOUTH",
+      "resolution_m": 20.0,
+      "origin_xy_m": [
+        0.0,
+        0.0
+      ],
+      "coordinate_unit": "m",
+      "height_unit": "m",
+      "time_unit": "min",
+      "cell_order": "row,column",
+      "x_axis": "increasing_column",
+      "y_axis": "increasing_row",
+      "origin_location": "outer_corner_row0_col0"
+    },
+    "jezero_bounds_m": [
+      -240.0,
+      -240.0,
+      240.0,
+      240.0
+    ],
+    "point_containment": "west/north inclusive; east/south exclusive",
+    "pixel_centers": "(column+0.5,row+0.5); integer edges are outer corners",
+    "planner_to_jezero": "E=crop_left+X; N=crop_top-Y",
+    "height_offset_applied_m": 0.0,
+    "interpolation": "none; direct crop"
+  },
+  "snapshot": {
+    "terrain_id": "jezero-ctx-regional-480m-20m",
+    "revision_sha256": "a7d386ea05d18f9021582b34e22bf325ce987bc5c8444ad830ead7b4e99c3ae2",
+    "hash_format": "terrain-snapshot-v1",
+    "rows": 24,
+    "columns": 24,
+    "resolution_m": 20.0
+  },
+  "display_convention": "Planetocentric latitude, east longitude; sphere radius 3396190 m",
+  "display_to_jezero": "E=R*cos(lat0)*(lon-lon0) radians; N=R*(lat-lat0) radians",
+  "layers_do_not_enter_planner": true,
+  "derivation_sha256": "1329c84a8e4674f3e4947c9724692c81744834d3c90e033851d4b140960b4d1c"
+}

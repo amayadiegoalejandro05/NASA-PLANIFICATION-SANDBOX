@@ -1,0 +1,121 @@
+- banner:
+  - generic: MARS GOD’S EYE / MISSION PLANNER
+  - heading "Jezero · Planificación de misión" [level=1]
+  - generic: LOCAL · ETAPA 6
+- main:
+  - region "Mapa navegable de Jezero":
+    - button "Ver Jezero"
+    - button "Zona disponible"
+    - button "Ajustar a la ruta" [active]
+    - generic: ↑ Norte
+    - generic "Mapa de Marte. Flechas para desplazar; más y menos para zoom":
+      - tooltip "Salida / base"
+      - tooltip "Destino / actividad"
+      - button "Zoom in": +
+      - button "Zoom out": −
+    - text: Capa del mapa
+    - combobox "Capa del mapa":
+      - option "Imagen orbital · CTX" [selected]
+      - option "Relieve · MOLA/HRSC + CTX local"
+      - option "Elevación · CTX local"
+    - generic "Fuentes y leyenda"
+    - status
+    - generic: 102,377 m
+    - paragraph: "Área de cálculo: 2 × 2 km · Resolución 20 m. Marca los centros usados por el motor."
+    - paragraph: Coordenadas planetocéntricas · Longitud este · Esfera de Marte
+    - paragraph: "Cartografía: NASA/JPL-Caltech/USGS · MRO CTX; NASA MGS MOLA / ESA Mars Express HRSC. Sin respaldo institucional implícito."
+  - complementary:
+    - text: TU MISIÓN
+    - heading "Prepara tu recorrido" [level=2]
+    - paragraph: 1. Marca la salida · 2. Elige destino · 3. Calcula
+    - paragraph:
+      - text: "Calcula dentro del área delimitada:"
+      - strong: 2 × 2 km · celdas de 20 m
+      - text: .
+    - text: Modo de misión
+    - combobox "Modo de misión":
+      - option "Misión nueva" [selected]
+      - option "Misión en curso"
+    - text: Agente
+    - combobox "Agente":
+      - option "Astronauta" [selected]
+      - option "Rover"
+    - paragraph: "Saldos al calcular: 321,137 min y 652,127 Wh. Reservas: 5 min y 10 Wh. Editables en Recursos y reservas."
+    - button "Marcar salida"
+    - button "Retirar salida": ×
+    - paragraph: Punto de ejemplo · puedes cambiarlo
+    - button "Marcar destino"
+    - button "Retirar destino": ×
+    - paragraph: Punto elegido · ajuste 8,769 m
+    - button "Consultar un punto"
+    - status
+    - text: Actividad
+    - combobox "Actividad":
+      - option "Pendiente" [selected]
+      - option "Completada"
+    - text: Tiempo de actividad (min)
+    - spinbutton "Tiempo de actividad (min)": "2"
+    - generic "Recursos y reservas"
+    - option "Modelado" [selected]
+    - option "Exclusión explícita"
+    - option "Modelado" [selected]
+    - option "Exclusión explícita"
+    - option "Modelado" [selected]
+    - option "Exclusión explícita"
+    - generic "Ajustes avanzados (opcional)"
+    - option "Rápido · A* y recursos del recorrido" [selected]
+    - option "Detallado · búsqueda multirrecurso"
+    - option "Nominal · tasas declaradas" [selected]
+    - option "Conservador · sensibilidad de tasas"
+    - generic "Obstáculos simulados y laboratorio"
+    - paragraph: El cálculo incluye ida, actividad y regreso a la base. El perfil inicial es una demostración corta; el cuadro marca datos disponibles, no autonomía.
+    - button "Calcular misión"
+  - complementary:
+    - heading "Tu misión" [level=2]
+    - status: Misión posible bajo el modelo
+    - region "Resultados de la misión":
+      - heading "Alternativas calculadas" [level=2]
+      - paragraph: "Modo rápido: busca un recorrido transitable y después calcula los recursos completos. No necesitas modificar límites de búsqueda."
+      - paragraph: Un recorrido A* calculado; no se comparan tres políticas en este modo.
+      - text: Mostrar fases
+      - combobox "Mostrar fases":
+        - option "Ida y regreso" [selected]
+        - option "Ida"
+        - option "Regreso"
+      - heading "¿Qué necesita esta misión?" [level=3]
+      - paragraph: Recursos del recorrido completo encontrado, incluyendo pendientes, desvíos y reservas.
+      - table:
+        - rowgroup:
+          - row "Recurso Necesitas Tienes":
+            - columnheader "Recurso"
+            - columnheader "Necesitas"
+            - columnheader "Tienes"
+        - rowgroup:
+          - row "Tiempo 321,137 min 321,137 min":
+            - cell "Tiempo"
+            - cell "321,137 min"
+            - cell "321,137 min"
+          - row "Batería 652,127 Wh 652,127 Wh":
+            - cell "Batería"
+            - cell "652,127 Wh"
+            - cell "652,127 Wh"
+          - row "Oxígeno simulado 82,673 simulated_u 82,673 simulated_u":
+            - cell "Oxígeno simulado"
+            - cell "82,673 simulated_u"
+            - cell "82,673 simulated_u"
+          - row "Agua 3,443 L 3,443 L":
+            - cell "Agua"
+            - cell "3,443 L"
+            - cell "3,443 L"
+          - row "Demanda energética 1311,167 kcal 1311,167 kcal":
+            - cell "Demanda energética"
+            - cell "1311,167 kcal"
+            - cell "1311,167 kcal"
+      - paragraph
+      - heading "Recorrido rápido" [level=3]
+      - paragraph: Recorrido comprobado con ida, actividad, regreso y reservas.
+      - generic "Detalle de recursos (opcional)"
+      - generic "Ida, actividad, regreso y eventos"
+      - generic "Códigos, criterio y perfil efectivo"
+    - generic "Exportaciones y trazabilidad"
+    - generic "Fuentes, cobertura y limitaciones"

@@ -1,0 +1,20 @@
+
+ASTRONAUTA: MISION FACTIBLE (escenario sintetico)
+  Distancia ida + regreso: 1232.0 m
+  Tiempo total con actividad: 53.1 min
+  O2 simulado: 13.27 u
+  Agua estimada: 0.212 L
+  Bateria estimada: 37.1 Wh
+  Demanda calorica estimada: 212 kcal
+  Tramos: ida 26 celdas, regreso 26 celdas
+  Etiquetas exploradas: 62681
+
+ROVER: MISION FACTIBLE (escenario sintetico)
+  Distancia ida + regreso: 12.6 m
+  Tiempo total con actividad: 89.4 min
+  O2 simulado: 0.00 u
+  Agua estimada: 0.000 L
+  Bateria estimada: 80.5 Wh
+  Demanda calorica estimada: 0 kcal
+  Tramos: ida 27 celdas, regreso 27 celdas
+  Etiquetas exploradas: 2399
