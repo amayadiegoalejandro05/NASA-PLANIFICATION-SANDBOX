@@ -51,4 +51,12 @@ Código, datos necesarios, pruebas y evidencia preservados; origen sin cambios d
 
 Primera intervención propuesta 6.5: verificar unidades y cuentas independientes por fase/recurso y coherencia de reservas, sin inventar calibración. Ver DEVELOPMENT_ROADMAP.
 
-La publicación de la rama/PR y la comprobación de checkout limpio se registrarán en un anexo antes de finalizar. Nunca auto-merge ni operaciones remotas en el repositorio anterior/principal.
+## Anexo: checkout limpio y preservación final
+
+Se creó un clon local limpio de lo versionado (`71c8a5c`, primer commit bootstrap), sin `.venv`, cachés ni archivos sin seguimiento. Se ejecutaron allí las mismas **101 pruebas: 101/101, 17.568 s, sin skips**, con el intérprete del entorno nuevo que ya tenía NumPy instalado. No es una segunda instalación pip ni una prueba Linux. Log `migration/clean-checkout-tests.log`; los 185 archivos importados conservan sus hashes también después del checkout, según `clean-checkout-integrity.json`.
+
+La selección sin NumPy ejecutó **55/55, 1.922 s**, Python global. Dos suites JS aprobadas. La verificación final del origen/copia sigue sin diferencias. El SANDBOX incorpora `.gitattributes` para evitar conversión implícita CRLF/LF de fuentes/checksums. Se restaura el blob LICENSE exacto del commit inicial después de detectar normalización de fin de línea durante staging; no se cambia su texto/licencia. Evidencias externas e históricas conservan whitespace original; `diff --check` global detecta espacios heredados en XML/HTML, que no se limpiaron por preservar bytes. Documentación nueva y ejemplos pasan el check acotado.
+
+Verificación de navegador del 2026-11-08, instancia migrada 8767: botón Calcular misión, estado «Misión posible bajo el modelo»; tabla Necesitas/Tienes observada (tiempo necesario 27,159 min con reserva, batería 58,478 Wh con reserva, entre otros). El smoke HTTP separado de rover dio 80 m. Son ejecuciones distintas, no se mezclan sus perfiles ni resultados. No se guardó una nueva captura de pantalla; la observación quedó en el registro de herramientas del chat.
+
+Publicación autorizada únicamente en rama SANDBOX, mediante PR a main sin fusión automática. Ninguna operación remota de escritura se dirige al origen/principal.
